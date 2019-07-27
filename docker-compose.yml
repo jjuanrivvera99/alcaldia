@@ -3,6 +3,7 @@ version: '3.3'
 services:
   web:
     container_name: laravel
+    restart: always
     build:
       context: ./build
     image: jjuanrivvera99/ubuntu-apache-php-sqlserver:mongo
@@ -27,6 +28,7 @@ services:
   mongo:
     image: mongo
     container_name: mongo
+    restart: always
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: EayMua75bntldbLmKhig
@@ -38,6 +40,7 @@ services:
   mongo_express:
     image: mongo-express
     container_name: mongo-express
+    restart: always
     depends_on: 
       - mongo
     ports:

@@ -20,10 +20,18 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/mongo', function(){
-    $users = \App\Mongo\User::all();
+    $users = \App\Mongo\User::first();
 
+    $users->telefonos = [
+        "casa" => 4487579,
+        "cel" => 573167290759,
+        "oficina" => [
+            "fax" => 21312,
+            "ext" => 23123
+        ]
+    ];
 
-    dd(\App\Mongo\User::all());
+    $users->save();
 
-    // dd(DB::connection('mongodb')->collection('users')->get());
+    dd($users->telefonos['oficina']);
 });
