@@ -14,8 +14,8 @@ services:
 
   mssql:
     container_name: sql-server
-    # image: mcr.microsoft.com/mssql/server:2017-CU11-ubuntu
-    image: mcr.microsoft.com/mssql/server:2017-latest
+    image: mcr.microsoft.com/mssql/server:2017-CU11-ubuntu
+    # image: mcr.microsoft.com/mssql/server:2017-latest
     restart: always
     environment:
       ACCEPT_EULA: "Y"
@@ -23,7 +23,7 @@ services:
     ports:
       - 1433:1433
     volumes:
-     - ./mssql/data:/var/opt/mssql
+     - mssql-data:/var/opt/mssql
 
   mongo:
     image: mongo
@@ -35,7 +35,7 @@ services:
     ports:
       - 27017:27017
     volumes:
-      - ./mongo/data:/data/db
+      - db-mongo:/data/db
 
   mongo_express:
     image: mongo-express
@@ -49,3 +49,7 @@ services:
       ME_CONFIG_MONGODB_ADMINUSERNAME: root
       ME_CONFIG_MONGODB_ADMINPASSWORD: EayMua75bntldbLmKhig
       ME_CONFIG_MONGODB_URL: mongodb://root:EayMua75bntldbLmKhig@mongo?ssl=false
+
+volumes:
+  db-mongo:
+  mssql-data:
