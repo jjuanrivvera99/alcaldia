@@ -216,13 +216,13 @@ CREATE TABLE plantel (
 CREATE TABLE empleado (
     id_empleado INT IDENTITY NOT NULL,
     id_area_dependencia INT NOT NULL,
-    primernombre VARCHAR(25) NOT NULL,
-    segundonombre VARCHAR(25),
-    primerapellido VARCHAR(25) NOT NULL,
-    segundoapellido VARCHAR(25),
-    Telefono VARCHAR(20) NOT NULL,
-    Direccion VARCHAR(150) NOT NULL,
-    Email VARCHAR(150) NOT NULL,
+    primer_nombre VARCHAR(25) NOT NULL,
+    segundo_nombre VARCHAR(25),
+    primer_apellido VARCHAR(25) NOT NULL,
+    segundo_apellido VARCHAR(25),
+    telefono VARCHAR(20) NOT NULL,
+    direccion VARCHAR(150) NOT NULL,
+    email VARCHAR(150) NOT NULL,
     CONSTRAINT empleado_pk PRIMARY KEY (id_empleado)
 )
 
@@ -238,7 +238,6 @@ CREATE TABLE integrante (
     id_tipo_identificacion INT NOT NULL,
     id_ciudad INT NOT NULL,
     id_familia INT NOT NULL,
-    Identificacion INT NOT NULL,
     primer_nombre VARCHAR(25) NOT NULL,
     segundo_nombre VARCHAR(25),
     primero_apellido VARCHAR(25) NOT NULL,
