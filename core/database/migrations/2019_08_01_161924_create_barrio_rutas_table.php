@@ -13,8 +13,10 @@ class CreateBarrioRutasTable extends Migration
      */
     public function up()
     {
-        Schema::create('barrio_rutas', function (Blueprint $table) {
-            $table->bigIncrements('id');
+        Schema::create('barrio_ruta', function (Blueprint $table) {
+            $table->bigIncrements('id_barrio_ruta');
+            $table->bigInteger('id_barrio');
+            $table->bigInteger('id_ruta');
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ class CreateBarrioRutasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('barrio_rutas');
+        Schema::dropIfExists('barrio_ruta');
     }
 }

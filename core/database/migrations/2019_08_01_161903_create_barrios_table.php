@@ -13,8 +13,11 @@ class CreateBarriosTable extends Migration
      */
     public function up()
     {
-        Schema::create('barrios', function (Blueprint $table) {
-            $table->bigIncrements('id');
+        Schema::create('barrio', function (Blueprint $table) {
+            $table->bigIncrements('id_barrio');
+            $table->bigInteger('id_localidad');
+            $table->string('nombre', 50);
+            $table->string('area', 100);
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class CreateBarriosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('barrios');
+        Schema::dropIfExists('barrio');
     }
 }

@@ -15,8 +15,8 @@ class CreatePlantelEducativosTable extends Migration
     {
         Schema::create('plantel_educativo', function (Blueprint $table) {
             $table->bigIncrements('id_plantel_educativo');
-            $table->string('nombre');
-            $table->string('localidad');
+            $table->string('nombre', 100);
+            $table->string('localidad', 200);
             $table->timestamps();
         });
     }

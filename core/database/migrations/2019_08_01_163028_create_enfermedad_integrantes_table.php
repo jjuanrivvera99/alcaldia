@@ -13,8 +13,11 @@ class CreateEnfermedadIntegrantesTable extends Migration
      */
     public function up()
     {
-        Schema::create('enfermedad_integrantes', function (Blueprint $table) {
-            $table->bigIncrements('id');
+        Schema::create('enfermedad_integrante', function (Blueprint $table) {
+            $table->bigIncrements('id_enfermedad_integrante');
+            $table->bigInteger('id_enfermedad');
+            $table->bigInteger('id_integrante');
+            $table->date('fecha');
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class CreateEnfermedadIntegrantesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('enfermedad_integrantes');
+        Schema::dropIfExists('enfermedad_integrante');
     }
 }

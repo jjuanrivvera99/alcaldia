@@ -13,8 +13,14 @@ class CreateFamiliasTable extends Migration
      */
     public function up()
     {
-        Schema::create('familias', function (Blueprint $table) {
-            $table->bigIncrements('id');
+        Schema::create('familia', function (Blueprint $table) {
+            $table->bigIncrements('id_familia');
+            $table->bigInteger('id_barrio');
+            $table->bigInteger('id_tipo_habitacion');
+            $table->string('nombre', 200);
+            $table->string('direccion', 150);
+            $table->string('telefono', 20);
+            $table->decimal('ingreso');
             $table->timestamps();
         });
     }
@@ -26,6 +32,6 @@ class CreateFamiliasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('familias');
+        Schema::dropIfExists('familia');
     }
 }

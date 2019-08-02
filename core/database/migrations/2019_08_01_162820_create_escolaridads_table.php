@@ -13,8 +13,13 @@ class CreateEscolaridadsTable extends Migration
      */
     public function up()
     {
-        Schema::create('escolaridads', function (Blueprint $table) {
-            $table->bigIncrements('id');
+        Schema::create('escolaridad', function (Blueprint $table) {
+            $table->bigIncrements('id_escolaridad');
+            $table->bigInteger('id_jornada');
+            $table->bigInteger('id_plantel_educativo');
+            $table->bigInteger('id_modalidad');
+            $table->bigInteger('id_integrante');
+            $table->dateTime('fecha');
             $table->timestamps();
         });
     }
@@ -26,6 +31,6 @@ class CreateEscolaridadsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('escolaridads');
+        Schema::dropIfExists('escolaridad');
     }
 }

@@ -13,8 +13,10 @@ class CreatePlantelsTable extends Migration
      */
     public function up()
     {
-        Schema::create('plantels', function (Blueprint $table) {
-            $table->bigIncrements('id');
+        Schema::create('plantel', function (Blueprint $table) {
+            $table->bigIncrements('id_plantel');
+            $table->bigInteger('id_tipo_plantel');
+            $table->bigInteger('id_localidad');
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ class CreatePlantelsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('plantels');
+        Schema::dropIfExists('plantel');
     }
 }

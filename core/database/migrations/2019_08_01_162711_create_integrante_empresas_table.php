@@ -13,8 +13,14 @@ class CreateIntegranteEmpresasTable extends Migration
      */
     public function up()
     {
-        Schema::create('integrante_empresas', function (Blueprint $table) {
-            $table->bigIncrements('id');
+        Schema::create('integrante_empresa', function (Blueprint $table) {
+            $table->bigIncrements('id_integrante_empresa');
+            $table->bigInteger('id_empresa');
+            $table->bigInteger('id_cargo');
+            $table->bigInteger('id_integrante');
+            $table->date('fecha_inicio');
+            $table->tinyInteger('estado');
+            $table->integer('sueldo');
             $table->timestamps();
         });
     }
@@ -26,6 +32,6 @@ class CreateIntegranteEmpresasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('integrante_empresas');
+        Schema::dropIfExists('integrante_empresa');
     }
 }

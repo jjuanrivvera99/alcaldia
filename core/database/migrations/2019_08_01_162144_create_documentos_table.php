@@ -13,8 +13,13 @@ class CreateDocumentosTable extends Migration
      */
     public function up()
     {
-        Schema::create('documentos', function (Blueprint $table) {
-            $table->bigIncrements('id');
+        Schema::create('documento', function (Blueprint $table) {
+            $table->bigIncrements('id_documento');
+            $table->bigInteger('id_estado_documento');
+            $table->bigInteger('id_depencia');
+            $table->string('nombre', 100);
+            $table->string('descripcion');
+            $table->string('ruta');
             $table->timestamps();
         });
     }
@@ -26,6 +31,6 @@ class CreateDocumentosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('documentos');
+        Schema::dropIfExists('documento');
     }
 }

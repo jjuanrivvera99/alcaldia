@@ -15,10 +15,10 @@ class CreateAlcaldesTable extends Migration
     {
         Schema::create('alcalde', function (Blueprint $table) {
             $table->bigIncrements('id_alcalde');
-            $table->string('primer_nombre');
-            $table->string('segundo_nombre');
-            $table->string('primer_apellido');
-            $table->string('segundo_apellido');
+            $table->string('primer_nombre', 100);
+            $table->string('segundo_nombre', 100);
+            $table->string('primer_apellido', 100);
+            $table->string('segundo_apellido', 100);
             $table->timestamps();
         });
     }

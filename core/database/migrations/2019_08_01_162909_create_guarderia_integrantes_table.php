@@ -13,8 +13,11 @@ class CreateGuarderiaIntegrantesTable extends Migration
      */
     public function up()
     {
-        Schema::create('guarderia_integrantes', function (Blueprint $table) {
-            $table->bigIncrements('id');
+        Schema::create('guarderia_integrante', function (Blueprint $table) {
+            $table->bigIncrements('id_guarderia_integrante');
+            $table->bigInteger('id_guarderia');
+            $table->bigInteger('id_integrante');
+            $table->date('fecha');
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class CreateGuarderiaIntegrantesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('guarderia_integrantes');
+        Schema::dropIfExists('guarderia_integrante');
     }
 }

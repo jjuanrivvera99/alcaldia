@@ -17,8 +17,8 @@ class CreateInfraestructurasTable extends Migration
             $table->bigIncrements('id_infraestructura');
             $table->bigInteger('id_area_dependencia');
             $table->bigInteger('id_tipo_infraestructura');
-            $table->string('nombre');
-            $table->string('especificaciones');
+            $table->string('nombre', 100);
+            $table->string('especificaciones', 200);
             $table->integer('codigo');
             $table->timestamps();
         });

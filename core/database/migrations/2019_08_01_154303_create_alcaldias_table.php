@@ -16,7 +16,7 @@ class CreateAlcaldiasTable extends Migration
         Schema::create('alcaldia', function (Blueprint $table) {
             $table->bigIncrements('id_alcaldia');
             $table->bigInteger('id_alcalde');
-            $table->string('nombre');
+            $table->string('nombre', 100);
             $table->timestamps();
         });
     }

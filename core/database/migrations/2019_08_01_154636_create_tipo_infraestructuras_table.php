@@ -15,7 +15,7 @@ class CreateTipoInfraestructurasTable extends Migration
     {
         Schema::create('tipo_infraestructura', function (Blueprint $table) {
             $table->bigIncrements('id_tipo_infraestructura');
-            $table->string('nombre');
+            $table->string('nombre', 100);
             $table->timestamps();
         });
     }

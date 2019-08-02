@@ -13,8 +13,9 @@ class CreateTipoPlantelsTable extends Migration
      */
     public function up()
     {
-        Schema::create('tipo_plantels', function (Blueprint $table) {
-            $table->bigIncrements('id');
+        Schema::create('tipo_plantel', function (Blueprint $table) {
+            $table->bigIncrements('id_tipo_plantel');
+            $table->string('nombre', 100);
             $table->timestamps();
         });
     }
@@ -26,6 +27,6 @@ class CreateTipoPlantelsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tipo_plantels');
+        Schema::dropIfExists('tipo_plantel');
     }
 }

@@ -16,7 +16,7 @@ class CreateDependenciasTable extends Migration
         Schema::create('dependencia', function (Blueprint $table) {
             $table->bigIncrements('id_dependencia');
             $table->bigInteger('id_alcaldia');
-            $table->string('nombre');
+            $table->string('nombre', 100);
             $table->timestamps();
         });
     }

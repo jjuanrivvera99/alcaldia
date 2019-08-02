@@ -15,7 +15,7 @@ class CreateTipoHabitacionsTable extends Migration
     {
         Schema::create('tipo_habitacion', function (Blueprint $table) {
             $table->bigIncrements('id_tipo_habitacion');
-            $table->string('nombre');
+            $table->string('nombre', 100);
             $table->timestamps();
         });
     }

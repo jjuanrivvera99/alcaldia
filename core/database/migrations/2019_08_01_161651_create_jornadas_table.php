@@ -13,8 +13,9 @@ class CreateJornadasTable extends Migration
      */
     public function up()
     {
-        Schema::create('jornadas', function (Blueprint $table) {
+        Schema::create('jornada', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('nombre');
             $table->timestamps();
         });
     }
@@ -26,6 +27,6 @@ class CreateJornadasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('jornadas');
+        Schema::dropIfExists('jornada');
     }
 }

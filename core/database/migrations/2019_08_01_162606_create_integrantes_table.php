@@ -13,8 +13,16 @@ class CreateIntegrantesTable extends Migration
      */
     public function up()
     {
-        Schema::create('integrantes', function (Blueprint $table) {
-            $table->bigIncrements('id');
+        Schema::create('integrante', function (Blueprint $table) {
+            $table->bigIncrements('id_integrante');
+            $table->bigInteger('id_tipo_identificacion');
+            $table->bigInteger('id_ciudad');
+            $table->bigInteger('id_familia');
+            $table->string('primer_nombre', 100);
+            $table->string('segundo_nombre', 100)->nullable();
+            $table->string('primer_apellido', 100);
+            $table->string('segundo_apellido', 100)->nullable();
+            $table->dateTime('fecha_nacimiento');
             $table->timestamps();
         });
     }
@@ -26,6 +34,6 @@ class CreateIntegrantesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('integrantes');
+        Schema::dropIfExists('integrante');
     }
 }
