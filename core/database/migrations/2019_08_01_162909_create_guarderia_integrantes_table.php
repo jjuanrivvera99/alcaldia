@@ -19,6 +19,9 @@ class CreateGuarderiaIntegrantesTable extends Migration
             $table->bigInteger('id_integrante');
             $table->date('fecha');
             $table->timestamps();
+
+            $table->foreign('id_guarderia')->references('id_guarderia')->on('guarderia');
+            $table->foreign('id_integrante')->references('id_integrante')->on('integrante');
         });
     }
 

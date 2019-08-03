@@ -18,6 +18,9 @@ class CreateAreaDependenciasTable extends Migration
             $table->bigInteger('id_area');
             $table->bigInteger('id_dependencia');
             $table->timestamps();
+
+            $table->foreign('id_area')->references('id_area')->on('area');
+            $table->foreign('id_dependencia')->references('id_dependencia')->on('dependencia');
         });
     }
 

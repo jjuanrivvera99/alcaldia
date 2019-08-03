@@ -24,6 +24,10 @@ class CreateIntegrantesTable extends Migration
             $table->string('segundo_apellido', 100)->nullable();
             $table->dateTime('fecha_nacimiento');
             $table->timestamps();
+
+            $table->foreign('id_tipo_identificacion')->references('id_tipo_identificacion')->on('tipo_identificacion');
+            $table->foreign('id_ciudad')->references('id_ciudad')->on('ciudad');
+            $table->foreign('id_familia')->references('id_familia')->on('familia');
         });
     }
 

@@ -22,6 +22,10 @@ class CreateIntegranteEmpresasTable extends Migration
             $table->tinyInteger('estado');
             $table->integer('sueldo');
             $table->timestamps();
+
+            $table->foreign('id_empresa')->references('id_empresa')->on('empresa');
+            $table->foreign('id_cargo')->references('id_cargo')->on('cargo');
+            $table->foreign('id_integrante')->references('id_integrante')->on('integrante');
         });
     }
 

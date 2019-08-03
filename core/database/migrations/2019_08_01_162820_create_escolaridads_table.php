@@ -21,6 +21,11 @@ class CreateEscolaridadsTable extends Migration
             $table->bigInteger('id_integrante');
             $table->dateTime('fecha');
             $table->timestamps();
+
+            $table->foreign('id_jornada')->references('id_jornada')->on('jornada');
+            $table->foreign('id_plantel_educativo')->references('id_plantel_educativo')->on('plantel_educativo');
+            $table->foreign('id_modalidad')->references('id_modalidad')->on('modalidad');
+            $table->foreign('id_integrante')->references('id_integrante')->on('integrante');
         });
     }
 

@@ -18,6 +18,8 @@ class CreateDependenciasTable extends Migration
             $table->bigInteger('id_alcaldia');
             $table->string('nombre', 100);
             $table->timestamps();
+
+            $table->foreign('id_alcaldia')->references('id_alcaldia')->on('alcaldia');
         });
     }
 

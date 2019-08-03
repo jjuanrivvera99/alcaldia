@@ -24,6 +24,8 @@ class CreateEmpleadosTable extends Migration
             $table->string('direccion');
             $table->string('email', 150);
             $table->timestamps();
+
+            $table->foreign('id_area_dependencia')->references('id_area_dependencia')->on('area_dependencia');
         });
     }
 

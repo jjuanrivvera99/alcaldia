@@ -19,6 +19,8 @@ class CreateBarriosTable extends Migration
             $table->string('nombre', 50);
             $table->string('area', 100);
             $table->timestamps();
+
+            $table->foreign('id_localidad')->references('id_localidad')->on('localidad');
         });
     }
 

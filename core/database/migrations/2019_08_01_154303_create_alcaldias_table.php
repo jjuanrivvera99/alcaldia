@@ -18,6 +18,8 @@ class CreateAlcaldiasTable extends Migration
             $table->bigInteger('id_alcalde');
             $table->string('nombre', 100);
             $table->timestamps();
+
+            $table->foreign('id_alcalde')->references('id_alcalde')->on('alcalde');
         });
     }
 

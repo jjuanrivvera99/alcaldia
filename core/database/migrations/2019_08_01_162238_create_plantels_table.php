@@ -17,7 +17,11 @@ class CreatePlantelsTable extends Migration
             $table->bigIncrements('id_plantel');
             $table->bigInteger('id_tipo_plantel');
             $table->bigInteger('id_localidad');
+            $table->string('nombre', 100);
             $table->timestamps();
+
+            $table->foreign('id_tipo_plantel')->references('id_tipo_plantel')->on('tipo_plantel');
+            $table->foreign('id_localidad')->references('id_localidad')->on('localidad');
         });
     }
 

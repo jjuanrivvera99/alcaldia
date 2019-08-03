@@ -16,11 +16,14 @@ class CreateDocumentosTable extends Migration
         Schema::create('documento', function (Blueprint $table) {
             $table->bigIncrements('id_documento');
             $table->bigInteger('id_estado_documento');
-            $table->bigInteger('id_depencia');
+            $table->bigInteger('id_dependencia');
             $table->string('nombre', 100);
             $table->string('descripcion');
             $table->string('ruta');
             $table->timestamps();
+
+            $table->foreign('id_estado_documento')->references('id_estado_documento')->on('estado_documento');
+            $table->foreign('id_dependencia')->references('id_dependencia')->on('dependencia');
         });
     }
 

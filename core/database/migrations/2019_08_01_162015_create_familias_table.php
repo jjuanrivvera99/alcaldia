@@ -22,6 +22,9 @@ class CreateFamiliasTable extends Migration
             $table->string('telefono', 20);
             $table->decimal('ingreso');
             $table->timestamps();
+
+            $table->foreign('id_barrio')->references('id_barrio')->on('barrio');
+            $table->foreign('id_tipo_habitacion')->references('id_tipo_habitacion')->on('tipo_habitacion');
         });
     }
 

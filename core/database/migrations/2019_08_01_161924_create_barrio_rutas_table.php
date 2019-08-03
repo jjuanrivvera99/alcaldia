@@ -18,6 +18,9 @@ class CreateBarrioRutasTable extends Migration
             $table->bigInteger('id_barrio');
             $table->bigInteger('id_ruta');
             $table->timestamps();
+
+            $table->foreign('id_barrio')->references('id_barrio')->on('barrio');
+            $table->foreign('id_ruta')->references('id_ruta')->on('ruta');
         });
     }
 

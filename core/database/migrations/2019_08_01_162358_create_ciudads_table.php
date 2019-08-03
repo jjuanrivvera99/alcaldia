@@ -18,6 +18,8 @@ class CreateCiudadsTable extends Migration
             $table->bigInteger('id_pais');
             $table->string('nombre');
             $table->timestamps();
+
+            $table->foreign('id_pais')->references('id_pais')->on('pais');
         });
     }
 
