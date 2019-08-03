@@ -1,0 +1,43 @@
+CREATE LOGIN daniel WITH PASSWORD = 'Pas$word1234';
+GO
+
+CREATE USER [daniel] FOR LOGIN [daniel];
+GO
+
+GRANT CONNECT TO daniel;
+
+ALTER authorization ON DATABASE::alcaldia TO daniel;
+GO
+
+CREATE LOGIN alejandro WITH PASSWORD = 'Pas$word1234';
+GO
+
+CREATE USER [alejandro] FOR LOGIN [alejandro];
+GO
+
+GRANT CONNECT TO alejandro;
+
+ALTER authorization ON DATABASE::alcaldia TO alejandro;
+GO
+
+CREATE LOGIN andres WITH PASSWORD = 'Pas$word1234';
+GO
+
+CREATE USER [andres] FOR LOGIN [andres];
+GO
+
+GRANT CONNECT TO andres;
+
+ALTER authorization ON DATABASE::alcaldia TO andres;
+GO
+
+CREATE LOGIN jefferson WITH PASSWORD = 'Pas$word1234';
+GO
+
+CREATE USER [jefferson] FOR LOGIN [jefferson];
+GO
+
+GRANT CONNECT TO jefferson;
+
+ALTER authorization ON DATABASE::alcaldia TO jefferson;
+GO
