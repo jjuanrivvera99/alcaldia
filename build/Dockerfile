@@ -85,6 +85,12 @@ COPY my-site.conf /etc/apache2/sites-available/
 RUN a2dissite 000-default && \
     a2ensite my-site.conf
 
+# Copy helpers binaries
+RUN mkdir /tmp/bin
+COPY /bin/* /tmp/bin/
+RUN chmod +x /tmp/bin/*
+RUN mv /tmp/bin/* /bin/
+
 EXPOSE 80 443
 
 WORKDIR /var/www/
