@@ -10,7 +10,7 @@ clean_server:
     - runner
   script:
     - sudo su - jjuanrivvera99 -c 'docker rm $(docker ps -a -q) || true'
-    - sudo su - jjuanrivvera99 -c 'docker rmi $(docker images -a | grep "<none>" | awk '{print $3}') || true'
+    - sudo su - jjuanrivvera99 -c 'docker rmi $(docker images -a | grep "<none>" | awk "{print $3}") || true'
 
 build_app:
   stage: build
