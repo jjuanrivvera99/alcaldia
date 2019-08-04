@@ -30,10 +30,10 @@ build_app:
     - sudo su - jjuanrivvera99 -c 'git -C /home/jjuanrivvera99/alcaldia pull origin master'
     # - sudo su - jjuanrivvera99 -c 'rm /home/jjuanrivvera99/alcaldia/core/.env'
     # - sudo su - jjuanrivvera99 -c 'cp /home/jjuanrivvera99/alcaldia/core/.env.example /home/jjuanrivvera99/alcaldia/core/.env'
-    - sudo su - jjuanrivvera99 -c 'docker-compose --file /home/jjuanrivvera99/alcaldia/docker-compose.yml update'
-    - sudo su - jjuanrivvera99 -c 'docker-compose --file /home/jjuanrivvera99/alcaldia/docker-compose.yml fix'
-    - sudo su - jjuanrivvera99 -c 'docker-compose --file /home/jjuanrivvera99/alcaldia/docker-compose.yml migrate'
-    - sudo su - jjuanrivvera99 -c 'docker-compose --file /home/jjuanrivvera99/alcaldia/docker-compose.yml migrate_seed'
+    - sudo su - jjuanrivvera99 -c 'docker-compose --file /home/jjuanrivvera99/alcaldia/docker-compose.yml exec web update'
+    - sudo su - jjuanrivvera99 -c 'docker-compose --file /home/jjuanrivvera99/alcaldia/docker-compose.yml exec web fix'
+    - sudo su - jjuanrivvera99 -c 'docker-compose --file /home/jjuanrivvera99/alcaldia/docker-compose.yml exec web migrate'
+    - sudo su - jjuanrivvera99 -c 'docker-compose --file /home/jjuanrivvera99/alcaldia/docker-compose.yml exec web migrate_seed'
 
   after_script:
     - sudo chown jjuanrivvera99:jjuanrivvera99 -R /home/jjuanrivvera99/alcaldia
