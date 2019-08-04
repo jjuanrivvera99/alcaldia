@@ -9,8 +9,8 @@ clean_server:
   tags:
     - runner
   script:
-    - docker rm $(docker ps -a -q) || true
-    - docker rmi $(docker images -a | grep "<none>" | awk '{print $3}') || true
+    - sudo su - jjuanrivvera99 -c 'docker rm $(docker ps -a -q) || true'
+    - sudo su - jjuanrivvera99 -c 'docker rmi $(docker images -a | grep "<none>" | awk '{print $3}') || true'
 
 build_app:
   stage: build
