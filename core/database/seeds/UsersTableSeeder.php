@@ -28,7 +28,15 @@ class UsersTableSeeder extends Seeder
                 'password' => bcrypt('password'),
                 'created_at' => DB::raw('GETDATE( )'),
                 'updated_at' => DB::raw('GETDATE( )'),
+            ],
+            [
+                'name' => "Andres Fabian Trigueros",
+                'email' => 'andrestrigueros12@gmail.com',
+                'password' => bcrypt('12345678'),
+                'created_at' => DB::raw('GETDATE( )'),
+                'updated_at' => DB::raw('GETDATE( )')  
             ]
         ]);
     }
+
 }
