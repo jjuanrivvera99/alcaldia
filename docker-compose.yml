@@ -6,25 +6,11 @@ services:
     restart: always
     build:
       context: ./build
-    # image: jjuanrivvera99/ubuntu-apache-php-sqlserver:mongo
+    image: jjuanrivvera99/alcaldia:oracle
     ports:
       - 80:80
     volumes:
       - ./core:/var/www
-
-  mssql:
-    container_name: sql-server
-    image: mcr.microsoft.com/mssql/server:2017-CU11-ubuntu
-    # image: mcr.microsoft.com/mssql/server:2017-latest
-    restart: always
-    environment:
-      ACCEPT_EULA: "Y"
-      SA_PASSWORD: LvJi7lXq8X8H2SuRx96B
-    ports:
-      - 1433:1433
-    volumes:
-     - mssql-data:/var/opt/mssql
-     - ./mssql/backups:/var/opt/mssql/data/backups
 
   mongo:
     image: mongo

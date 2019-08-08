@@ -15,18 +15,18 @@ class ModalidadTableSeeder extends Seeder
         DB::table('modalidad')->insert([
             [
                 "nombre" => 'Mixta',
-                "created_at" => DB::raw('GETDATE()'),
-                "updated_at" => DB::raw('GETDATE()'),
+                "created_at" => DB::raw('SYSDATE'),
+                "updated_at" => DB::raw('SYSDATE'),
             ],
             [
                 "nombre" => 'Presencial',
-                "created_at" => DB::raw('GETDATE()'),
-                "updated_at" => DB::raw('GETDATE()'),
+                "created_at" => DB::raw('SYSDATE'),
+                "updated_at" => DB::raw('SYSDATE'),
             ],
             [
                 "nombre" => 'Virtual',
-                "created_at" => DB::raw('GETDATE()'),
-                "updated_at" => DB::raw('GETDATE()'),
+                "created_at" => DB::raw('SYSDATE'),
+                "updated_at" => DB::raw('SYSDATE'),
             ],
         ]);
     }

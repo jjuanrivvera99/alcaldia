@@ -16,13 +16,13 @@ class PaisTableSeeder extends Seeder
         DB::table('pais')->insert([
             [
                 'nombre' => "Colombia",
-                'created_at' => DB::raw('GETDATE( )'),
-                'updated_at' => DB::raw('GETDATE( )'),
+                'created_at' => DB::raw('SYSDATE'),
+                'updated_at' => DB::raw('SYSDATE'),
             ],
             [
                 'nombre' => "Venezuela", //Trigueros insistió
-                'created_at' => DB::raw('GETDATE( )'),
-                'updated_at' => DB::raw('GETDATE( )'),
+                'created_at' => DB::raw('SYSDATE'),
+                'updated_at' => DB::raw('SYSDATE'),
             ],
         ]);
     }

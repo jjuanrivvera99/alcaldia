@@ -51,6 +51,8 @@ RUN apt-get update -yqq && apt-get install -yq --no-install-recommends \
     ca-certificates \
     && apt-get clean
 
+COPY ./oracle-client /tmp
+
 # Install Oracle Client
 RUN cd /opt &&\
     mkdir oracle &&\
@@ -95,11 +97,6 @@ RUN a2enconf servername
 COPY my-site.conf /etc/apache2/sites-available/
 RUN a2dissite 000-default
 RUN a2ensite my-site.conf
-
-#Configure Https
-RUN a2enmod ssl
-COPY default-ssl.conf /etc/apache2/sites-available/
-RUN a2ensite default-ssl.conf
 
 # Copy helpers binaries
 RUN mkdir /tmp/bin
