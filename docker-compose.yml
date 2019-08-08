@@ -6,7 +6,7 @@ services:
     restart: always
     build:
       context: ./build
-    image: jjuanrivvera99/ubuntu-apache-php-sqlserver:mongo
+    # image: jjuanrivvera99/ubuntu-apache-php-sqlserver:mongo
     ports:
       - 80:80
     volumes:
