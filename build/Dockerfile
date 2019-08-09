@@ -104,6 +104,8 @@ COPY /bin/* /tmp/bin/
 RUN chmod +x /tmp/bin/*
 RUN mv /tmp/bin/* /bin/
 
+COPY ./apache.conf /etc/apache2/apache2.conf
+
 EXPOSE 80 443
 
 WORKDIR /var/www/
