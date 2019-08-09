@@ -24,8 +24,8 @@ build_app:
     - sudo chmod 777 -R /home/jjuanrivvera99/alcaldia/core/storage/
   script:
     - sudo su - jjuanrivvera99 -c 'git -C /home/jjuanrivvera99/alcaldia checkout .'
-    - sudo su - jjuanrivvera99 -c 'git -C /home/jjuanrivvera99/alcaldia checkout $CI_COMMIT_REF_NAME'
-    - sudo su - jjuanrivvera99 -c 'git -C /home/jjuanrivvera99/alcaldia pull origin $CI_COMMIT_REF_NAME'
+    - sudo su - jjuanrivvera99 -c 'git -C /home/jjuanrivvera99/alcaldia checkout oracle'
+    - sudo su - jjuanrivvera99 -c 'git -C /home/jjuanrivvera99/alcaldia pull origin oracle'
     - sudo su - jjuanrivvera99 -c 'rm /home/jjuanrivvera99/alcaldia/core/.env'
     - sudo su - jjuanrivvera99 -c 'cp /home/jjuanrivvera99/alcaldia/core/.env.example /home/jjuanrivvera99/alcaldia/core/.env'
     - sudo su - jjuanrivvera99 -c 'docker-compose --file /home/jjuanrivvera99/alcaldia/docker-compose.yml pull'
