@@ -1,0 +1,1 @@
+DROP USER alcaldia CASCADE;
