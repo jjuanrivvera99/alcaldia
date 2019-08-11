@@ -19,17 +19,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/prueba', function(){
-
-    config('database.sqlsrv.username', 'usuario1');
-    config('database.sqlsrv.password', 'Pas$word1234');
-
-    // Query Builder
-    $data = \DB::connection('sqlsrv')->table('empresa')->get();
-
-    dd($data);
-})->name('home');
-
 Route::get('/mongo', function(){
     $users = \App\Mongo\User::first();
 
@@ -46,9 +35,3 @@ Route::get('/mongo', function(){
 
     dd($users->telefonos['oficina']);
 });
-
-Route::get('locale/{locale}', function ($locale){
-    Session::put('locale', $locale);
-    return redirect()->back();
-});
-

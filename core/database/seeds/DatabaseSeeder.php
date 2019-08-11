@@ -11,7 +11,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        DB::statement("BEGIN CONSTRAINTS_ON_OFF('alcaldia', 'OFF');END;");
+        DB::statement('EXEC sp_msforeachtable "ALTER TABLE ? NOCHECK CONSTRAINT all"');
 
         $this->call(UsersTableSeeder::class);
         $this->call(TipoIdentificacionTableSeeder::class);
@@ -20,6 +20,6 @@ class DatabaseSeeder extends Seeder
         $this->call(PaisTableSeeder::class);
         $this->call(CiudadTableSeeder::class);
 
-        DB::statement("BEGIN CONSTRAINTS_ON_OFF('alcaldia', 'ON');END;");
+        DB::statement('EXEC sp_msforeachtable "ALTER TABLE ? WITH CHECK CHECK CONSTRAINT all"');
     }
 }

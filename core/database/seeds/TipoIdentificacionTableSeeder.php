@@ -18,26 +18,26 @@ class TipoIdentificacionTableSeeder extends Seeder
             [
                 'nombre' => "C.C",
                 'descripcion' => "Cédula ciudadanía",
-                'created_at' => DB::raw('SYSDATE'),
-                'updated_at' => DB::raw('SYSDATE'),
+                'created_at' => DB::raw('GETDATE( )'),
+                'updated_at' => DB::raw('GETDATE( )'),
             ],
             [
                 'nombre' => "T.I",
                 'descripcion' => "Tarjeta Identidad",
-                'created_at' => DB::raw('SYSDATE'),
-                'updated_at' => DB::raw('SYSDATE'),
+                'created_at' => DB::raw('GETDATE( )'),
+                'updated_at' => DB::raw('GETDATE( )'),
             ],
             [
                 'nombre' => "C.E",
                 'descripcion' => "Cédula Extranjería",
-                'created_at' => DB::raw('SYSDATE'),
-                'updated_at' => DB::raw('SYSDATE'),
+                'created_at' => DB::raw('GETDATE( )'),
+                'updated_at' => DB::raw('GETDATE( )'),
             ],
             [
                 'nombre' => "P.A",
                 'descripcion' => "Pasaporte",
-                'created_at' => DB::raw('SYSDATE'),
-                'updated_at' => DB::raw('SYSDATE'),
+                'created_at' => DB::raw('GETDATE( )'),
+                'updated_at' => DB::raw('GETDATE( )'),
             ],
         ]);
 

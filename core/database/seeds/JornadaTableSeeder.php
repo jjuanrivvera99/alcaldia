@@ -15,23 +15,23 @@ class JornadaTableSeeder extends Seeder
         DB::table('jornada')->insert([
             [
                 "nombre" => 'Diurna',
-                "created_at" => DB::raw('SYSDATE'),
-                "updated_at" => DB::raw('SYSDATE'),
+                "created_at" => DB::raw('GETDATE()'),
+                "updated_at" => DB::raw('GETDATE()'),
             ],
             [
                 "nombre" => 'Nocturna',
-                "created_at" => DB::raw('SYSDATE'),
-                "updated_at" => DB::raw('SYSDATE'),
+                "created_at" => DB::raw('GETDATE()'),
+                "updated_at" => DB::raw('GETDATE()'),
             ],
             [
                 "nombre" => 'Mixto',
-                "created_at" => DB::raw('SYSDATE'),
-                "updated_at" => DB::raw('SYSDATE'),
+                "created_at" => DB::raw('GETDATE()'),
+                "updated_at" => DB::raw('GETDATE()'),
             ],
             [
                 "nombre" => 'Vespertino',
-                "created_at" => DB::raw('SYSDATE'),
-                "updated_at" => DB::raw('SYSDATE'),
+                "created_at" => DB::raw('GETDATE()'),
+                "updated_at" => DB::raw('GETDATE()'),
             ],
         ]);
     }
