@@ -6,7 +6,7 @@ services:
     restart: always
     build:
       context: ./build
-    image: jjuanrivvera99/alcaldia:oracle
+    image: jjuanrivvera99/alcaldia:sql-server
     ports:
       - 80:80
     volumes:
