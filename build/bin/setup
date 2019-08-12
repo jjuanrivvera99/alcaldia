@@ -1,0 +1,6 @@
+#!/bin/sh
+
+composer install --working-dir=/var/www/
+chmod 775 -R /var/www/storage /var/www/bootstrap /var/www/public
+cp /var/www/.env.example /var/www/.env
+sh /bin/fix
