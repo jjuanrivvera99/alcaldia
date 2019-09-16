@@ -95,31 +95,3 @@ GO
 EXEC sp_addsrvrolemember 'jefferson', 'sysadmin';
 
 GRANT CONTROL SERVER TO [jefferson];
-GO
-
--- CREACIÓN DE USUARIO usrcore
-CREATE LOGIN [usrcore] WITH PASSWORD = 'Pas$word1234'
-GO
-
-CREATE USER [usrcore] FOR LOGIN [usrcore]
-GO
-
-GRANT CONNECT TO usrcore;
-GO
-
--- PERMITIR AL USUARIO usrcore SOLO ACCEDER AL ESQUEMA core
-ALTER authorization ON SCHEMA ::core TO usrcore
-GO
-
--- CREACIÓN DE USUARIO usrnocore
-CREATE LOGIN [usrnocore] WITH PASSWORD = 'Pas$word1234'
-GO
-
-CREATE USER [usrnocore] FOR LOGIN [usrnocore]
-GO
-
-GRANT CONNECT TO usrnocore;
-GO
-
--- PERMITIR AL USUARIO usrnocore SOLO ACCEDER AL ESQUEMA usrnocore
-ALTER authorization ON SCHEMA ::nocore TO usrnocore
