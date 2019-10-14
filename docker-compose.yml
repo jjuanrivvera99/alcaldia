@@ -25,6 +25,8 @@ services:
     volumes:
      - mssql-data:/var/opt/mssql
      - ./mssql/backups:/var/opt/mssql/data/backups
+     - ./mssql/certificates:/var/opt/mssql/data/certificates
+     - ./mssql/audits:/var/opt/mssql/data/audits
 
   mongo:
     image: mongo

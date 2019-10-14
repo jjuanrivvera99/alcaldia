@@ -176,7 +176,7 @@ CREATE TABLE core.familia (
     id_familia INT IDENTITY NOT NULL,
     id_barrio INT NOT NULL,
     id_tipo_habitacion INT NOT NULL,
-    nombre VARCHAR(5) NOT NULL,
+    nombre VARCHAR(50) NOT NULL,
     direccion VARCHAR(150) NOT NULL,
     telefono VARCHAR(20) NOT NULL,
     ingreso DECIMAL(15,2) NOT NULL,
@@ -224,7 +224,7 @@ CREATE TABLE core.plantel (
     id_plantel INT IDENTITY NOT NULL,
     id_tipo_plantel INT NOT NULL,
     id_localidad INT NOT NULL,
-    nombre VARCHAR(50) NOT NULL,
+    nombre VARCHAR(500) NOT NULL,
     CONSTRAINT plantel_pk PRIMARY KEY (id_plantel)
 )
 

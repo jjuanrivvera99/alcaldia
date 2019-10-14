@@ -4,7 +4,7 @@ GO
 CREATE SERVER AUDIT [AuditoriaAlcaldia]
 TO FILE 
 (	
-FILEPATH = N'C:\AuditoriaAlcaldia\'
+FILEPATH = N'/var/opt/mssql/data/audits'
 )
 WITH
 (	QUEUE_DELAY = 1000
