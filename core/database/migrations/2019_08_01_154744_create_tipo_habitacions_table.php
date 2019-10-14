@@ -13,7 +13,7 @@ class CreateTipoHabitacionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('tipo_habitacion', function (Blueprint $table) {
+        Schema::create('core.tipo_habitacion', function (Blueprint $table) {
             $table->bigIncrements('id_tipo_habitacion');
             $table->string('nombre', 100);
             $table->timestamps();
@@ -27,6 +27,6 @@ class CreateTipoHabitacionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tipo_habitacion');
+        Schema::dropIfExists('core.tipo_habitacion');
     }
 }

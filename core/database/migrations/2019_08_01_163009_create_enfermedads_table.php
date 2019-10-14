@@ -13,7 +13,7 @@ class CreateEnfermedadsTable extends Migration
      */
     public function up()
     {
-        Schema::create('enfermedad', function (Blueprint $table) {
+        Schema::create('core.enfermedad', function (Blueprint $table) {
             $table->bigIncrements('id_enfermedad');
             $table->string('nombre', 100);
             $table->tinyInteger('estado');
@@ -28,6 +28,6 @@ class CreateEnfermedadsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('enfermedad');
+        Schema::dropIfExists('core.enfermedad');
     }
 }

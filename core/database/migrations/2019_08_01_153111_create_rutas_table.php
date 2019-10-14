@@ -13,7 +13,7 @@ class CreateRutasTable extends Migration
      */
     public function up()
     {
-        Schema::create('ruta', function (Blueprint $table) {
+        Schema::create('core.ruta', function (Blueprint $table) {
             $table->bigIncrements('id_ruta');
             $table->string('descripcion');
             $table->timestamps();
@@ -27,6 +27,6 @@ class CreateRutasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ruta');
+        Schema::dropIfExists('core.ruta');
     }
 }

@@ -13,7 +13,7 @@ class CreateAlcaldesTable extends Migration
      */
     public function up()
     {
-        Schema::create('alcalde', function (Blueprint $table) {
+        Schema::create('nocore.alcalde', function (Blueprint $table) {
             $table->bigIncrements('id_alcalde');
             $table->string('primer_nombre', 100);
             $table->string('segundo_nombre', 100);
@@ -30,6 +30,6 @@ class CreateAlcaldesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('alcalde');
+        Schema::dropIfExists('nocore.alcalde');
     }
 }

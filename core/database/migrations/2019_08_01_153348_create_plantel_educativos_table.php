@@ -13,9 +13,9 @@ class CreatePlantelEducativosTable extends Migration
      */
     public function up()
     {
-        Schema::create('plantel_educativo', function (Blueprint $table) {
+        Schema::create('core.plantel_educativo', function (Blueprint $table) {
             $table->bigIncrements('id_plantel_educativo');
-            $table->string('nombre', 100);
+            $table->string('nombre', 200);
             $table->string('localidad', 200);
             $table->timestamps();
         });
@@ -28,6 +28,6 @@ class CreatePlantelEducativosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('plantel_educativo');
+        Schema::dropIfExists('core.plantel_educativo');
     }
 }

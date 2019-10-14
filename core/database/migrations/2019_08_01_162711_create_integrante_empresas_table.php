@@ -13,7 +13,7 @@ class CreateIntegranteEmpresasTable extends Migration
      */
     public function up()
     {
-        Schema::create('integrante_empresa', function (Blueprint $table) {
+        Schema::create('core.integrante_empresa', function (Blueprint $table) {
             $table->bigIncrements('id_integrante_empresa');
             $table->bigInteger('id_empresa');
             $table->bigInteger('id_cargo');
@@ -23,9 +23,9 @@ class CreateIntegranteEmpresasTable extends Migration
             $table->integer('sueldo');
             $table->timestamps();
 
-            $table->foreign('id_empresa')->references('id_empresa')->on('empresa');
-            $table->foreign('id_cargo')->references('id_cargo')->on('cargo');
-            $table->foreign('id_integrante')->references('id_integrante')->on('integrante');
+            $table->foreign('id_empresa')->references('id_empresa')->on('core.empresa');
+            $table->foreign('id_cargo')->references('id_cargo')->on('core.cargo');
+            $table->foreign('id_integrante')->references('id_integrante')->on('core.integrante');
         });
     }
 
@@ -36,6 +36,6 @@ class CreateIntegranteEmpresasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('integrante_empresa');
+        Schema::dropIfExists('core.integrante_empresa');
     }
 }

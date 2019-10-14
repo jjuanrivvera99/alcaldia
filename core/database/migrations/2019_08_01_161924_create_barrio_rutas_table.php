@@ -13,14 +13,14 @@ class CreateBarrioRutasTable extends Migration
      */
     public function up()
     {
-        Schema::create('barrio_ruta', function (Blueprint $table) {
+        Schema::create('core.barrio_ruta', function (Blueprint $table) {
             $table->bigIncrements('id_barrio_ruta');
             $table->bigInteger('id_barrio');
             $table->bigInteger('id_ruta');
             $table->timestamps();
 
-            $table->foreign('id_barrio')->references('id_barrio')->on('barrio');
-            $table->foreign('id_ruta')->references('id_ruta')->on('ruta');
+            $table->foreign('id_barrio')->references('id_barrio')->on('core.barrio');
+            $table->foreign('id_ruta')->references('id_ruta')->on('core.ruta');
         });
     }
 
@@ -31,6 +31,6 @@ class CreateBarrioRutasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('barrio_ruta');
+        Schema::dropIfExists('core.barrio_ruta');
     }
 }

@@ -13,7 +13,7 @@ class CreatePaisTable extends Migration
      */
     public function up()
     {
-        Schema::create('pais', function (Blueprint $table) {
+        Schema::create('core.pais', function (Blueprint $table) {
             $table->bigIncrements('id_pais');
             $table->string('nombre');
             $table->timestamps();
@@ -27,6 +27,6 @@ class CreatePaisTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pais');
+        Schema::dropIfExists('core.pais');
     }
 }

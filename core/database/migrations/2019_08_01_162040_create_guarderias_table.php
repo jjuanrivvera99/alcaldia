@@ -13,7 +13,7 @@ class CreateGuarderiasTable extends Migration
      */
     public function up()
     {
-        Schema::create('guarderia', function (Blueprint $table) {
+        Schema::create('core.guarderia', function (Blueprint $table) {
             $table->bigIncrements('id_guarderia');
             $table->string('nombre', 100);
             $table->string('localidad', 100);
@@ -28,6 +28,6 @@ class CreateGuarderiasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('guarderia');
+        Schema::dropIfExists('core.guarderia');
     }
 }

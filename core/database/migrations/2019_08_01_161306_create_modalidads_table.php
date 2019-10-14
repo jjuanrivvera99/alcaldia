@@ -13,7 +13,7 @@ class CreateModalidadsTable extends Migration
      */
     public function up()
     {
-        Schema::create('modalidad', function (Blueprint $table) {
+        Schema::create('core.modalidad', function (Blueprint $table) {
             $table->bigIncrements('id_modalidad');
             $table->string('nombre');
             $table->timestamps();
@@ -27,6 +27,6 @@ class CreateModalidadsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('modalidad');
+        Schema::dropIfExists('core.modalidad');
     }
 }

@@ -13,13 +13,13 @@ class CreateAlcaldiasTable extends Migration
      */
     public function up()
     {
-        Schema::create('alcaldia', function (Blueprint $table) {
+        Schema::create('nocore.alcaldia', function (Blueprint $table) {
             $table->bigIncrements('id_alcaldia');
             $table->bigInteger('id_alcalde');
             $table->string('nombre', 100);
             $table->timestamps();
 
-            $table->foreign('id_alcalde')->references('id_alcalde')->on('alcalde');
+            $table->foreign('id_alcalde')->references('id_alcalde')->on('nocore.alcalde');
         });
     }
 
@@ -30,6 +30,6 @@ class CreateAlcaldiasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('alcaldia');
+        Schema::dropIfExists('nocore.alcaldia');
     }
 }

@@ -19,6 +19,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/alcalde/list', 'AlcaldeController@index')->name('alcalde.list');
+Route::get('/alcalde/{id}', 'AlcaldeController@show')->name('alcalde.show')->where('id','[0-9,]+');
+Route::get('/alcalde/create', 'AlcaldeController@store')->name('alcalde.create');
+Route::get('/alcalde/{id}/update', 'AlcaldeController@update')->name('alcalde.update')->where('id','[0-9,]+');
+Route::get('/alcalde/{id}/delete', 'AlcaldeController@destroy')->name('alcalde.delete')->where('id','[0-9,]+');
+
 Route::get('/mongo', function(){
     $users = \App\Mongo\User::first();
 

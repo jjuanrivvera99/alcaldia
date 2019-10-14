@@ -13,7 +13,7 @@ class CreateInfraestructurasTable extends Migration
      */
     public function up()
     {
-        Schema::create('infraestructura', function (Blueprint $table) {
+        Schema::create('nocore.infraestructura', function (Blueprint $table) {
             $table->bigIncrements('id_infraestructura');
             $table->bigInteger('id_area_dependencia');
             $table->bigInteger('id_tipo_infraestructura');
@@ -31,6 +31,6 @@ class CreateInfraestructurasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('infraestructura');
+        Schema::dropIfExists('nocore.infraestructura');
     }
 }

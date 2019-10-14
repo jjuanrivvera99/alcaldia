@@ -256,10 +256,10 @@ CREATE TABLE core.integrante (
     id_familia INT NOT NULL,
     primer_nombre VARCHAR(25) MASKED WITH (FUNCTION = 'partial(2,"XXXXXXX",0)') NOT NULL,
     segundo_nombre VARCHAR(25),
-    primero_apellido VARCHAR(25) MASKED WITH (FUNCTION = 'partial(2,"XXXXXXX",0)') NOT NULL,
-    segundo_apelido VARCHAR(25),
+    primer_apellido VARCHAR(25) MASKED WITH (FUNCTION = 'partial(2,"XXXXXXX",0)') NOT NULL,
+    segundo_apellido VARCHAR(25),
     fecha_nacimiento DATETIME NOT NULL,
-    Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL,
+    email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL,
     CONSTRAINT Integrante_PK PRIMARY KEY (id_integrante)
 )
 

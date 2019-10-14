@@ -13,15 +13,15 @@ class CreatePlantelsTable extends Migration
      */
     public function up()
     {
-        Schema::create('plantel', function (Blueprint $table) {
+        Schema::create('core.plantel', function (Blueprint $table) {
             $table->bigIncrements('id_plantel');
             $table->bigInteger('id_tipo_plantel');
             $table->bigInteger('id_localidad');
             $table->string('nombre', 100);
             $table->timestamps();
 
-            $table->foreign('id_tipo_plantel')->references('id_tipo_plantel')->on('tipo_plantel');
-            $table->foreign('id_localidad')->references('id_localidad')->on('localidad');
+            $table->foreign('id_tipo_plantel')->references('id_tipo_plantel')->on('core.tipo_plantel');
+            $table->foreign('id_localidad')->references('id_localidad')->on('core.localidad');
         });
     }
 
@@ -32,6 +32,6 @@ class CreatePlantelsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('plantel');
+        Schema::dropIfExists('core.plantel');
     }
 }

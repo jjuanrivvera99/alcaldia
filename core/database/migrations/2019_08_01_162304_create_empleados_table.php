@@ -13,7 +13,7 @@ class CreateEmpleadosTable extends Migration
      */
     public function up()
     {
-        Schema::create('empleado', function (Blueprint $table) {
+        Schema::create('nocore.empleado', function (Blueprint $table) {
             $table->bigIncrements('id_empleado');
             $table->bigInteger('id_area_dependencia');
             $table->string('primer_nombre', 100);
@@ -25,7 +25,7 @@ class CreateEmpleadosTable extends Migration
             $table->string('email', 150);
             $table->timestamps();
 
-            $table->foreign('id_area_dependencia')->references('id_area_dependencia')->on('area_dependencia');
+            $table->foreign('id_area_dependencia')->references('id_area_dependencia')->on('nocore.area_dependencia');
         });
     }
 
@@ -36,6 +36,6 @@ class CreateEmpleadosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('empleado');
+        Schema::dropIfExists('nocore.empleado');
     }
 }

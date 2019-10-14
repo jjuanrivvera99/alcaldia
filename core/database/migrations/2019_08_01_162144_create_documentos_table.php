@@ -13,7 +13,7 @@ class CreateDocumentosTable extends Migration
      */
     public function up()
     {
-        Schema::create('documento', function (Blueprint $table) {
+        Schema::create('nocore.documento', function (Blueprint $table) {
             $table->bigIncrements('id_documento');
             $table->bigInteger('id_estado_documento');
             $table->bigInteger('id_dependencia');
@@ -22,8 +22,8 @@ class CreateDocumentosTable extends Migration
             $table->string('ruta');
             $table->timestamps();
 
-            $table->foreign('id_estado_documento')->references('id_estado_documento')->on('estado_documento');
-            $table->foreign('id_dependencia')->references('id_dependencia')->on('dependencia');
+            $table->foreign('id_estado_documento')->references('id_estado_documento')->on('nocore.estado_documento');
+            $table->foreign('id_dependencia')->references('id_dependencia')->on('nocore.dependencia');
         });
     }
 
@@ -34,6 +34,6 @@ class CreateDocumentosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('documento');
+        Schema::dropIfExists('nocore.documento');
     }
 }
