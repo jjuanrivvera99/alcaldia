@@ -85,6 +85,14 @@ Route::group(['prefix' => '/api'], function () {
         Route::post('/{id}/delete', 'TipoIdentificacionController@destroy')->name('tipoid.delete')->where('id','[0-9,]+');
     });
 
+    Route::group(['prefix' => '/tipo-habitacion'], function () {
+        Route::post('/list', 'TipoHabitacionController@index')->name('tipohab.list');
+        Route::post('/{id}', 'TipoHabitacionController@show')->name('tipohab.show')->where('id','[0-9,]+');
+        Route::post('/create', 'TipoHabitacionController@store')->name('tipohab.create');
+        Route::post('/{id}/update', 'TipoHabitacionController@update')->name('tipohab.update')->where('id','[0-9,]+');
+        Route::post('/{id}/delete', 'TipoHabitacionController@destroy')->name('tipohab.delete')->where('id','[0-9,]+');
+    });
+
 });
 
 Route::get('/mongo', function(){
