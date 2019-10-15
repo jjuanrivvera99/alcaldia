@@ -42,6 +42,15 @@ Route::group(['prefix' => '/localidad'], function () {
     Route::post('/{id}/update', 'LocalidadController@update')->name('localidad.update')->where('id','[0-9,]+');
     Route::post('/{id}/delete', 'LocalidadController@destroy')->name('localidad.delete')->where('id','[0-9,]+');
 });
+
+Route::group(['prefix' => '/barrio'], function () {
+    Route::post('/list', 'BarrioController@index')->name('barrio.list');
+    Route::post('/{id}', 'BarrioController@show')->name('barrio.show')->where('id','[0-9,]+');
+    Route::post('/create', 'BarrioController@store')->name('barrio.create');
+    Route::post('/{id}/update', 'BarrioController@update')->name('barrio.update')->where('id','[0-9,]+');
+    Route::post('/{id}/delete', 'BarrioController@destroy')->name('barrio.delete')->where('id','[0-9,]+');
+});
+
 Route::get('/mongo', function(){
     $users = \App\Mongo\User::first();
 
