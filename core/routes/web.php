@@ -19,44 +19,64 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::group(['prefix' => '/alcalde'], function () {
-    Route::post('/list', 'AlcaldeController@index')->name('alcalde.list');
-    Route::post('/{id}', 'AlcaldeController@show')->name('alcalde.show')->where('id','[0-9,]+');
-    Route::post('/create', 'AlcaldeController@store')->name('alcalde.create');
-    Route::post('/{id}/update', 'AlcaldeController@update')->name('alcalde.update')->where('id','[0-9,]+');
-    Route::post('/{id}/delete', 'AlcaldeController@destroy')->name('alcalde.delete')->where('id','[0-9,]+');
-});
+Route::group(['prefix' => '/api'], function () {
 
-Route::group(['prefix' => '/alcaldia'], function () {
-    Route::post('/list', 'AlcaldiaController@index')->name('alcaldia.list');
-    Route::post('/{id}', 'AlcaldiaController@show')->name('alcaldia.show')->where('id','[0-9,]+');
-    Route::post('/create', 'AlcaldiaController@store')->name('alcaldia.create');
-    Route::post('/{id}/update', 'AlcaldiaController@update')->name('alcaldia.update')->where('id','[0-9,]+');
-    Route::post('/{id}/delete', 'AlcaldiaController@destroy')->name('alcaldia.delete')->where('id','[0-9,]+');
-});
+    Route::group(['prefix' => '/alcalde'], function () {
+        Route::post('/list', 'AlcaldeController@index')->name('alcalde.list');
+        Route::post('/{id}', 'AlcaldeController@show')->name('alcalde.show')->where('id','[0-9,]+');
+        Route::post('/create', 'AlcaldeController@store')->name('alcalde.create');
+        Route::post('/{id}/update', 'AlcaldeController@update')->name('alcalde.update')->where('id','[0-9,]+');
+        Route::post('/{id}/delete', 'AlcaldeController@destroy')->name('alcalde.delete')->where('id','[0-9,]+');
+    });
 
-Route::group(['prefix' => '/localidad'], function () {
-    Route::post('/list', 'LocalidadController@index')->name('localidad.list');
-    Route::post('/{id}', 'LocalidadController@show')->name('localidad.show')->where('id','[0-9,]+');
-    Route::post('/create', 'LocalidadController@store')->name('localidad.create');
-    Route::post('/{id}/update', 'LocalidadController@update')->name('localidad.update')->where('id','[0-9,]+');
-    Route::post('/{id}/delete', 'LocalidadController@destroy')->name('localidad.delete')->where('id','[0-9,]+');
-});
+    Route::group(['prefix' => '/alcaldia'], function () {
+        Route::post('/list', 'AlcaldiaController@index')->name('alcaldia.list');
+        Route::post('/{id}', 'AlcaldiaController@show')->name('alcaldia.show')->where('id','[0-9,]+');
+        Route::post('/create', 'AlcaldiaController@store')->name('alcaldia.create');
+        Route::post('/{id}/update', 'AlcaldiaController@update')->name('alcaldia.update')->where('id','[0-9,]+');
+        Route::post('/{id}/delete', 'AlcaldiaController@destroy')->name('alcaldia.delete')->where('id','[0-9,]+');
+    });
 
-Route::group(['prefix' => '/barrio'], function () {
-    Route::post('/list', 'BarrioController@index')->name('barrio.list');
-    Route::post('/{id}', 'BarrioController@show')->name('barrio.show')->where('id','[0-9,]+');
-    Route::post('/create', 'BarrioController@store')->name('barrio.create');
-    Route::post('/{id}/update', 'BarrioController@update')->name('barrio.update')->where('id','[0-9,]+');
-    Route::post('/{id}/delete', 'BarrioController@destroy')->name('barrio.delete')->where('id','[0-9,]+');
-});
+    Route::group(['prefix' => '/localidad'], function () {
+        Route::post('/list', 'LocalidadController@index')->name('localidad.list');
+        Route::post('/{id}', 'LocalidadController@show')->name('localidad.show')->where('id','[0-9,]+');
+        Route::post('/create', 'LocalidadController@store')->name('localidad.create');
+        Route::post('/{id}/update', 'LocalidadController@update')->name('localidad.update')->where('id','[0-9,]+');
+        Route::post('/{id}/delete', 'LocalidadController@destroy')->name('localidad.delete')->where('id','[0-9,]+');
+    });
 
-Route::group(['prefix' => '/ruta'], function () {
-    Route::post('/list', 'RutaController@index')->name('ruta.list');
-    Route::post('/{id}', 'RutaController@show')->name('ruta.show')->where('id','[0-9,]+');
-    Route::post('/create', 'RutaController@store')->name('ruta.create');
-    Route::post('/{id}/update', 'RutaController@update')->name('ruta.update')->where('id','[0-9,]+');
-    Route::post('/{id}/delete', 'RutaController@destroy')->name('ruta.delete')->where('id','[0-9,]+');
+    Route::group(['prefix' => '/barrio'], function () {
+        Route::post('/list', 'BarrioController@index')->name('barrio.list');
+        Route::post('/{id}', 'BarrioController@show')->name('barrio.show')->where('id','[0-9,]+');
+        Route::post('/create', 'BarrioController@store')->name('barrio.create');
+        Route::post('/{id}/update', 'BarrioController@update')->name('barrio.update')->where('id','[0-9,]+');
+        Route::post('/{id}/delete', 'BarrioController@destroy')->name('barrio.delete')->where('id','[0-9,]+');
+    });
+
+    Route::group(['prefix' => '/ruta'], function () {
+        Route::post('/list', 'RutaController@index')->name('ruta.list');
+        Route::post('/{id}', 'RutaController@show')->name('ruta.show')->where('id','[0-9,]+');
+        Route::post('/create', 'RutaController@store')->name('ruta.create');
+        Route::post('/{id}/update', 'RutaController@update')->name('ruta.update')->where('id','[0-9,]+');
+        Route::post('/{id}/delete', 'RutaController@destroy')->name('ruta.delete')->where('id','[0-9,]+');
+    });
+
+    Route::group(['prefix' => '/pais'], function () {
+        Route::post('/list', 'PaisController@index')->name('pais.list');
+        Route::post('/{id}', 'PaisController@show')->name('pais.show')->where('id','[0-9,]+');
+        Route::post('/create', 'PaisController@store')->name('pais.create');
+        Route::post('/{id}/update', 'PaisController@update')->name('pais.update')->where('id','[0-9,]+');
+        Route::post('/{id}/delete', 'PaisController@destroy')->name('pais.delete')->where('id','[0-9,]+');
+    });
+
+    Route::group(['prefix' => '/ciudad'], function () {
+        Route::post('/list', 'CiudadController@index')->name('ciudad.list');
+        Route::post('/{id}', 'CiudadController@show')->name('ciudad.show')->where('id','[0-9,]+');
+        Route::post('/create', 'CiudadController@store')->name('ciudad.create');
+        Route::post('/{id}/update', 'CiudadController@update')->name('ciudad.update')->where('id','[0-9,]+');
+        Route::post('/{id}/delete', 'CiudadController@destroy')->name('ciudad.delete')->where('id','[0-9,]+');
+    });
+
 });
 
 Route::get('/mongo', function(){
