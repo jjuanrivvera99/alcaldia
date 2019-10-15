@@ -93,6 +93,14 @@ Route::group(['prefix' => '/api'], function () {
         Route::post('/{id}/delete', 'TipoHabitacionController@destroy')->name('tipohab.delete')->where('id','[0-9,]+');
     });
 
+    Route::group(['prefix' => '/jornada'], function () {
+        Route::post('/list', 'JornadaController@index')->name('jornada.list');
+        Route::post('/{id}', 'JornadaController@show')->name('jornada.show')->where('id','[0-9,]+');
+        Route::post('/create', 'JornadaController@store')->name('jornada.create');
+        Route::post('/{id}/update', 'JornadaController@update')->name('jornada.update')->where('id','[0-9,]+');
+        Route::post('/{id}/delete', 'JornadaController@destroy')->name('jornada.delete')->where('id','[0-9,]+');
+    });
+
 });
 
 Route::get('/mongo', function(){
