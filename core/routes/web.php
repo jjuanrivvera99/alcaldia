@@ -19,12 +19,21 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/alcalde/list', 'AlcaldeController@index')->name('alcalde.list');
-Route::get('/alcalde/{id}', 'AlcaldeController@show')->name('alcalde.show')->where('id','[0-9,]+');
-Route::get('/alcalde/create', 'AlcaldeController@store')->name('alcalde.create');
-Route::get('/alcalde/{id}/update', 'AlcaldeController@update')->name('alcalde.update')->where('id','[0-9,]+');
-Route::get('/alcalde/{id}/delete', 'AlcaldeController@destroy')->name('alcalde.delete')->where('id','[0-9,]+');
+Route::group(['prefix' => '/alcalde'], function () {
+    Route::get('/list', 'AlcaldeController@index')->name('alcalde.list');
+    Route::get('/{id}', 'AlcaldeController@show')->name('alcalde.show')->where('id','[0-9,]+');
+    Route::get('/create', 'AlcaldeController@store')->name('alcalde.create');
+    Route::get('/{id}/update', 'AlcaldeController@update')->name('alcalde.update')->where('id','[0-9,]+');
+    Route::get('/{id}/delete', 'AlcaldeController@destroy')->name('alcalde.delete')->where('id','[0-9,]+');
+});
 
+Route::group(['prefix' => '/alcaldia'], function () {
+    Route::post('/list', 'AlcaldiaController@index')->name('alcaldia.list');
+    Route::post('/{id}', 'AlcaldiaController@show')->name('alcaldia.show')->where('id','[0-9,]+');
+    Route::post('/create', 'AlcaldiaController@store')->name('alcaldia.create');
+    Route::post('/{id}/update', 'AlcaldiaController@update')->name('alcaldia.update')->where('id','[0-9,]+');
+    Route::post('/{id}/delete', 'AlcaldiaController@destroy')->name('alcaldia.delete')->where('id','[0-9,]+');
+});
 Route::get('/mongo', function(){
     $users = \App\Mongo\User::first();
 
