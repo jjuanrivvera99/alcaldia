@@ -331,7 +331,6 @@ CREATE  NONCLUSTERED INDEX fk_guarderia_integrantes_integrante_idx
 CREATE TABLE core.enfermedad (
     id_enfermedad INT IDENTITY NOT NULL,
     nombre VARCHAR(50) NOT NULL,
-    estado TINYINT,
     CONSTRAINT enfermedad_pk PRIMARY KEY (id_enfermedad)
 )
 
@@ -340,6 +339,7 @@ CREATE TABLE core.enfermedad_integrante (
     id_enfermedad INT NOT NULL,
     id_integrante INT NOT NULL,
     fecha DATETIME,
+    estado TINYINT,
     CONSTRAINT enfermedad_integrante_pk PRIMARY KEY (id_enfermedad_integrante)
 )
 CREATE  NONCLUSTERED INDEX fk_enfermedad_integrante_enfermedad_idx

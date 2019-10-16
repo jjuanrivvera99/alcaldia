@@ -18,6 +18,7 @@ class CreateEnfermedadIntegrantesTable extends Migration
             $table->bigInteger('id_enfermedad');
             $table->bigInteger('id_integrante');
             $table->date('fecha');
+            $table->tinyInteger('estado');
             $table->timestamps();
 
             $table->foreign('id_enfermedad')->references('id_enfermedad')->on('core.enfermedad');
