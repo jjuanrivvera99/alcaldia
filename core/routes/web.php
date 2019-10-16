@@ -101,6 +101,14 @@ Route::group(['prefix' => '/api'], function () {
         Route::post('/{id}/delete', 'JornadaController@destroy')->name('jornada.delete')->where('id','[0-9,]+');
     });
 
+    Route::group(['prefix' => '/dependencia'], function () {
+        Route::post('/list', 'DependenciaController@index')->name('dependencia.list');
+        Route::post('/{id}', 'DependenciaController@show')->name('dependencia.show')->where('id','[0-9,]+');
+        Route::post('/create', 'DependenciaController@store')->name('dependencia.create');
+        Route::post('/{id}/update', 'DependenciaController@update')->name('dependencia.update')->where('id','[0-9,]+');
+        Route::post('/{id}/delete', 'DependenciaController@destroy')->name('dependencia.delete')->where('id','[0-9,]+');
+    });
+
 });
 
 Route::get('/mongo', function(){
