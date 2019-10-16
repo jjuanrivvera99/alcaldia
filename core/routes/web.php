@@ -125,6 +125,14 @@ Route::group(['prefix' => '/api'], function () {
         Route::post('/{id}/delete', 'FamiliaController@destroy')->name('familia.delete')->where('id','[0-9,]+');
     });
 
+    Route::group(['prefix' => '/integrante'], function () {
+        Route::post('/list', 'IntegranteController@index')->name('integrante.list');
+        Route::post('/{id}', 'IntegranteController@show')->name('integrante.show')->where('id','[0-9,]+');
+        Route::post('/create', 'IntegranteController@store')->name('integrante.create');
+        Route::post('/{id}/update', 'IntegranteController@update')->name('integrante.update')->where('id','[0-9,]+');
+        Route::post('/{id}/delete', 'IntegranteController@destroy')->name('integrante.delete')->where('id','[0-9,]+');
+    });
+
 });
 
 Route::get('/mongo', function(){
