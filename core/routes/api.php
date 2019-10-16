@@ -19,7 +19,7 @@ Route::post('signup', 'Api\AuthController@signup');
 Route::group([
     'middleware' => 'auth:api'
 ], function() {
-    
+
     Route::get('logout', 'Api/AuthController@logout');
     Route::get('user', 'Api/AuthController@user');
 
@@ -133,5 +133,13 @@ Route::group([
         Route::post('/create', 'IntegranteController@store')->name('integrante.create');
         Route::post('/{id}/update', 'IntegranteController@update')->name('integrante.update')->where('id','[0-9,]+');
         Route::post('/{id}/delete', 'IntegranteController@destroy')->name('integrante.delete')->where('id','[0-9,]+');
+    });
+
+    Route::group(['prefix' => '/tipo-plantel'], function () {
+        Route::post('/list', 'TipoPlantelController@index')->name('tipo-plantel.list');
+        Route::post('/{id}', 'TipoPlantelController@show')->name('tipo-plantel.show')->where('id','[0-9,]+');
+        Route::post('/create', 'TipoPlantelController@store')->name('tipo-plantel.create');
+        Route::post('/{id}/update', 'TipoPlantelController@update')->name('tipo-plantel.update')->where('id','[0-9,]+');
+        Route::post('/{id}/delete', 'TipoPlantelController@destroy')->name('tipo-plantel.delete')->where('id','[0-9,]+');
     });
 });
