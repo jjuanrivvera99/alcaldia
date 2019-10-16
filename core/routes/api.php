@@ -142,4 +142,12 @@ Route::group([
         Route::post('/{id}/update', 'TipoPlantelController@update')->name('tipo-plantel.update')->where('id','[0-9,]+');
         Route::post('/{id}/delete', 'TipoPlantelController@destroy')->name('tipo-plantel.delete')->where('id','[0-9,]+');
     });
+
+    Route::group(['prefix' => '/plantel'], function () {
+        Route::post('/list', 'PlantelController@index')->name('plantel.list');
+        Route::post('/{id}', 'PlantelController@show')->name('plantel.show')->where('id','[0-9,]+');
+        Route::post('/create', 'PlantelController@store')->name('plantel.create');
+        Route::post('/{id}/update', 'PlantelController@update')->name('plantel.update')->where('id','[0-9,]+');
+        Route::post('/{id}/delete', 'PlantelController@destroy')->name('plantel.delete')->where('id','[0-9,]+');
+    });
 });
