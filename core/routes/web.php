@@ -117,6 +117,14 @@ Route::group(['prefix' => '/api'], function () {
         Route::post('/{id}/delete', 'EnfermedadController@destroy')->name('enfermedad.delete')->where('id','[0-9,]+');
     });
 
+    Route::group(['prefix' => '/familia'], function () {
+        Route::post('/list', 'FamiliaController@index')->name('familia.list');
+        Route::post('/{id}', 'FamiliaController@show')->name('familia.show')->where('id','[0-9,]+');
+        Route::post('/create', 'FamiliaController@store')->name('familia.create');
+        Route::post('/{id}/update', 'FamiliaController@update')->name('familia.update')->where('id','[0-9,]+');
+        Route::post('/{id}/delete', 'FamiliaController@destroy')->name('familia.delete')->where('id','[0-9,]+');
+    });
+
 });
 
 Route::get('/mongo', function(){
