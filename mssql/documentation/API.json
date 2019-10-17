@@ -1,0 +1,782 @@
+{
+	"info": {
+		"_postman_id": "afc532aa-9d3c-478f-a4cc-5dfc58681dc6",
+		"name": "Alcaldia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Alcalde",
+			"item": [
+				{
+					"name": "Listar Alcaldes",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "XSRF-TOKEN",
+								"value": "eyJpdiI6IkxocmtZV2xBbXBiV1cyWDRkd3BVZHc9PSIsInZhbHVlIjoiM2w3UGFSVFRtbllzRkxBNmhRMTd6TnYrMWMxSXVIOVRWeE02MExEbzRGRVpLZkJNdjBEN2pzTFRNXC9WRXF4bnAiLCJtYWMiOiJiOWVhNzZlOGE4M2NlYzlmZjhkYzM3YmE1NTNhZGY5M2U1NGE1YzEwOTc2MzY1YTA1MGNhMGE5ZjZkMTBmMDdmIn0%3D",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost/api/alcalde/list",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"alcalde",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Alcalde",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "XSRF-TOKEN",
+								"value": "eyJpdiI6IkxocmtZV2xBbXBiV1cyWDRkd3BVZHc9PSIsInZhbHVlIjoiM2w3UGFSVFRtbllzRkxBNmhRMTd6TnYrMWMxSXVIOVRWeE02MExEbzRGRVpLZkJNdjBEN2pzTFRNXC9WRXF4bnAiLCJtYWMiOiJiOWVhNzZlOGE4M2NlYzlmZjhkYzM3YmE1NTNhZGY5M2U1NGE1YzEwOTc2MzY1YTA1MGNhMGE5ZjZkMTBmMDdmIn0%3D",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"primer_nombre\":\"Juan\",\n\t\"segundo_nombre\":\"Felipe\",\n\t\"primer_apellido\":\"Rivera\",\n\t\"segundo_apellido\":\"González\"\n}"
+						},
+						"url": {
+							"raw": "localhost/api/alcalde/create",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"alcalde",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Alcalde",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "XSRF-TOKEN",
+								"value": "eyJpdiI6IkxocmtZV2xBbXBiV1cyWDRkd3BVZHc9PSIsInZhbHVlIjoiM2w3UGFSVFRtbllzRkxBNmhRMTd6TnYrMWMxSXVIOVRWeE02MExEbzRGRVpLZkJNdjBEN2pzTFRNXC9WRXF4bnAiLCJtYWMiOiJiOWVhNzZlOGE4M2NlYzlmZjhkYzM3YmE1NTNhZGY5M2U1NGE1YzEwOTc2MzY1YTA1MGNhMGE5ZjZkMTBmMDdmIn0%3D",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"primer_nombre\":\"Juan\",\n\t\"segundo_nombre\":\"David\",\n\t\"primer_apellido\":\"Rivera\",\n\t\"segundo_apellido\":\"González\"\n}"
+						},
+						"url": {
+							"raw": "localhost/api/alcalde/5/update",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"alcalde",
+								"5",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detalle Alcalde",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "XSRF-TOKEN",
+								"value": "eyJpdiI6IkxocmtZV2xBbXBiV1cyWDRkd3BVZHc9PSIsInZhbHVlIjoiM2w3UGFSVFRtbllzRkxBNmhRMTd6TnYrMWMxSXVIOVRWeE02MExEbzRGRVpLZkJNdjBEN2pzTFRNXC9WRXF4bnAiLCJtYWMiOiJiOWVhNzZlOGE4M2NlYzlmZjhkYzM3YmE1NTNhZGY5M2U1NGE1YzEwOTc2MzY1YTA1MGNhMGE5ZjZkMTBmMDdmIn0%3D",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost/api/alcalde/5",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"alcalde",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Alcalde",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "XSRF-TOKEN",
+								"value": "eyJpdiI6IkxocmtZV2xBbXBiV1cyWDRkd3BVZHc9PSIsInZhbHVlIjoiM2w3UGFSVFRtbllzRkxBNmhRMTd6TnYrMWMxSXVIOVRWeE02MExEbzRGRVpLZkJNdjBEN2pzTFRNXC9WRXF4bnAiLCJtYWMiOiJiOWVhNzZlOGE4M2NlYzlmZjhkYzM3YmE1NTNhZGY5M2U1NGE1YzEwOTc2MzY1YTA1MGNhMGE5ZjZkMTBmMDdmIn0%3D",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost/api/alcalde/5/delete",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"alcalde",
+								"5",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Alcaldia",
+			"item": [
+				{
+					"name": "Listar Alcaldias",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "XSRF-TOKEN",
+								"value": "eyJpdiI6IkxocmtZV2xBbXBiV1cyWDRkd3BVZHc9PSIsInZhbHVlIjoiM2w3UGFSVFRtbllzRkxBNmhRMTd6TnYrMWMxSXVIOVRWeE02MExEbzRGRVpLZkJNdjBEN2pzTFRNXC9WRXF4bnAiLCJtYWMiOiJiOWVhNzZlOGE4M2NlYzlmZjhkYzM3YmE1NTNhZGY5M2U1NGE1YzEwOTc2MzY1YTA1MGNhMGE5ZjZkMTBmMDdmIn0%3D",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost/api/alcaldia/list",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"alcaldia",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Alcaldia",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "XSRF-TOKEN",
+								"value": "eyJpdiI6IkxocmtZV2xBbXBiV1cyWDRkd3BVZHc9PSIsInZhbHVlIjoiM2w3UGFSVFRtbllzRkxBNmhRMTd6TnYrMWMxSXVIOVRWeE02MExEbzRGRVpLZkJNdjBEN2pzTFRNXC9WRXF4bnAiLCJtYWMiOiJiOWVhNzZlOGE4M2NlYzlmZjhkYzM3YmE1NTNhZGY5M2U1NGE1YzEwOTc2MzY1YTA1MGNhMGE5ZjZkMTBmMDdmIn0%3D",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id_alcalde\": 1,\n\t\"nombre\": \"Bogotá\"\n}"
+						},
+						"url": {
+							"raw": "localhost/api/alcaldia/create",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"alcaldia",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Alcaldia",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "XSRF-TOKEN",
+								"value": "eyJpdiI6IkxocmtZV2xBbXBiV1cyWDRkd3BVZHc9PSIsInZhbHVlIjoiM2w3UGFSVFRtbllzRkxBNmhRMTd6TnYrMWMxSXVIOVRWeE02MExEbzRGRVpLZkJNdjBEN2pzTFRNXC9WRXF4bnAiLCJtYWMiOiJiOWVhNzZlOGE4M2NlYzlmZjhkYzM3YmE1NTNhZGY5M2U1NGE1YzEwOTc2MzY1YTA1MGNhMGE5ZjZkMTBmMDdmIn0%3D",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id_alcalde\": 1,\n\t\"nombre\": \"Bogotáa\"\n}"
+						},
+						"url": {
+							"raw": "localhost/api/alcaldia/2/update",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"alcaldia",
+								"2",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detalle Alcaldia",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "XSRF-TOKEN",
+								"value": "eyJpdiI6IkxocmtZV2xBbXBiV1cyWDRkd3BVZHc9PSIsInZhbHVlIjoiM2w3UGFSVFRtbllzRkxBNmhRMTd6TnYrMWMxSXVIOVRWeE02MExEbzRGRVpLZkJNdjBEN2pzTFRNXC9WRXF4bnAiLCJtYWMiOiJiOWVhNzZlOGE4M2NlYzlmZjhkYzM3YmE1NTNhZGY5M2U1NGE1YzEwOTc2MzY1YTA1MGNhMGE5ZjZkMTBmMDdmIn0%3D",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost/api/alcaldia/2",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"alcaldia",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Alcaldia",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "XSRF-TOKEN",
+								"value": "eyJpdiI6IkxocmtZV2xBbXBiV1cyWDRkd3BVZHc9PSIsInZhbHVlIjoiM2w3UGFSVFRtbllzRkxBNmhRMTd6TnYrMWMxSXVIOVRWeE02MExEbzRGRVpLZkJNdjBEN2pzTFRNXC9WRXF4bnAiLCJtYWMiOiJiOWVhNzZlOGE4M2NlYzlmZjhkYzM3YmE1NTNhZGY5M2U1NGE1YzEwOTc2MzY1YTA1MGNhMGE5ZjZkMTBmMDdmIn0%3D",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost/api/alcaldia/2/delete",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"alcaldia",
+								"2",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Localidad",
+			"item": [
+				{
+					"name": "Listar Localidades",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "XSRF-TOKEN",
+								"value": "eyJpdiI6IkxocmtZV2xBbXBiV1cyWDRkd3BVZHc9PSIsInZhbHVlIjoiM2w3UGFSVFRtbllzRkxBNmhRMTd6TnYrMWMxSXVIOVRWeE02MExEbzRGRVpLZkJNdjBEN2pzTFRNXC9WRXF4bnAiLCJtYWMiOiJiOWVhNzZlOGE4M2NlYzlmZjhkYzM3YmE1NTNhZGY5M2U1NGE1YzEwOTc2MzY1YTA1MGNhMGE5ZjZkMTBmMDdmIn0%3D",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost/api/localidad/list",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"localidad",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Localidad",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "XSRF-TOKEN",
+								"value": "eyJpdiI6IkxocmtZV2xBbXBiV1cyWDRkd3BVZHc9PSIsInZhbHVlIjoiM2w3UGFSVFRtbllzRkxBNmhRMTd6TnYrMWMxSXVIOVRWeE02MExEbzRGRVpLZkJNdjBEN2pzTFRNXC9WRXF4bnAiLCJtYWMiOiJiOWVhNzZlOGE4M2NlYzlmZjhkYzM3YmE1NTNhZGY5M2U1NGE1YzEwOTc2MzY1YTA1MGNhMGE5ZjZkMTBmMDdmIn0%3D",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id_alcaldia\": 1,\n\t\"nombre\": \"Localidad\"\n}"
+						},
+						"url": {
+							"raw": "localhost/api/localidad/create",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"localidad",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Localidad",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "XSRF-TOKEN",
+								"value": "eyJpdiI6IkxocmtZV2xBbXBiV1cyWDRkd3BVZHc9PSIsInZhbHVlIjoiM2w3UGFSVFRtbllzRkxBNmhRMTd6TnYrMWMxSXVIOVRWeE02MExEbzRGRVpLZkJNdjBEN2pzTFRNXC9WRXF4bnAiLCJtYWMiOiJiOWVhNzZlOGE4M2NlYzlmZjhkYzM3YmE1NTNhZGY5M2U1NGE1YzEwOTc2MzY1YTA1MGNhMGE5ZjZkMTBmMDdmIn0%3D",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id_alcaldia\": 1,\n\t\"nombre\": \"Localidad 1\"\n}"
+						},
+						"url": {
+							"raw": "localhost/api/localidad/6/update",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"localidad",
+								"6",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detalle Localidad",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "XSRF-TOKEN",
+								"value": "eyJpdiI6IkxocmtZV2xBbXBiV1cyWDRkd3BVZHc9PSIsInZhbHVlIjoiM2w3UGFSVFRtbllzRkxBNmhRMTd6TnYrMWMxSXVIOVRWeE02MExEbzRGRVpLZkJNdjBEN2pzTFRNXC9WRXF4bnAiLCJtYWMiOiJiOWVhNzZlOGE4M2NlYzlmZjhkYzM3YmE1NTNhZGY5M2U1NGE1YzEwOTc2MzY1YTA1MGNhMGE5ZjZkMTBmMDdmIn0%3D",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost/api/localidad/6",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"localidad",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Localidad",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "XSRF-TOKEN",
+								"value": "eyJpdiI6IkxocmtZV2xBbXBiV1cyWDRkd3BVZHc9PSIsInZhbHVlIjoiM2w3UGFSVFRtbllzRkxBNmhRMTd6TnYrMWMxSXVIOVRWeE02MExEbzRGRVpLZkJNdjBEN2pzTFRNXC9WRXF4bnAiLCJtYWMiOiJiOWVhNzZlOGE4M2NlYzlmZjhkYzM3YmE1NTNhZGY5M2U1NGE1YzEwOTc2MzY1YTA1MGNhMGE5ZjZkMTBmMDdmIn0%3D",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost/api/localidad/6/delete",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"localidad",
+								"6",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Barrio",
+			"item": [
+				{
+					"name": "Listar Barrios",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkYzA0NTcxYWNlYWVlZDIyODg1YjRlNzhhNWVjYjg5NWYxMTc1NzA2MGZiZmNkZmI3ODNlNDQ0MWEzZGUxY2Q1YTViNjg0YzkzZjQzMzQ0In0.eyJhdWQiOiIxIiwianRpIjoiN2RjMDQ1NzFhY2VhZWVkMjI4ODViNGU3OGE1ZWNiODk1ZjExNzU3MDYwZmJmY2RmYjc4M2U0NDQxYTNkZTFjZDVhNWI2ODRjOTNmNDMzNDQiLCJpYXQiOjE1NzEyNDQ1OTEsIm5iZiI6MTU3MTI0NDU5MSwiZXhwIjoxNjAyODY2OTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NUaomiHeu9XNGCzUEbVzaTW0ZVuBM2CR5VZ7mawCUDE-TMOQQ1Eo7r6BJYYMqIkORJpdoaTRUaPQEtriQ4fVOWYsORz-XyqMVdSoWJxv3VKCEeWsW1J7TLnM_ZPs_2CrmU8ZZ6CRqLYOCGhxu97Xz_45FpNixUPIn3LRq_1Bboe-7CjJA3DqrTNgI9X8PdgHcWIV8WFtWnHBXAtqLrgtFMAXZTHz-q5qSLnXnUUlY9A4vnO9CaOHT0YKD31bfc7YjFEyaCOJzV9YBPHhooxHWagoW8ZB4BvmbcdSKaDcntqPUCZuJcZsrRAkBVFnBbopZ1JGEzlKgYrM8uPhA78TbX_NviEy7DeycvtR0Ke6dFQZzZZZu-V-DgSraRVlZUmuM5n4NdUErpu9edyJ1iXxo55pwT48AoBZREfQq4L5a_IcNo8OIJcK5PqOu1BLuRIkoNQ5h7ZDfzV3vuXIIztMG51f82b-PmLt10MGHpWKU0FN5LmsCnU5jZZ0RxpGkhrvoLCAzxWt4bzE6AKHEM-pnVmiHgXHdGbEwAFBAhRdMPmZUUjckBbamuVGPGBN9RWqTzuP-dGZ8O--rZ-McveUKN5kVV4ocBr-duSDCcVPSgGx6T00Bv4gxsFAzJzvaAEEWbgTRFRqyLPzL2M2eSXY6HJ_MNk5GyZ-gvKcsRvDq3A"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost/api/barrio/list",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"barrio",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Barrio",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkYzA0NTcxYWNlYWVlZDIyODg1YjRlNzhhNWVjYjg5NWYxMTc1NzA2MGZiZmNkZmI3ODNlNDQ0MWEzZGUxY2Q1YTViNjg0YzkzZjQzMzQ0In0.eyJhdWQiOiIxIiwianRpIjoiN2RjMDQ1NzFhY2VhZWVkMjI4ODViNGU3OGE1ZWNiODk1ZjExNzU3MDYwZmJmY2RmYjc4M2U0NDQxYTNkZTFjZDVhNWI2ODRjOTNmNDMzNDQiLCJpYXQiOjE1NzEyNDQ1OTEsIm5iZiI6MTU3MTI0NDU5MSwiZXhwIjoxNjAyODY2OTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NUaomiHeu9XNGCzUEbVzaTW0ZVuBM2CR5VZ7mawCUDE-TMOQQ1Eo7r6BJYYMqIkORJpdoaTRUaPQEtriQ4fVOWYsORz-XyqMVdSoWJxv3VKCEeWsW1J7TLnM_ZPs_2CrmU8ZZ6CRqLYOCGhxu97Xz_45FpNixUPIn3LRq_1Bboe-7CjJA3DqrTNgI9X8PdgHcWIV8WFtWnHBXAtqLrgtFMAXZTHz-q5qSLnXnUUlY9A4vnO9CaOHT0YKD31bfc7YjFEyaCOJzV9YBPHhooxHWagoW8ZB4BvmbcdSKaDcntqPUCZuJcZsrRAkBVFnBbopZ1JGEzlKgYrM8uPhA78TbX_NviEy7DeycvtR0Ke6dFQZzZZZu-V-DgSraRVlZUmuM5n4NdUErpu9edyJ1iXxo55pwT48AoBZREfQq4L5a_IcNo8OIJcK5PqOu1BLuRIkoNQ5h7ZDfzV3vuXIIztMG51f82b-PmLt10MGHpWKU0FN5LmsCnU5jZZ0RxpGkhrvoLCAzxWt4bzE6AKHEM-pnVmiHgXHdGbEwAFBAhRdMPmZUUjckBbamuVGPGBN9RWqTzuP-dGZ8O--rZ-McveUKN5kVV4ocBr-duSDCcVPSgGx6T00Bv4gxsFAzJzvaAEEWbgTRFRqyLPzL2M2eSXY6HJ_MNk5GyZ-gvKcsRvDq3A",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id_localidad\": 1,\n    \"nombre\": \"Barrio 1\",\n    \"area\": \"Urbana\",\n    \"estrato\": 3\n}"
+						},
+						"url": {
+							"raw": "localhost/api/barrio/create",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"barrio",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Barrio",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "XSRF-TOKEN",
+								"type": "text",
+								"value": "eyJpdiI6IkxocmtZV2xBbXBiV1cyWDRkd3BVZHc9PSIsInZhbHVlIjoiM2w3UGFSVFRtbllzRkxBNmhRMTd6TnYrMWMxSXVIOVRWeE02MExEbzRGRVpLZkJNdjBEN2pzTFRNXC9WRXF4bnAiLCJtYWMiOiJiOWVhNzZlOGE4M2NlYzlmZjhkYzM3YmE1NTNhZGY5M2U1NGE1YzEwOTc2MzY1YTA1MGNhMGE5ZjZkMTBmMDdmIn0%3D",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id_localidad\": 1,\n    \"nombre\": \"Barrio 2\",\n    \"area\": \"Urbana\",\n    \"estrato\": 3\n}"
+						},
+						"url": {
+							"raw": "localhost/api/barrio/59/update",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"barrio",
+								"59",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detalle Barrio",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "XSRF-TOKEN",
+								"type": "text",
+								"value": "eyJpdiI6IkxocmtZV2xBbXBiV1cyWDRkd3BVZHc9PSIsInZhbHVlIjoiM2w3UGFSVFRtbllzRkxBNmhRMTd6TnYrMWMxSXVIOVRWeE02MExEbzRGRVpLZkJNdjBEN2pzTFRNXC9WRXF4bnAiLCJtYWMiOiJiOWVhNzZlOGE4M2NlYzlmZjhkYzM3YmE1NTNhZGY5M2U1NGE1YzEwOTc2MzY1YTA1MGNhMGE5ZjZkMTBmMDdmIn0%3D",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost/api/barrio/59",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"barrio",
+								"59"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Barrio",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "XSRF-TOKEN",
+								"type": "text",
+								"value": "eyJpdiI6IkxocmtZV2xBbXBiV1cyWDRkd3BVZHc9PSIsInZhbHVlIjoiM2w3UGFSVFRtbllzRkxBNmhRMTd6TnYrMWMxSXVIOVRWeE02MExEbzRGRVpLZkJNdjBEN2pzTFRNXC9WRXF4bnAiLCJtYWMiOiJiOWVhNzZlOGE4M2NlYzlmZjhkYzM3YmE1NTNhZGY5M2U1NGE1YzEwOTc2MzY1YTA1MGNhMGE5ZjZkMTBmMDdmIn0%3D",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost/api/barrio/59/delete",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"barrio",
+								"59",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"juan.rivera@alegra.com\",\n\t\"password\": \"admin1234\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
