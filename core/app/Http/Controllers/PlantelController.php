@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Plantel;
 use Illuminate\Http\Request;
+use App\Http\Requests\Plantel\CreateFormRequest;
+use App\Http\Requests\Plantel\UpdateFormRequest;
 
 class PlantelController extends Controller
 {
@@ -22,10 +24,10 @@ class PlantelController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\Plantel\CreateFormRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateFormRequest $request)
     {
         $plantel = $request->all();
 
@@ -51,11 +53,11 @@ class PlantelController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\Plantel\UpdateFormRequest  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateFormRequest $request, $id)
     {
         $plantel = Plantel::findOrFail($id)->update($request->all());
 

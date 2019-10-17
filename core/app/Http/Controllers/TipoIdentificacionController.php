@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\TipoIdentificacion;
 use Illuminate\Http\Request;
+use App\Http\Requests\TipoIdentificacion\CreateFormRequest;
+use App\Http\Requests\TipoIdentificacion\UpdateFormRequest;
 
 class TipoIdentificacionController extends Controller
 {
@@ -22,10 +24,10 @@ class TipoIdentificacionController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\TipoIdentificacion\CreateFormRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateFormRequest $request)
     {
         $tipoIdentificacion = $request->all();
 
@@ -51,11 +53,11 @@ class TipoIdentificacionController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\TipoIdentificacion\UpdateFormRequest  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateFormRequest $request, $id)
     {
         $tipoIdentificacion = TipoIdentificacion::findOrFail($id)->update($request->all());
 

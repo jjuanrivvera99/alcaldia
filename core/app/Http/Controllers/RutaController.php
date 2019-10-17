@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Ruta;
 use Illuminate\Http\Request;
+use App\Http\Requests\Ruta\CreateFormRequest;
+use App\Http\Requests\Ruta\UpdateFormRequest;
 
 class RutaController extends Controller
 {
@@ -22,10 +24,10 @@ class RutaController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\Ruta\CreateFormRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateFormRequest $request)
     {
         $ruta = $request->all();
 
@@ -51,11 +53,11 @@ class RutaController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\Ruta\UpdateFormRequest  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateFormRequest $request, $id)
     {
         $ruta = Ruta::findOrFail($id)->update($request->all());
 

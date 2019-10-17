@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Localidad;
 use Illuminate\Http\Request;
+use App\Http\Requests\Localidad\CreateFormRequest;
+use App\Http\Requests\Localidad\UpdateFormRequest;
 
 class LocalidadController extends Controller
 {
@@ -25,7 +27,7 @@ class LocalidadController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateFormRequest $request)
     {
         $localidad = $request->all();
 
@@ -55,7 +57,7 @@ class LocalidadController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateFormRequest $request, $id)
     {
         $localidad = Localidad::findOrFail($id)->update($request->all());
 

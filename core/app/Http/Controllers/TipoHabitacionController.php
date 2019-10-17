@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\TipoHabitacion;
 use Illuminate\Http\Request;
+use App\Http\Requests\TipoHabitacion\CreateFormRequest;
+use App\Http\Requests\TipoHabitacion\UpdateFormRequest;
 
 class TipoHabitacionController extends Controller
 {
@@ -22,10 +24,10 @@ class TipoHabitacionController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\TipoHabitacion\CreateFormRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateFormRequest $request)
     {
         $tipoHabitacion = $request->all();
 
@@ -51,11 +53,11 @@ class TipoHabitacionController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\TipoHabitacion\UpdateFormRequest  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateFormRequest $request, $id)
     {
         $tipoHabitacion = TipoHabitacion::findOrFail($id)->update($request->all());
 

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\TipoPlantel;
 use Illuminate\Http\Request;
+use App\Http\Requests\TipoPlantel\CreateFormRequest;
+use App\Http\Requests\TipoPlantel\UpdateFormRequest;
 
 class TipoPlantelController extends Controller
 {
@@ -22,10 +24,10 @@ class TipoPlantelController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\TipoPlantel\CreateFormRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateFormRequest $request)
     {
         $tipoPlantel = $request->all();
 
@@ -51,11 +53,11 @@ class TipoPlantelController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\TipoPlantel\UpdateFormRequest  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateFormRequest $request, $id)
     {
         $tipoPlantel = TipoPlantel::findOrFail($id)->update($request->all());
 

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Dependencia;
 use Illuminate\Http\Request;
+use App\Http\Requests\Dependencia\CreateFormRequest;
+use App\Http\Requests\Dependencia\UpdateFormRequest;
 
 class DependenciaController extends Controller
 {
@@ -22,10 +24,10 @@ class DependenciaController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\Dependencia\CreateFormRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateFormRequest $request)
     {
         $dependencia = $request->all();
 
@@ -51,11 +53,11 @@ class DependenciaController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\Dependencia\UpdateFormRequest  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateFormRequest $request, $id)
     {
         $dependencia = Dependencia::findOrFail($id)->update($request->all());
 

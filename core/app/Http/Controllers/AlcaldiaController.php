@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Alcaldia;
 use Illuminate\Http\Request;
+use App\Http\Requests\Alcaldia\CreateFormRequest;
+use App\Http\Requests\Alcaldia\UpdateFormRequest;
 
 class AlcaldiaController extends Controller
 {
@@ -22,10 +24,10 @@ class AlcaldiaController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\Alcaldia\CreateFormRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateFormRequest $request)
     {
         $alcaldia = $request->all();
 
@@ -51,11 +53,11 @@ class AlcaldiaController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\Alcaldia\UpdateFormRequest  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateFormRequest $request, $id)
     {
         $alcaldia = Alcaldia::findOrFail($id)->update($request->all());
 

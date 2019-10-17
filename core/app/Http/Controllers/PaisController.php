@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Pais;
 use Illuminate\Http\Request;
+use App\Http\Requests\Pais\CreateFormRequest;
+use App\Http\Requests\Pais\UpdateFormRequest;
 
 class PaisController extends Controller
 {
@@ -22,10 +24,10 @@ class PaisController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\Pais\CreateFormRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateFormRequest $request)
     {
         $pais = $request->all();
 
@@ -51,11 +53,11 @@ class PaisController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\Pais\UpdateFormRequest  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateFormRequest $request, $id)
     {
         $pais = Pais::findOrFail($id)->update($request->all());
 

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Ciudad;
 use Illuminate\Http\Request;
+use App\Http\Requests\Ciudad\CreateFormRequest;
+use App\Http\Requests\Ciudad\UpdateFormRequest;
 
 class CiudadController extends Controller
 {
@@ -22,10 +24,10 @@ class CiudadController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\Ciudad\CreateFormRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateFormRequest $request)
     {
         $ciudad = $request->all();
 
@@ -51,11 +53,11 @@ class CiudadController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\Ciudad\UpdateFormRequest  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateFormRequest $request, $id)
     {
         $ciudad = Ciudad::findOrFail($id)->update($request->all());
 

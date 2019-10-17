@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Jornada;
 use Illuminate\Http\Request;
+use App\Http\Requests\Jornada\CreateFormRequest;
+use App\Http\Requests\Jornada\UpdateFormRequest;
 
 class JornadaController extends Controller
 {
@@ -22,10 +24,10 @@ class JornadaController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\Jornada\CreateFormRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateFormRequest $request)
     {
         $jornada = $request->all();
 
@@ -51,11 +53,11 @@ class JornadaController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\Jornada\UpdateFormRequest  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateFormRequest $request, $id)
     {
         $jornada = Jornada::findOrFail($id)->update($request->all());
 
