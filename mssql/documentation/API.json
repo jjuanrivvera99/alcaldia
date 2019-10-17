@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "afc532aa-9d3c-478f-a4cc-5dfc58681dc6",
+		"_postman_id": "cc6df75b-9200-4562-8be7-1431d520e40e",
 		"name": "Alcaldia",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -11,20 +11,22 @@
 				{
 					"name": "Listar Alcaldes",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkYzA0NTcxYWNlYWVlZDIyODg1YjRlNzhhNWVjYjg5NWYxMTc1NzA2MGZiZmNkZmI3ODNlNDQ0MWEzZGUxY2Q1YTViNjg0YzkzZjQzMzQ0In0.eyJhdWQiOiIxIiwianRpIjoiN2RjMDQ1NzFhY2VhZWVkMjI4ODViNGU3OGE1ZWNiODk1ZjExNzU3MDYwZmJmY2RmYjc4M2U0NDQxYTNkZTFjZDVhNWI2ODRjOTNmNDMzNDQiLCJpYXQiOjE1NzEyNDQ1OTEsIm5iZiI6MTU3MTI0NDU5MSwiZXhwIjoxNjAyODY2OTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NUaomiHeu9XNGCzUEbVzaTW0ZVuBM2CR5VZ7mawCUDE-TMOQQ1Eo7r6BJYYMqIkORJpdoaTRUaPQEtriQ4fVOWYsORz-XyqMVdSoWJxv3VKCEeWsW1J7TLnM_ZPs_2CrmU8ZZ6CRqLYOCGhxu97Xz_45FpNixUPIn3LRq_1Bboe-7CjJA3DqrTNgI9X8PdgHcWIV8WFtWnHBXAtqLrgtFMAXZTHz-q5qSLnXnUUlY9A4vnO9CaOHT0YKD31bfc7YjFEyaCOJzV9YBPHhooxHWagoW8ZB4BvmbcdSKaDcntqPUCZuJcZsrRAkBVFnBbopZ1JGEzlKgYrM8uPhA78TbX_NviEy7DeycvtR0Ke6dFQZzZZZu-V-DgSraRVlZUmuM5n4NdUErpu9edyJ1iXxo55pwT48AoBZREfQq4L5a_IcNo8OIJcK5PqOu1BLuRIkoNQ5h7ZDfzV3vuXIIztMG51f82b-PmLt10MGHpWKU0FN5LmsCnU5jZZ0RxpGkhrvoLCAzxWt4bzE6AKHEM-pnVmiHgXHdGbEwAFBAhRdMPmZUUjckBbamuVGPGBN9RWqTzuP-dGZ8O--rZ-McveUKN5kVV4ocBr-duSDCcVPSgGx6T00Bv4gxsFAzJzvaAEEWbgTRFRqyLPzL2M2eSXY6HJ_MNk5GyZ-gvKcsRvDq3A",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
-								"key": "XSRF-TOKEN",
-								"value": "eyJpdiI6IkxocmtZV2xBbXBiV1cyWDRkd3BVZHc9PSIsInZhbHVlIjoiM2w3UGFSVFRtbllzRkxBNmhRMTd6TnYrMWMxSXVIOVRWeE02MExEbzRGRVpLZkJNdjBEN2pzTFRNXC9WRXF4bnAiLCJtYWMiOiJiOWVhNzZlOGE4M2NlYzlmZjhkYzM3YmE1NTNhZGY5M2U1NGE1YzEwOTc2MzY1YTA1MGNhMGE5ZjZkMTBmMDdmIn0%3D",
-								"type": "text",
-								"disabled": true
-							},
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
+								"key": "Accept",
 								"value": "application/json",
-								"type": "text",
-								"disabled": true
+								"type": "text"
 							}
 						],
 						"body": {
@@ -48,17 +50,26 @@
 				{
 					"name": "Crear Alcalde",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkYzA0NTcxYWNlYWVlZDIyODg1YjRlNzhhNWVjYjg5NWYxMTc1NzA2MGZiZmNkZmI3ODNlNDQ0MWEzZGUxY2Q1YTViNjg0YzkzZjQzMzQ0In0.eyJhdWQiOiIxIiwianRpIjoiN2RjMDQ1NzFhY2VhZWVkMjI4ODViNGU3OGE1ZWNiODk1ZjExNzU3MDYwZmJmY2RmYjc4M2U0NDQxYTNkZTFjZDVhNWI2ODRjOTNmNDMzNDQiLCJpYXQiOjE1NzEyNDQ1OTEsIm5iZiI6MTU3MTI0NDU5MSwiZXhwIjoxNjAyODY2OTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NUaomiHeu9XNGCzUEbVzaTW0ZVuBM2CR5VZ7mawCUDE-TMOQQ1Eo7r6BJYYMqIkORJpdoaTRUaPQEtriQ4fVOWYsORz-XyqMVdSoWJxv3VKCEeWsW1J7TLnM_ZPs_2CrmU8ZZ6CRqLYOCGhxu97Xz_45FpNixUPIn3LRq_1Bboe-7CjJA3DqrTNgI9X8PdgHcWIV8WFtWnHBXAtqLrgtFMAXZTHz-q5qSLnXnUUlY9A4vnO9CaOHT0YKD31bfc7YjFEyaCOJzV9YBPHhooxHWagoW8ZB4BvmbcdSKaDcntqPUCZuJcZsrRAkBVFnBbopZ1JGEzlKgYrM8uPhA78TbX_NviEy7DeycvtR0Ke6dFQZzZZZu-V-DgSraRVlZUmuM5n4NdUErpu9edyJ1iXxo55pwT48AoBZREfQq4L5a_IcNo8OIJcK5PqOu1BLuRIkoNQ5h7ZDfzV3vuXIIztMG51f82b-PmLt10MGHpWKU0FN5LmsCnU5jZZ0RxpGkhrvoLCAzxWt4bzE6AKHEM-pnVmiHgXHdGbEwAFBAhRdMPmZUUjckBbamuVGPGBN9RWqTzuP-dGZ8O--rZ-McveUKN5kVV4ocBr-duSDCcVPSgGx6T00Bv4gxsFAzJzvaAEEWbgTRFRqyLPzL2M2eSXY6HJ_MNk5GyZ-gvKcsRvDq3A",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
-								"key": "XSRF-TOKEN",
-								"value": "eyJpdiI6IkxocmtZV2xBbXBiV1cyWDRkd3BVZHc9PSIsInZhbHVlIjoiM2w3UGFSVFRtbllzRkxBNmhRMTd6TnYrMWMxSXVIOVRWeE02MExEbzRGRVpLZkJNdjBEN2pzTFRNXC9WRXF4bnAiLCJtYWMiOiJiOWVhNzZlOGE4M2NlYzlmZjhkYzM3YmE1NTNhZGY5M2U1NGE1YzEwOTc2MzY1YTA1MGNhMGE5ZjZkMTBmMDdmIn0%3D",
-								"type": "text",
-								"disabled": true
-							},
-							{
 								"key": "Content-Type",
 								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
 								"value": "application/json",
 								"type": "text"
 							}
@@ -84,17 +95,26 @@
 				{
 					"name": "Actualizar Alcalde",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkYzA0NTcxYWNlYWVlZDIyODg1YjRlNzhhNWVjYjg5NWYxMTc1NzA2MGZiZmNkZmI3ODNlNDQ0MWEzZGUxY2Q1YTViNjg0YzkzZjQzMzQ0In0.eyJhdWQiOiIxIiwianRpIjoiN2RjMDQ1NzFhY2VhZWVkMjI4ODViNGU3OGE1ZWNiODk1ZjExNzU3MDYwZmJmY2RmYjc4M2U0NDQxYTNkZTFjZDVhNWI2ODRjOTNmNDMzNDQiLCJpYXQiOjE1NzEyNDQ1OTEsIm5iZiI6MTU3MTI0NDU5MSwiZXhwIjoxNjAyODY2OTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NUaomiHeu9XNGCzUEbVzaTW0ZVuBM2CR5VZ7mawCUDE-TMOQQ1Eo7r6BJYYMqIkORJpdoaTRUaPQEtriQ4fVOWYsORz-XyqMVdSoWJxv3VKCEeWsW1J7TLnM_ZPs_2CrmU8ZZ6CRqLYOCGhxu97Xz_45FpNixUPIn3LRq_1Bboe-7CjJA3DqrTNgI9X8PdgHcWIV8WFtWnHBXAtqLrgtFMAXZTHz-q5qSLnXnUUlY9A4vnO9CaOHT0YKD31bfc7YjFEyaCOJzV9YBPHhooxHWagoW8ZB4BvmbcdSKaDcntqPUCZuJcZsrRAkBVFnBbopZ1JGEzlKgYrM8uPhA78TbX_NviEy7DeycvtR0Ke6dFQZzZZZu-V-DgSraRVlZUmuM5n4NdUErpu9edyJ1iXxo55pwT48AoBZREfQq4L5a_IcNo8OIJcK5PqOu1BLuRIkoNQ5h7ZDfzV3vuXIIztMG51f82b-PmLt10MGHpWKU0FN5LmsCnU5jZZ0RxpGkhrvoLCAzxWt4bzE6AKHEM-pnVmiHgXHdGbEwAFBAhRdMPmZUUjckBbamuVGPGBN9RWqTzuP-dGZ8O--rZ-McveUKN5kVV4ocBr-duSDCcVPSgGx6T00Bv4gxsFAzJzvaAEEWbgTRFRqyLPzL2M2eSXY6HJ_MNk5GyZ-gvKcsRvDq3A",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
-								"key": "XSRF-TOKEN",
-								"value": "eyJpdiI6IkxocmtZV2xBbXBiV1cyWDRkd3BVZHc9PSIsInZhbHVlIjoiM2w3UGFSVFRtbllzRkxBNmhRMTd6TnYrMWMxSXVIOVRWeE02MExEbzRGRVpLZkJNdjBEN2pzTFRNXC9WRXF4bnAiLCJtYWMiOiJiOWVhNzZlOGE4M2NlYzlmZjhkYzM3YmE1NTNhZGY5M2U1NGE1YzEwOTc2MzY1YTA1MGNhMGE5ZjZkMTBmMDdmIn0%3D",
-								"type": "text",
-								"disabled": true
-							},
-							{
 								"key": "Content-Type",
 								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
 								"value": "application/json",
 								"type": "text"
 							}
@@ -104,14 +124,14 @@
 							"raw": "{\n\t\"primer_nombre\":\"Juan\",\n\t\"segundo_nombre\":\"David\",\n\t\"primer_apellido\":\"Rivera\",\n\t\"segundo_apellido\":\"González\"\n}"
 						},
 						"url": {
-							"raw": "localhost/api/alcalde/5/update",
+							"raw": "localhost/api/alcalde/3/update",
 							"host": [
 								"localhost"
 							],
 							"path": [
 								"api",
 								"alcalde",
-								"5",
+								"3",
 								"update"
 							]
 						}
@@ -121,20 +141,27 @@
 				{
 					"name": "Detalle Alcalde",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkYzA0NTcxYWNlYWVlZDIyODg1YjRlNzhhNWVjYjg5NWYxMTc1NzA2MGZiZmNkZmI3ODNlNDQ0MWEzZGUxY2Q1YTViNjg0YzkzZjQzMzQ0In0.eyJhdWQiOiIxIiwianRpIjoiN2RjMDQ1NzFhY2VhZWVkMjI4ODViNGU3OGE1ZWNiODk1ZjExNzU3MDYwZmJmY2RmYjc4M2U0NDQxYTNkZTFjZDVhNWI2ODRjOTNmNDMzNDQiLCJpYXQiOjE1NzEyNDQ1OTEsIm5iZiI6MTU3MTI0NDU5MSwiZXhwIjoxNjAyODY2OTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NUaomiHeu9XNGCzUEbVzaTW0ZVuBM2CR5VZ7mawCUDE-TMOQQ1Eo7r6BJYYMqIkORJpdoaTRUaPQEtriQ4fVOWYsORz-XyqMVdSoWJxv3VKCEeWsW1J7TLnM_ZPs_2CrmU8ZZ6CRqLYOCGhxu97Xz_45FpNixUPIn3LRq_1Bboe-7CjJA3DqrTNgI9X8PdgHcWIV8WFtWnHBXAtqLrgtFMAXZTHz-q5qSLnXnUUlY9A4vnO9CaOHT0YKD31bfc7YjFEyaCOJzV9YBPHhooxHWagoW8ZB4BvmbcdSKaDcntqPUCZuJcZsrRAkBVFnBbopZ1JGEzlKgYrM8uPhA78TbX_NviEy7DeycvtR0Ke6dFQZzZZZu-V-DgSraRVlZUmuM5n4NdUErpu9edyJ1iXxo55pwT48AoBZREfQq4L5a_IcNo8OIJcK5PqOu1BLuRIkoNQ5h7ZDfzV3vuXIIztMG51f82b-PmLt10MGHpWKU0FN5LmsCnU5jZZ0RxpGkhrvoLCAzxWt4bzE6AKHEM-pnVmiHgXHdGbEwAFBAhRdMPmZUUjckBbamuVGPGBN9RWqTzuP-dGZ8O--rZ-McveUKN5kVV4ocBr-duSDCcVPSgGx6T00Bv4gxsFAzJzvaAEEWbgTRFRqyLPzL2M2eSXY6HJ_MNk5GyZ-gvKcsRvDq3A",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
-								"key": "XSRF-TOKEN",
-								"value": "eyJpdiI6IkxocmtZV2xBbXBiV1cyWDRkd3BVZHc9PSIsInZhbHVlIjoiM2w3UGFSVFRtbllzRkxBNmhRMTd6TnYrMWMxSXVIOVRWeE02MExEbzRGRVpLZkJNdjBEN2pzTFRNXC9WRXF4bnAiLCJtYWMiOiJiOWVhNzZlOGE4M2NlYzlmZjhkYzM3YmE1NTNhZGY5M2U1NGE1YzEwOTc2MzY1YTA1MGNhMGE5ZjZkMTBmMDdmIn0%3D",
-								"type": "text",
-								"disabled": true
+								"key": "Accept",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
 							},
 							{
 								"key": "Content-Type",
-								"name": "Content-Type",
-								"value": "application/json",
-								"type": "text",
-								"disabled": true
+								"value": "application/json"
 							}
 						],
 						"body": {
@@ -158,20 +185,27 @@
 				{
 					"name": "Eliminar Alcalde",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkYzA0NTcxYWNlYWVlZDIyODg1YjRlNzhhNWVjYjg5NWYxMTc1NzA2MGZiZmNkZmI3ODNlNDQ0MWEzZGUxY2Q1YTViNjg0YzkzZjQzMzQ0In0.eyJhdWQiOiIxIiwianRpIjoiN2RjMDQ1NzFhY2VhZWVkMjI4ODViNGU3OGE1ZWNiODk1ZjExNzU3MDYwZmJmY2RmYjc4M2U0NDQxYTNkZTFjZDVhNWI2ODRjOTNmNDMzNDQiLCJpYXQiOjE1NzEyNDQ1OTEsIm5iZiI6MTU3MTI0NDU5MSwiZXhwIjoxNjAyODY2OTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NUaomiHeu9XNGCzUEbVzaTW0ZVuBM2CR5VZ7mawCUDE-TMOQQ1Eo7r6BJYYMqIkORJpdoaTRUaPQEtriQ4fVOWYsORz-XyqMVdSoWJxv3VKCEeWsW1J7TLnM_ZPs_2CrmU8ZZ6CRqLYOCGhxu97Xz_45FpNixUPIn3LRq_1Bboe-7CjJA3DqrTNgI9X8PdgHcWIV8WFtWnHBXAtqLrgtFMAXZTHz-q5qSLnXnUUlY9A4vnO9CaOHT0YKD31bfc7YjFEyaCOJzV9YBPHhooxHWagoW8ZB4BvmbcdSKaDcntqPUCZuJcZsrRAkBVFnBbopZ1JGEzlKgYrM8uPhA78TbX_NviEy7DeycvtR0Ke6dFQZzZZZu-V-DgSraRVlZUmuM5n4NdUErpu9edyJ1iXxo55pwT48AoBZREfQq4L5a_IcNo8OIJcK5PqOu1BLuRIkoNQ5h7ZDfzV3vuXIIztMG51f82b-PmLt10MGHpWKU0FN5LmsCnU5jZZ0RxpGkhrvoLCAzxWt4bzE6AKHEM-pnVmiHgXHdGbEwAFBAhRdMPmZUUjckBbamuVGPGBN9RWqTzuP-dGZ8O--rZ-McveUKN5kVV4ocBr-duSDCcVPSgGx6T00Bv4gxsFAzJzvaAEEWbgTRFRqyLPzL2M2eSXY6HJ_MNk5GyZ-gvKcsRvDq3A",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
-								"key": "XSRF-TOKEN",
-								"value": "eyJpdiI6IkxocmtZV2xBbXBiV1cyWDRkd3BVZHc9PSIsInZhbHVlIjoiM2w3UGFSVFRtbllzRkxBNmhRMTd6TnYrMWMxSXVIOVRWeE02MExEbzRGRVpLZkJNdjBEN2pzTFRNXC9WRXF4bnAiLCJtYWMiOiJiOWVhNzZlOGE4M2NlYzlmZjhkYzM3YmE1NTNhZGY5M2U1NGE1YzEwOTc2MzY1YTA1MGNhMGE5ZjZkMTBmMDdmIn0%3D",
-								"type": "text",
-								"disabled": true
+								"key": "Accept",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
 							},
 							{
 								"key": "Content-Type",
-								"name": "Content-Type",
-								"value": "application/json",
-								"type": "text",
-								"disabled": true
+								"value": "application/json"
 							}
 						],
 						"body": {
@@ -188,12 +222,20 @@
 								"alcalde",
 								"5",
 								"delete"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
 							]
 						}
 					},
 					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "Alcaldia",
@@ -201,19 +243,27 @@
 				{
 					"name": "Listar Alcaldias",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkYzA0NTcxYWNlYWVlZDIyODg1YjRlNzhhNWVjYjg5NWYxMTc1NzA2MGZiZmNkZmI3ODNlNDQ0MWEzZGUxY2Q1YTViNjg0YzkzZjQzMzQ0In0.eyJhdWQiOiIxIiwianRpIjoiN2RjMDQ1NzFhY2VhZWVkMjI4ODViNGU3OGE1ZWNiODk1ZjExNzU3MDYwZmJmY2RmYjc4M2U0NDQxYTNkZTFjZDVhNWI2ODRjOTNmNDMzNDQiLCJpYXQiOjE1NzEyNDQ1OTEsIm5iZiI6MTU3MTI0NDU5MSwiZXhwIjoxNjAyODY2OTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NUaomiHeu9XNGCzUEbVzaTW0ZVuBM2CR5VZ7mawCUDE-TMOQQ1Eo7r6BJYYMqIkORJpdoaTRUaPQEtriQ4fVOWYsORz-XyqMVdSoWJxv3VKCEeWsW1J7TLnM_ZPs_2CrmU8ZZ6CRqLYOCGhxu97Xz_45FpNixUPIn3LRq_1Bboe-7CjJA3DqrTNgI9X8PdgHcWIV8WFtWnHBXAtqLrgtFMAXZTHz-q5qSLnXnUUlY9A4vnO9CaOHT0YKD31bfc7YjFEyaCOJzV9YBPHhooxHWagoW8ZB4BvmbcdSKaDcntqPUCZuJcZsrRAkBVFnBbopZ1JGEzlKgYrM8uPhA78TbX_NviEy7DeycvtR0Ke6dFQZzZZZu-V-DgSraRVlZUmuM5n4NdUErpu9edyJ1iXxo55pwT48AoBZREfQq4L5a_IcNo8OIJcK5PqOu1BLuRIkoNQ5h7ZDfzV3vuXIIztMG51f82b-PmLt10MGHpWKU0FN5LmsCnU5jZZ0RxpGkhrvoLCAzxWt4bzE6AKHEM-pnVmiHgXHdGbEwAFBAhRdMPmZUUjckBbamuVGPGBN9RWqTzuP-dGZ8O--rZ-McveUKN5kVV4ocBr-duSDCcVPSgGx6T00Bv4gxsFAzJzvaAEEWbgTRFRqyLPzL2M2eSXY6HJ_MNk5GyZ-gvKcsRvDq3A",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
-								"key": "XSRF-TOKEN",
-								"value": "eyJpdiI6IkxocmtZV2xBbXBiV1cyWDRkd3BVZHc9PSIsInZhbHVlIjoiM2w3UGFSVFRtbllzRkxBNmhRMTd6TnYrMWMxSXVIOVRWeE02MExEbzRGRVpLZkJNdjBEN2pzTFRNXC9WRXF4bnAiLCJtYWMiOiJiOWVhNzZlOGE4M2NlYzlmZjhkYzM3YmE1NTNhZGY5M2U1NGE1YzEwOTc2MzY1YTA1MGNhMGE5ZjZkMTBmMDdmIn0%3D",
-								"type": "text",
-								"disabled": true
-							},
-							{
-								"key": "Content-Type",
+								"key": "Accept",
 								"name": "Content-Type",
 								"value": "application/json",
 								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
 							}
 						],
 						"body": {
@@ -237,13 +287,22 @@
 				{
 					"name": "Crear Alcaldia",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkYzA0NTcxYWNlYWVlZDIyODg1YjRlNzhhNWVjYjg5NWYxMTc1NzA2MGZiZmNkZmI3ODNlNDQ0MWEzZGUxY2Q1YTViNjg0YzkzZjQzMzQ0In0.eyJhdWQiOiIxIiwianRpIjoiN2RjMDQ1NzFhY2VhZWVkMjI4ODViNGU3OGE1ZWNiODk1ZjExNzU3MDYwZmJmY2RmYjc4M2U0NDQxYTNkZTFjZDVhNWI2ODRjOTNmNDMzNDQiLCJpYXQiOjE1NzEyNDQ1OTEsIm5iZiI6MTU3MTI0NDU5MSwiZXhwIjoxNjAyODY2OTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NUaomiHeu9XNGCzUEbVzaTW0ZVuBM2CR5VZ7mawCUDE-TMOQQ1Eo7r6BJYYMqIkORJpdoaTRUaPQEtriQ4fVOWYsORz-XyqMVdSoWJxv3VKCEeWsW1J7TLnM_ZPs_2CrmU8ZZ6CRqLYOCGhxu97Xz_45FpNixUPIn3LRq_1Bboe-7CjJA3DqrTNgI9X8PdgHcWIV8WFtWnHBXAtqLrgtFMAXZTHz-q5qSLnXnUUlY9A4vnO9CaOHT0YKD31bfc7YjFEyaCOJzV9YBPHhooxHWagoW8ZB4BvmbcdSKaDcntqPUCZuJcZsrRAkBVFnBbopZ1JGEzlKgYrM8uPhA78TbX_NviEy7DeycvtR0Ke6dFQZzZZZu-V-DgSraRVlZUmuM5n4NdUErpu9edyJ1iXxo55pwT48AoBZREfQq4L5a_IcNo8OIJcK5PqOu1BLuRIkoNQ5h7ZDfzV3vuXIIztMG51f82b-PmLt10MGHpWKU0FN5LmsCnU5jZZ0RxpGkhrvoLCAzxWt4bzE6AKHEM-pnVmiHgXHdGbEwAFBAhRdMPmZUUjckBbamuVGPGBN9RWqTzuP-dGZ8O--rZ-McveUKN5kVV4ocBr-duSDCcVPSgGx6T00Bv4gxsFAzJzvaAEEWbgTRFRqyLPzL2M2eSXY6HJ_MNk5GyZ-gvKcsRvDq3A",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
-								"key": "XSRF-TOKEN",
-								"value": "eyJpdiI6IkxocmtZV2xBbXBiV1cyWDRkd3BVZHc9PSIsInZhbHVlIjoiM2w3UGFSVFRtbllzRkxBNmhRMTd6TnYrMWMxSXVIOVRWeE02MExEbzRGRVpLZkJNdjBEN2pzTFRNXC9WRXF4bnAiLCJtYWMiOiJiOWVhNzZlOGE4M2NlYzlmZjhkYzM3YmE1NTNhZGY5M2U1NGE1YzEwOTc2MzY1YTA1MGNhMGE5ZjZkMTBmMDdmIn0%3D",
-								"type": "text",
-								"disabled": true
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
 							},
 							{
 								"key": "Content-Type",
@@ -273,13 +332,22 @@
 				{
 					"name": "Actualizar Alcaldia",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkYzA0NTcxYWNlYWVlZDIyODg1YjRlNzhhNWVjYjg5NWYxMTc1NzA2MGZiZmNkZmI3ODNlNDQ0MWEzZGUxY2Q1YTViNjg0YzkzZjQzMzQ0In0.eyJhdWQiOiIxIiwianRpIjoiN2RjMDQ1NzFhY2VhZWVkMjI4ODViNGU3OGE1ZWNiODk1ZjExNzU3MDYwZmJmY2RmYjc4M2U0NDQxYTNkZTFjZDVhNWI2ODRjOTNmNDMzNDQiLCJpYXQiOjE1NzEyNDQ1OTEsIm5iZiI6MTU3MTI0NDU5MSwiZXhwIjoxNjAyODY2OTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NUaomiHeu9XNGCzUEbVzaTW0ZVuBM2CR5VZ7mawCUDE-TMOQQ1Eo7r6BJYYMqIkORJpdoaTRUaPQEtriQ4fVOWYsORz-XyqMVdSoWJxv3VKCEeWsW1J7TLnM_ZPs_2CrmU8ZZ6CRqLYOCGhxu97Xz_45FpNixUPIn3LRq_1Bboe-7CjJA3DqrTNgI9X8PdgHcWIV8WFtWnHBXAtqLrgtFMAXZTHz-q5qSLnXnUUlY9A4vnO9CaOHT0YKD31bfc7YjFEyaCOJzV9YBPHhooxHWagoW8ZB4BvmbcdSKaDcntqPUCZuJcZsrRAkBVFnBbopZ1JGEzlKgYrM8uPhA78TbX_NviEy7DeycvtR0Ke6dFQZzZZZu-V-DgSraRVlZUmuM5n4NdUErpu9edyJ1iXxo55pwT48AoBZREfQq4L5a_IcNo8OIJcK5PqOu1BLuRIkoNQ5h7ZDfzV3vuXIIztMG51f82b-PmLt10MGHpWKU0FN5LmsCnU5jZZ0RxpGkhrvoLCAzxWt4bzE6AKHEM-pnVmiHgXHdGbEwAFBAhRdMPmZUUjckBbamuVGPGBN9RWqTzuP-dGZ8O--rZ-McveUKN5kVV4ocBr-duSDCcVPSgGx6T00Bv4gxsFAzJzvaAEEWbgTRFRqyLPzL2M2eSXY6HJ_MNk5GyZ-gvKcsRvDq3A",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
-								"key": "XSRF-TOKEN",
-								"value": "eyJpdiI6IkxocmtZV2xBbXBiV1cyWDRkd3BVZHc9PSIsInZhbHVlIjoiM2w3UGFSVFRtbllzRkxBNmhRMTd6TnYrMWMxSXVIOVRWeE02MExEbzRGRVpLZkJNdjBEN2pzTFRNXC9WRXF4bnAiLCJtYWMiOiJiOWVhNzZlOGE4M2NlYzlmZjhkYzM3YmE1NTNhZGY5M2U1NGE1YzEwOTc2MzY1YTA1MGNhMGE5ZjZkMTBmMDdmIn0%3D",
-								"type": "text",
-								"disabled": true
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
 							},
 							{
 								"key": "Content-Type",
@@ -310,17 +378,20 @@
 				{
 					"name": "Detalle Alcaldia",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkYzA0NTcxYWNlYWVlZDIyODg1YjRlNzhhNWVjYjg5NWYxMTc1NzA2MGZiZmNkZmI3ODNlNDQ0MWEzZGUxY2Q1YTViNjg0YzkzZjQzMzQ0In0.eyJhdWQiOiIxIiwianRpIjoiN2RjMDQ1NzFhY2VhZWVkMjI4ODViNGU3OGE1ZWNiODk1ZjExNzU3MDYwZmJmY2RmYjc4M2U0NDQxYTNkZTFjZDVhNWI2ODRjOTNmNDMzNDQiLCJpYXQiOjE1NzEyNDQ1OTEsIm5iZiI6MTU3MTI0NDU5MSwiZXhwIjoxNjAyODY2OTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NUaomiHeu9XNGCzUEbVzaTW0ZVuBM2CR5VZ7mawCUDE-TMOQQ1Eo7r6BJYYMqIkORJpdoaTRUaPQEtriQ4fVOWYsORz-XyqMVdSoWJxv3VKCEeWsW1J7TLnM_ZPs_2CrmU8ZZ6CRqLYOCGhxu97Xz_45FpNixUPIn3LRq_1Bboe-7CjJA3DqrTNgI9X8PdgHcWIV8WFtWnHBXAtqLrgtFMAXZTHz-q5qSLnXnUUlY9A4vnO9CaOHT0YKD31bfc7YjFEyaCOJzV9YBPHhooxHWagoW8ZB4BvmbcdSKaDcntqPUCZuJcZsrRAkBVFnBbopZ1JGEzlKgYrM8uPhA78TbX_NviEy7DeycvtR0Ke6dFQZzZZZu-V-DgSraRVlZUmuM5n4NdUErpu9edyJ1iXxo55pwT48AoBZREfQq4L5a_IcNo8OIJcK5PqOu1BLuRIkoNQ5h7ZDfzV3vuXIIztMG51f82b-PmLt10MGHpWKU0FN5LmsCnU5jZZ0RxpGkhrvoLCAzxWt4bzE6AKHEM-pnVmiHgXHdGbEwAFBAhRdMPmZUUjckBbamuVGPGBN9RWqTzuP-dGZ8O--rZ-McveUKN5kVV4ocBr-duSDCcVPSgGx6T00Bv4gxsFAzJzvaAEEWbgTRFRqyLPzL2M2eSXY6HJ_MNk5GyZ-gvKcsRvDq3A",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
-								"key": "XSRF-TOKEN",
-								"value": "eyJpdiI6IkxocmtZV2xBbXBiV1cyWDRkd3BVZHc9PSIsInZhbHVlIjoiM2w3UGFSVFRtbllzRkxBNmhRMTd6TnYrMWMxSXVIOVRWeE02MExEbzRGRVpLZkJNdjBEN2pzTFRNXC9WRXF4bnAiLCJtYWMiOiJiOWVhNzZlOGE4M2NlYzlmZjhkYzM3YmE1NTNhZGY5M2U1NGE1YzEwOTc2MzY1YTA1MGNhMGE5ZjZkMTBmMDdmIn0%3D",
-								"type": "text",
-								"disabled": true
-							},
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
+								"key": "Accept",
 								"value": "application/json",
 								"type": "text"
 							}
@@ -346,17 +417,20 @@
 				{
 					"name": "Eliminar Alcaldia",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkYzA0NTcxYWNlYWVlZDIyODg1YjRlNzhhNWVjYjg5NWYxMTc1NzA2MGZiZmNkZmI3ODNlNDQ0MWEzZGUxY2Q1YTViNjg0YzkzZjQzMzQ0In0.eyJhdWQiOiIxIiwianRpIjoiN2RjMDQ1NzFhY2VhZWVkMjI4ODViNGU3OGE1ZWNiODk1ZjExNzU3MDYwZmJmY2RmYjc4M2U0NDQxYTNkZTFjZDVhNWI2ODRjOTNmNDMzNDQiLCJpYXQiOjE1NzEyNDQ1OTEsIm5iZiI6MTU3MTI0NDU5MSwiZXhwIjoxNjAyODY2OTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NUaomiHeu9XNGCzUEbVzaTW0ZVuBM2CR5VZ7mawCUDE-TMOQQ1Eo7r6BJYYMqIkORJpdoaTRUaPQEtriQ4fVOWYsORz-XyqMVdSoWJxv3VKCEeWsW1J7TLnM_ZPs_2CrmU8ZZ6CRqLYOCGhxu97Xz_45FpNixUPIn3LRq_1Bboe-7CjJA3DqrTNgI9X8PdgHcWIV8WFtWnHBXAtqLrgtFMAXZTHz-q5qSLnXnUUlY9A4vnO9CaOHT0YKD31bfc7YjFEyaCOJzV9YBPHhooxHWagoW8ZB4BvmbcdSKaDcntqPUCZuJcZsrRAkBVFnBbopZ1JGEzlKgYrM8uPhA78TbX_NviEy7DeycvtR0Ke6dFQZzZZZu-V-DgSraRVlZUmuM5n4NdUErpu9edyJ1iXxo55pwT48AoBZREfQq4L5a_IcNo8OIJcK5PqOu1BLuRIkoNQ5h7ZDfzV3vuXIIztMG51f82b-PmLt10MGHpWKU0FN5LmsCnU5jZZ0RxpGkhrvoLCAzxWt4bzE6AKHEM-pnVmiHgXHdGbEwAFBAhRdMPmZUUjckBbamuVGPGBN9RWqTzuP-dGZ8O--rZ-McveUKN5kVV4ocBr-duSDCcVPSgGx6T00Bv4gxsFAzJzvaAEEWbgTRFRqyLPzL2M2eSXY6HJ_MNk5GyZ-gvKcsRvDq3A",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
-								"key": "XSRF-TOKEN",
-								"value": "eyJpdiI6IkxocmtZV2xBbXBiV1cyWDRkd3BVZHc9PSIsInZhbHVlIjoiM2w3UGFSVFRtbllzRkxBNmhRMTd6TnYrMWMxSXVIOVRWeE02MExEbzRGRVpLZkJNdjBEN2pzTFRNXC9WRXF4bnAiLCJtYWMiOiJiOWVhNzZlOGE4M2NlYzlmZjhkYzM3YmE1NTNhZGY5M2U1NGE1YzEwOTc2MzY1YTA1MGNhMGE5ZjZkMTBmMDdmIn0%3D",
-								"type": "text",
-								"disabled": true
-							},
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
+								"key": "Accept",
 								"value": "application/json",
 								"type": "text"
 							}
@@ -380,7 +454,8 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "Localidad",
@@ -388,19 +463,27 @@
 				{
 					"name": "Listar Localidades",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkYzA0NTcxYWNlYWVlZDIyODg1YjRlNzhhNWVjYjg5NWYxMTc1NzA2MGZiZmNkZmI3ODNlNDQ0MWEzZGUxY2Q1YTViNjg0YzkzZjQzMzQ0In0.eyJhdWQiOiIxIiwianRpIjoiN2RjMDQ1NzFhY2VhZWVkMjI4ODViNGU3OGE1ZWNiODk1ZjExNzU3MDYwZmJmY2RmYjc4M2U0NDQxYTNkZTFjZDVhNWI2ODRjOTNmNDMzNDQiLCJpYXQiOjE1NzEyNDQ1OTEsIm5iZiI6MTU3MTI0NDU5MSwiZXhwIjoxNjAyODY2OTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NUaomiHeu9XNGCzUEbVzaTW0ZVuBM2CR5VZ7mawCUDE-TMOQQ1Eo7r6BJYYMqIkORJpdoaTRUaPQEtriQ4fVOWYsORz-XyqMVdSoWJxv3VKCEeWsW1J7TLnM_ZPs_2CrmU8ZZ6CRqLYOCGhxu97Xz_45FpNixUPIn3LRq_1Bboe-7CjJA3DqrTNgI9X8PdgHcWIV8WFtWnHBXAtqLrgtFMAXZTHz-q5qSLnXnUUlY9A4vnO9CaOHT0YKD31bfc7YjFEyaCOJzV9YBPHhooxHWagoW8ZB4BvmbcdSKaDcntqPUCZuJcZsrRAkBVFnBbopZ1JGEzlKgYrM8uPhA78TbX_NviEy7DeycvtR0Ke6dFQZzZZZu-V-DgSraRVlZUmuM5n4NdUErpu9edyJ1iXxo55pwT48AoBZREfQq4L5a_IcNo8OIJcK5PqOu1BLuRIkoNQ5h7ZDfzV3vuXIIztMG51f82b-PmLt10MGHpWKU0FN5LmsCnU5jZZ0RxpGkhrvoLCAzxWt4bzE6AKHEM-pnVmiHgXHdGbEwAFBAhRdMPmZUUjckBbamuVGPGBN9RWqTzuP-dGZ8O--rZ-McveUKN5kVV4ocBr-duSDCcVPSgGx6T00Bv4gxsFAzJzvaAEEWbgTRFRqyLPzL2M2eSXY6HJ_MNk5GyZ-gvKcsRvDq3A",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
-								"key": "XSRF-TOKEN",
-								"value": "eyJpdiI6IkxocmtZV2xBbXBiV1cyWDRkd3BVZHc9PSIsInZhbHVlIjoiM2w3UGFSVFRtbllzRkxBNmhRMTd6TnYrMWMxSXVIOVRWeE02MExEbzRGRVpLZkJNdjBEN2pzTFRNXC9WRXF4bnAiLCJtYWMiOiJiOWVhNzZlOGE4M2NlYzlmZjhkYzM3YmE1NTNhZGY5M2U1NGE1YzEwOTc2MzY1YTA1MGNhMGE5ZjZkMTBmMDdmIn0%3D",
-								"type": "text",
-								"disabled": true
-							},
-							{
-								"key": "Content-Type",
+								"key": "Accept",
 								"name": "Content-Type",
 								"value": "application/json",
 								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
 							}
 						],
 						"body": {
@@ -424,13 +507,22 @@
 				{
 					"name": "Crear Localidad",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkYzA0NTcxYWNlYWVlZDIyODg1YjRlNzhhNWVjYjg5NWYxMTc1NzA2MGZiZmNkZmI3ODNlNDQ0MWEzZGUxY2Q1YTViNjg0YzkzZjQzMzQ0In0.eyJhdWQiOiIxIiwianRpIjoiN2RjMDQ1NzFhY2VhZWVkMjI4ODViNGU3OGE1ZWNiODk1ZjExNzU3MDYwZmJmY2RmYjc4M2U0NDQxYTNkZTFjZDVhNWI2ODRjOTNmNDMzNDQiLCJpYXQiOjE1NzEyNDQ1OTEsIm5iZiI6MTU3MTI0NDU5MSwiZXhwIjoxNjAyODY2OTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NUaomiHeu9XNGCzUEbVzaTW0ZVuBM2CR5VZ7mawCUDE-TMOQQ1Eo7r6BJYYMqIkORJpdoaTRUaPQEtriQ4fVOWYsORz-XyqMVdSoWJxv3VKCEeWsW1J7TLnM_ZPs_2CrmU8ZZ6CRqLYOCGhxu97Xz_45FpNixUPIn3LRq_1Bboe-7CjJA3DqrTNgI9X8PdgHcWIV8WFtWnHBXAtqLrgtFMAXZTHz-q5qSLnXnUUlY9A4vnO9CaOHT0YKD31bfc7YjFEyaCOJzV9YBPHhooxHWagoW8ZB4BvmbcdSKaDcntqPUCZuJcZsrRAkBVFnBbopZ1JGEzlKgYrM8uPhA78TbX_NviEy7DeycvtR0Ke6dFQZzZZZu-V-DgSraRVlZUmuM5n4NdUErpu9edyJ1iXxo55pwT48AoBZREfQq4L5a_IcNo8OIJcK5PqOu1BLuRIkoNQ5h7ZDfzV3vuXIIztMG51f82b-PmLt10MGHpWKU0FN5LmsCnU5jZZ0RxpGkhrvoLCAzxWt4bzE6AKHEM-pnVmiHgXHdGbEwAFBAhRdMPmZUUjckBbamuVGPGBN9RWqTzuP-dGZ8O--rZ-McveUKN5kVV4ocBr-duSDCcVPSgGx6T00Bv4gxsFAzJzvaAEEWbgTRFRqyLPzL2M2eSXY6HJ_MNk5GyZ-gvKcsRvDq3A",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
-								"key": "XSRF-TOKEN",
-								"value": "eyJpdiI6IkxocmtZV2xBbXBiV1cyWDRkd3BVZHc9PSIsInZhbHVlIjoiM2w3UGFSVFRtbllzRkxBNmhRMTd6TnYrMWMxSXVIOVRWeE02MExEbzRGRVpLZkJNdjBEN2pzTFRNXC9WRXF4bnAiLCJtYWMiOiJiOWVhNzZlOGE4M2NlYzlmZjhkYzM3YmE1NTNhZGY5M2U1NGE1YzEwOTc2MzY1YTA1MGNhMGE5ZjZkMTBmMDdmIn0%3D",
-								"type": "text",
-								"disabled": true
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
 							},
 							{
 								"key": "Content-Type",
@@ -460,13 +552,22 @@
 				{
 					"name": "Actualizar Localidad",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkYzA0NTcxYWNlYWVlZDIyODg1YjRlNzhhNWVjYjg5NWYxMTc1NzA2MGZiZmNkZmI3ODNlNDQ0MWEzZGUxY2Q1YTViNjg0YzkzZjQzMzQ0In0.eyJhdWQiOiIxIiwianRpIjoiN2RjMDQ1NzFhY2VhZWVkMjI4ODViNGU3OGE1ZWNiODk1ZjExNzU3MDYwZmJmY2RmYjc4M2U0NDQxYTNkZTFjZDVhNWI2ODRjOTNmNDMzNDQiLCJpYXQiOjE1NzEyNDQ1OTEsIm5iZiI6MTU3MTI0NDU5MSwiZXhwIjoxNjAyODY2OTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NUaomiHeu9XNGCzUEbVzaTW0ZVuBM2CR5VZ7mawCUDE-TMOQQ1Eo7r6BJYYMqIkORJpdoaTRUaPQEtriQ4fVOWYsORz-XyqMVdSoWJxv3VKCEeWsW1J7TLnM_ZPs_2CrmU8ZZ6CRqLYOCGhxu97Xz_45FpNixUPIn3LRq_1Bboe-7CjJA3DqrTNgI9X8PdgHcWIV8WFtWnHBXAtqLrgtFMAXZTHz-q5qSLnXnUUlY9A4vnO9CaOHT0YKD31bfc7YjFEyaCOJzV9YBPHhooxHWagoW8ZB4BvmbcdSKaDcntqPUCZuJcZsrRAkBVFnBbopZ1JGEzlKgYrM8uPhA78TbX_NviEy7DeycvtR0Ke6dFQZzZZZu-V-DgSraRVlZUmuM5n4NdUErpu9edyJ1iXxo55pwT48AoBZREfQq4L5a_IcNo8OIJcK5PqOu1BLuRIkoNQ5h7ZDfzV3vuXIIztMG51f82b-PmLt10MGHpWKU0FN5LmsCnU5jZZ0RxpGkhrvoLCAzxWt4bzE6AKHEM-pnVmiHgXHdGbEwAFBAhRdMPmZUUjckBbamuVGPGBN9RWqTzuP-dGZ8O--rZ-McveUKN5kVV4ocBr-duSDCcVPSgGx6T00Bv4gxsFAzJzvaAEEWbgTRFRqyLPzL2M2eSXY6HJ_MNk5GyZ-gvKcsRvDq3A",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
-								"key": "XSRF-TOKEN",
-								"value": "eyJpdiI6IkxocmtZV2xBbXBiV1cyWDRkd3BVZHc9PSIsInZhbHVlIjoiM2w3UGFSVFRtbllzRkxBNmhRMTd6TnYrMWMxSXVIOVRWeE02MExEbzRGRVpLZkJNdjBEN2pzTFRNXC9WRXF4bnAiLCJtYWMiOiJiOWVhNzZlOGE4M2NlYzlmZjhkYzM3YmE1NTNhZGY5M2U1NGE1YzEwOTc2MzY1YTA1MGNhMGE5ZjZkMTBmMDdmIn0%3D",
-								"type": "text",
-								"disabled": true
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
 							},
 							{
 								"key": "Content-Type",
@@ -497,19 +598,27 @@
 				{
 					"name": "Detalle Localidad",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkYzA0NTcxYWNlYWVlZDIyODg1YjRlNzhhNWVjYjg5NWYxMTc1NzA2MGZiZmNkZmI3ODNlNDQ0MWEzZGUxY2Q1YTViNjg0YzkzZjQzMzQ0In0.eyJhdWQiOiIxIiwianRpIjoiN2RjMDQ1NzFhY2VhZWVkMjI4ODViNGU3OGE1ZWNiODk1ZjExNzU3MDYwZmJmY2RmYjc4M2U0NDQxYTNkZTFjZDVhNWI2ODRjOTNmNDMzNDQiLCJpYXQiOjE1NzEyNDQ1OTEsIm5iZiI6MTU3MTI0NDU5MSwiZXhwIjoxNjAyODY2OTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NUaomiHeu9XNGCzUEbVzaTW0ZVuBM2CR5VZ7mawCUDE-TMOQQ1Eo7r6BJYYMqIkORJpdoaTRUaPQEtriQ4fVOWYsORz-XyqMVdSoWJxv3VKCEeWsW1J7TLnM_ZPs_2CrmU8ZZ6CRqLYOCGhxu97Xz_45FpNixUPIn3LRq_1Bboe-7CjJA3DqrTNgI9X8PdgHcWIV8WFtWnHBXAtqLrgtFMAXZTHz-q5qSLnXnUUlY9A4vnO9CaOHT0YKD31bfc7YjFEyaCOJzV9YBPHhooxHWagoW8ZB4BvmbcdSKaDcntqPUCZuJcZsrRAkBVFnBbopZ1JGEzlKgYrM8uPhA78TbX_NviEy7DeycvtR0Ke6dFQZzZZZu-V-DgSraRVlZUmuM5n4NdUErpu9edyJ1iXxo55pwT48AoBZREfQq4L5a_IcNo8OIJcK5PqOu1BLuRIkoNQ5h7ZDfzV3vuXIIztMG51f82b-PmLt10MGHpWKU0FN5LmsCnU5jZZ0RxpGkhrvoLCAzxWt4bzE6AKHEM-pnVmiHgXHdGbEwAFBAhRdMPmZUUjckBbamuVGPGBN9RWqTzuP-dGZ8O--rZ-McveUKN5kVV4ocBr-duSDCcVPSgGx6T00Bv4gxsFAzJzvaAEEWbgTRFRqyLPzL2M2eSXY6HJ_MNk5GyZ-gvKcsRvDq3A",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
-								"key": "XSRF-TOKEN",
-								"value": "eyJpdiI6IkxocmtZV2xBbXBiV1cyWDRkd3BVZHc9PSIsInZhbHVlIjoiM2w3UGFSVFRtbllzRkxBNmhRMTd6TnYrMWMxSXVIOVRWeE02MExEbzRGRVpLZkJNdjBEN2pzTFRNXC9WRXF4bnAiLCJtYWMiOiJiOWVhNzZlOGE4M2NlYzlmZjhkYzM3YmE1NTNhZGY5M2U1NGE1YzEwOTc2MzY1YTA1MGNhMGE5ZjZkMTBmMDdmIn0%3D",
-								"type": "text",
-								"disabled": true
-							},
-							{
-								"key": "Content-Type",
+								"key": "Accept",
 								"name": "Content-Type",
 								"value": "application/json",
 								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
 							}
 						],
 						"body": {
@@ -533,17 +642,20 @@
 				{
 					"name": "Eliminar Localidad",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkYzA0NTcxYWNlYWVlZDIyODg1YjRlNzhhNWVjYjg5NWYxMTc1NzA2MGZiZmNkZmI3ODNlNDQ0MWEzZGUxY2Q1YTViNjg0YzkzZjQzMzQ0In0.eyJhdWQiOiIxIiwianRpIjoiN2RjMDQ1NzFhY2VhZWVkMjI4ODViNGU3OGE1ZWNiODk1ZjExNzU3MDYwZmJmY2RmYjc4M2U0NDQxYTNkZTFjZDVhNWI2ODRjOTNmNDMzNDQiLCJpYXQiOjE1NzEyNDQ1OTEsIm5iZiI6MTU3MTI0NDU5MSwiZXhwIjoxNjAyODY2OTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NUaomiHeu9XNGCzUEbVzaTW0ZVuBM2CR5VZ7mawCUDE-TMOQQ1Eo7r6BJYYMqIkORJpdoaTRUaPQEtriQ4fVOWYsORz-XyqMVdSoWJxv3VKCEeWsW1J7TLnM_ZPs_2CrmU8ZZ6CRqLYOCGhxu97Xz_45FpNixUPIn3LRq_1Bboe-7CjJA3DqrTNgI9X8PdgHcWIV8WFtWnHBXAtqLrgtFMAXZTHz-q5qSLnXnUUlY9A4vnO9CaOHT0YKD31bfc7YjFEyaCOJzV9YBPHhooxHWagoW8ZB4BvmbcdSKaDcntqPUCZuJcZsrRAkBVFnBbopZ1JGEzlKgYrM8uPhA78TbX_NviEy7DeycvtR0Ke6dFQZzZZZu-V-DgSraRVlZUmuM5n4NdUErpu9edyJ1iXxo55pwT48AoBZREfQq4L5a_IcNo8OIJcK5PqOu1BLuRIkoNQ5h7ZDfzV3vuXIIztMG51f82b-PmLt10MGHpWKU0FN5LmsCnU5jZZ0RxpGkhrvoLCAzxWt4bzE6AKHEM-pnVmiHgXHdGbEwAFBAhRdMPmZUUjckBbamuVGPGBN9RWqTzuP-dGZ8O--rZ-McveUKN5kVV4ocBr-duSDCcVPSgGx6T00Bv4gxsFAzJzvaAEEWbgTRFRqyLPzL2M2eSXY6HJ_MNk5GyZ-gvKcsRvDq3A",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
-								"key": "XSRF-TOKEN",
-								"value": "eyJpdiI6IkxocmtZV2xBbXBiV1cyWDRkd3BVZHc9PSIsInZhbHVlIjoiM2w3UGFSVFRtbllzRkxBNmhRMTd6TnYrMWMxSXVIOVRWeE02MExEbzRGRVpLZkJNdjBEN2pzTFRNXC9WRXF4bnAiLCJtYWMiOiJiOWVhNzZlOGE4M2NlYzlmZjhkYzM3YmE1NTNhZGY5M2U1NGE1YzEwOTc2MzY1YTA1MGNhMGE5ZjZkMTBmMDdmIn0%3D",
-								"type": "text",
-								"disabled": true
-							},
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
+								"key": "Accept",
 								"value": "application/json",
 								"type": "text"
 							}
@@ -567,7 +679,8 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "Barrio",
@@ -575,12 +688,22 @@
 				{
 					"name": "Listar Barrios",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkYzA0NTcxYWNlYWVlZDIyODg1YjRlNzhhNWVjYjg5NWYxMTc1NzA2MGZiZmNkZmI3ODNlNDQ0MWEzZGUxY2Q1YTViNjg0YzkzZjQzMzQ0In0.eyJhdWQiOiIxIiwianRpIjoiN2RjMDQ1NzFhY2VhZWVkMjI4ODViNGU3OGE1ZWNiODk1ZjExNzU3MDYwZmJmY2RmYjc4M2U0NDQxYTNkZTFjZDVhNWI2ODRjOTNmNDMzNDQiLCJpYXQiOjE1NzEyNDQ1OTEsIm5iZiI6MTU3MTI0NDU5MSwiZXhwIjoxNjAyODY2OTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NUaomiHeu9XNGCzUEbVzaTW0ZVuBM2CR5VZ7mawCUDE-TMOQQ1Eo7r6BJYYMqIkORJpdoaTRUaPQEtriQ4fVOWYsORz-XyqMVdSoWJxv3VKCEeWsW1J7TLnM_ZPs_2CrmU8ZZ6CRqLYOCGhxu97Xz_45FpNixUPIn3LRq_1Bboe-7CjJA3DqrTNgI9X8PdgHcWIV8WFtWnHBXAtqLrgtFMAXZTHz-q5qSLnXnUUlY9A4vnO9CaOHT0YKD31bfc7YjFEyaCOJzV9YBPHhooxHWagoW8ZB4BvmbcdSKaDcntqPUCZuJcZsrRAkBVFnBbopZ1JGEzlKgYrM8uPhA78TbX_NviEy7DeycvtR0Ke6dFQZzZZZu-V-DgSraRVlZUmuM5n4NdUErpu9edyJ1iXxo55pwT48AoBZREfQq4L5a_IcNo8OIJcK5PqOu1BLuRIkoNQ5h7ZDfzV3vuXIIztMG51f82b-PmLt10MGHpWKU0FN5LmsCnU5jZZ0RxpGkhrvoLCAzxWt4bzE6AKHEM-pnVmiHgXHdGbEwAFBAhRdMPmZUUjckBbamuVGPGBN9RWqTzuP-dGZ8O--rZ-McveUKN5kVV4ocBr-duSDCcVPSgGx6T00Bv4gxsFAzJzvaAEEWbgTRFRqyLPzL2M2eSXY6HJ_MNk5GyZ-gvKcsRvDq3A",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
-								"key": "Authorization",
-								"type": "text",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkYzA0NTcxYWNlYWVlZDIyODg1YjRlNzhhNWVjYjg5NWYxMTc1NzA2MGZiZmNkZmI3ODNlNDQ0MWEzZGUxY2Q1YTViNjg0YzkzZjQzMzQ0In0.eyJhdWQiOiIxIiwianRpIjoiN2RjMDQ1NzFhY2VhZWVkMjI4ODViNGU3OGE1ZWNiODk1ZjExNzU3MDYwZmJmY2RmYjc4M2U0NDQxYTNkZTFjZDVhNWI2ODRjOTNmNDMzNDQiLCJpYXQiOjE1NzEyNDQ1OTEsIm5iZiI6MTU3MTI0NDU5MSwiZXhwIjoxNjAyODY2OTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NUaomiHeu9XNGCzUEbVzaTW0ZVuBM2CR5VZ7mawCUDE-TMOQQ1Eo7r6BJYYMqIkORJpdoaTRUaPQEtriQ4fVOWYsORz-XyqMVdSoWJxv3VKCEeWsW1J7TLnM_ZPs_2CrmU8ZZ6CRqLYOCGhxu97Xz_45FpNixUPIn3LRq_1Bboe-7CjJA3DqrTNgI9X8PdgHcWIV8WFtWnHBXAtqLrgtFMAXZTHz-q5qSLnXnUUlY9A4vnO9CaOHT0YKD31bfc7YjFEyaCOJzV9YBPHhooxHWagoW8ZB4BvmbcdSKaDcntqPUCZuJcZsrRAkBVFnBbopZ1JGEzlKgYrM8uPhA78TbX_NviEy7DeycvtR0Ke6dFQZzZZZu-V-DgSraRVlZUmuM5n4NdUErpu9edyJ1iXxo55pwT48AoBZREfQq4L5a_IcNo8OIJcK5PqOu1BLuRIkoNQ5h7ZDfzV3vuXIIztMG51f82b-PmLt10MGHpWKU0FN5LmsCnU5jZZ0RxpGkhrvoLCAzxWt4bzE6AKHEM-pnVmiHgXHdGbEwAFBAhRdMPmZUUjckBbamuVGPGBN9RWqTzuP-dGZ8O--rZ-McveUKN5kVV4ocBr-duSDCcVPSgGx6T00Bv4gxsFAzJzvaAEEWbgTRFRqyLPzL2M2eSXY6HJ_MNk5GyZ-gvKcsRvDq3A"
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
 							}
 						],
 						"body": {
@@ -604,11 +727,21 @@
 				{
 					"name": "Crear Barrio",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkYzA0NTcxYWNlYWVlZDIyODg1YjRlNzhhNWVjYjg5NWYxMTc1NzA2MGZiZmNkZmI3ODNlNDQ0MWEzZGUxY2Q1YTViNjg0YzkzZjQzMzQ0In0.eyJhdWQiOiIxIiwianRpIjoiN2RjMDQ1NzFhY2VhZWVkMjI4ODViNGU3OGE1ZWNiODk1ZjExNzU3MDYwZmJmY2RmYjc4M2U0NDQxYTNkZTFjZDVhNWI2ODRjOTNmNDMzNDQiLCJpYXQiOjE1NzEyNDQ1OTEsIm5iZiI6MTU3MTI0NDU5MSwiZXhwIjoxNjAyODY2OTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NUaomiHeu9XNGCzUEbVzaTW0ZVuBM2CR5VZ7mawCUDE-TMOQQ1Eo7r6BJYYMqIkORJpdoaTRUaPQEtriQ4fVOWYsORz-XyqMVdSoWJxv3VKCEeWsW1J7TLnM_ZPs_2CrmU8ZZ6CRqLYOCGhxu97Xz_45FpNixUPIn3LRq_1Bboe-7CjJA3DqrTNgI9X8PdgHcWIV8WFtWnHBXAtqLrgtFMAXZTHz-q5qSLnXnUUlY9A4vnO9CaOHT0YKD31bfc7YjFEyaCOJzV9YBPHhooxHWagoW8ZB4BvmbcdSKaDcntqPUCZuJcZsrRAkBVFnBbopZ1JGEzlKgYrM8uPhA78TbX_NviEy7DeycvtR0Ke6dFQZzZZZu-V-DgSraRVlZUmuM5n4NdUErpu9edyJ1iXxo55pwT48AoBZREfQq4L5a_IcNo8OIJcK5PqOu1BLuRIkoNQ5h7ZDfzV3vuXIIztMG51f82b-PmLt10MGHpWKU0FN5LmsCnU5jZZ0RxpGkhrvoLCAzxWt4bzE6AKHEM-pnVmiHgXHdGbEwAFBAhRdMPmZUUjckBbamuVGPGBN9RWqTzuP-dGZ8O--rZ-McveUKN5kVV4ocBr-duSDCcVPSgGx6T00Bv4gxsFAzJzvaAEEWbgTRFRqyLPzL2M2eSXY6HJ_MNk5GyZ-gvKcsRvDq3A",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
-								"key": "Authorization",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkYzA0NTcxYWNlYWVlZDIyODg1YjRlNzhhNWVjYjg5NWYxMTc1NzA2MGZiZmNkZmI3ODNlNDQ0MWEzZGUxY2Q1YTViNjg0YzkzZjQzMzQ0In0.eyJhdWQiOiIxIiwianRpIjoiN2RjMDQ1NzFhY2VhZWVkMjI4ODViNGU3OGE1ZWNiODk1ZjExNzU3MDYwZmJmY2RmYjc4M2U0NDQxYTNkZTFjZDVhNWI2ODRjOTNmNDMzNDQiLCJpYXQiOjE1NzEyNDQ1OTEsIm5iZiI6MTU3MTI0NDU5MSwiZXhwIjoxNjAyODY2OTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NUaomiHeu9XNGCzUEbVzaTW0ZVuBM2CR5VZ7mawCUDE-TMOQQ1Eo7r6BJYYMqIkORJpdoaTRUaPQEtriQ4fVOWYsORz-XyqMVdSoWJxv3VKCEeWsW1J7TLnM_ZPs_2CrmU8ZZ6CRqLYOCGhxu97Xz_45FpNixUPIn3LRq_1Bboe-7CjJA3DqrTNgI9X8PdgHcWIV8WFtWnHBXAtqLrgtFMAXZTHz-q5qSLnXnUUlY9A4vnO9CaOHT0YKD31bfc7YjFEyaCOJzV9YBPHhooxHWagoW8ZB4BvmbcdSKaDcntqPUCZuJcZsrRAkBVFnBbopZ1JGEzlKgYrM8uPhA78TbX_NviEy7DeycvtR0Ke6dFQZzZZZu-V-DgSraRVlZUmuM5n4NdUErpu9edyJ1iXxo55pwT48AoBZREfQq4L5a_IcNo8OIJcK5PqOu1BLuRIkoNQ5h7ZDfzV3vuXIIztMG51f82b-PmLt10MGHpWKU0FN5LmsCnU5jZZ0RxpGkhrvoLCAzxWt4bzE6AKHEM-pnVmiHgXHdGbEwAFBAhRdMPmZUUjckBbamuVGPGBN9RWqTzuP-dGZ8O--rZ-McveUKN5kVV4ocBr-duSDCcVPSgGx6T00Bv4gxsFAzJzvaAEEWbgTRFRqyLPzL2M2eSXY6HJ_MNk5GyZ-gvKcsRvDq3A",
+								"key": "Accept",
+								"value": "application/json",
 								"type": "text"
 							},
 							{
@@ -639,13 +772,22 @@
 				{
 					"name": "Actualizar Barrio",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkYzA0NTcxYWNlYWVlZDIyODg1YjRlNzhhNWVjYjg5NWYxMTc1NzA2MGZiZmNkZmI3ODNlNDQ0MWEzZGUxY2Q1YTViNjg0YzkzZjQzMzQ0In0.eyJhdWQiOiIxIiwianRpIjoiN2RjMDQ1NzFhY2VhZWVkMjI4ODViNGU3OGE1ZWNiODk1ZjExNzU3MDYwZmJmY2RmYjc4M2U0NDQxYTNkZTFjZDVhNWI2ODRjOTNmNDMzNDQiLCJpYXQiOjE1NzEyNDQ1OTEsIm5iZiI6MTU3MTI0NDU5MSwiZXhwIjoxNjAyODY2OTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NUaomiHeu9XNGCzUEbVzaTW0ZVuBM2CR5VZ7mawCUDE-TMOQQ1Eo7r6BJYYMqIkORJpdoaTRUaPQEtriQ4fVOWYsORz-XyqMVdSoWJxv3VKCEeWsW1J7TLnM_ZPs_2CrmU8ZZ6CRqLYOCGhxu97Xz_45FpNixUPIn3LRq_1Bboe-7CjJA3DqrTNgI9X8PdgHcWIV8WFtWnHBXAtqLrgtFMAXZTHz-q5qSLnXnUUlY9A4vnO9CaOHT0YKD31bfc7YjFEyaCOJzV9YBPHhooxHWagoW8ZB4BvmbcdSKaDcntqPUCZuJcZsrRAkBVFnBbopZ1JGEzlKgYrM8uPhA78TbX_NviEy7DeycvtR0Ke6dFQZzZZZu-V-DgSraRVlZUmuM5n4NdUErpu9edyJ1iXxo55pwT48AoBZREfQq4L5a_IcNo8OIJcK5PqOu1BLuRIkoNQ5h7ZDfzV3vuXIIztMG51f82b-PmLt10MGHpWKU0FN5LmsCnU5jZZ0RxpGkhrvoLCAzxWt4bzE6AKHEM-pnVmiHgXHdGbEwAFBAhRdMPmZUUjckBbamuVGPGBN9RWqTzuP-dGZ8O--rZ-McveUKN5kVV4ocBr-duSDCcVPSgGx6T00Bv4gxsFAzJzvaAEEWbgTRFRqyLPzL2M2eSXY6HJ_MNk5GyZ-gvKcsRvDq3A",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
-								"key": "XSRF-TOKEN",
+								"key": "Accept",
 								"type": "text",
-								"value": "eyJpdiI6IkxocmtZV2xBbXBiV1cyWDRkd3BVZHc9PSIsInZhbHVlIjoiM2w3UGFSVFRtbllzRkxBNmhRMTd6TnYrMWMxSXVIOVRWeE02MExEbzRGRVpLZkJNdjBEN2pzTFRNXC9WRXF4bnAiLCJtYWMiOiJiOWVhNzZlOGE4M2NlYzlmZjhkYzM3YmE1NTNhZGY5M2U1NGE1YzEwOTc2MzY1YTA1MGNhMGE5ZjZkMTBmMDdmIn0%3D",
-								"disabled": true
+								"value": "application/json"
 							},
 							{
 								"key": "Content-Type",
@@ -676,18 +818,26 @@
 				{
 					"name": "Detalle Barrio",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkYzA0NTcxYWNlYWVlZDIyODg1YjRlNzhhNWVjYjg5NWYxMTc1NzA2MGZiZmNkZmI3ODNlNDQ0MWEzZGUxY2Q1YTViNjg0YzkzZjQzMzQ0In0.eyJhdWQiOiIxIiwianRpIjoiN2RjMDQ1NzFhY2VhZWVkMjI4ODViNGU3OGE1ZWNiODk1ZjExNzU3MDYwZmJmY2RmYjc4M2U0NDQxYTNkZTFjZDVhNWI2ODRjOTNmNDMzNDQiLCJpYXQiOjE1NzEyNDQ1OTEsIm5iZiI6MTU3MTI0NDU5MSwiZXhwIjoxNjAyODY2OTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NUaomiHeu9XNGCzUEbVzaTW0ZVuBM2CR5VZ7mawCUDE-TMOQQ1Eo7r6BJYYMqIkORJpdoaTRUaPQEtriQ4fVOWYsORz-XyqMVdSoWJxv3VKCEeWsW1J7TLnM_ZPs_2CrmU8ZZ6CRqLYOCGhxu97Xz_45FpNixUPIn3LRq_1Bboe-7CjJA3DqrTNgI9X8PdgHcWIV8WFtWnHBXAtqLrgtFMAXZTHz-q5qSLnXnUUlY9A4vnO9CaOHT0YKD31bfc7YjFEyaCOJzV9YBPHhooxHWagoW8ZB4BvmbcdSKaDcntqPUCZuJcZsrRAkBVFnBbopZ1JGEzlKgYrM8uPhA78TbX_NviEy7DeycvtR0Ke6dFQZzZZZu-V-DgSraRVlZUmuM5n4NdUErpu9edyJ1iXxo55pwT48AoBZREfQq4L5a_IcNo8OIJcK5PqOu1BLuRIkoNQ5h7ZDfzV3vuXIIztMG51f82b-PmLt10MGHpWKU0FN5LmsCnU5jZZ0RxpGkhrvoLCAzxWt4bzE6AKHEM-pnVmiHgXHdGbEwAFBAhRdMPmZUUjckBbamuVGPGBN9RWqTzuP-dGZ8O--rZ-McveUKN5kVV4ocBr-duSDCcVPSgGx6T00Bv4gxsFAzJzvaAEEWbgTRFRqyLPzL2M2eSXY6HJ_MNk5GyZ-gvKcsRvDq3A",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
-								"key": "XSRF-TOKEN",
+								"key": "Accept",
+								"name": "Content-Type",
 								"type": "text",
-								"value": "eyJpdiI6IkxocmtZV2xBbXBiV1cyWDRkd3BVZHc9PSIsInZhbHVlIjoiM2w3UGFSVFRtbllzRkxBNmhRMTd6TnYrMWMxSXVIOVRWeE02MExEbzRGRVpLZkJNdjBEN2pzTFRNXC9WRXF4bnAiLCJtYWMiOiJiOWVhNzZlOGE4M2NlYzlmZjhkYzM3YmE1NTNhZGY5M2U1NGE1YzEwOTc2MzY1YTA1MGNhMGE5ZjZkMTBmMDdmIn0%3D",
-								"disabled": true
+								"value": "application/json"
 							},
 							{
 								"key": "Content-Type",
-								"name": "Content-Type",
-								"type": "text",
 								"value": "application/json"
 							}
 						],
@@ -712,18 +862,26 @@
 				{
 					"name": "Eliminar Barrio",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkYzA0NTcxYWNlYWVlZDIyODg1YjRlNzhhNWVjYjg5NWYxMTc1NzA2MGZiZmNkZmI3ODNlNDQ0MWEzZGUxY2Q1YTViNjg0YzkzZjQzMzQ0In0.eyJhdWQiOiIxIiwianRpIjoiN2RjMDQ1NzFhY2VhZWVkMjI4ODViNGU3OGE1ZWNiODk1ZjExNzU3MDYwZmJmY2RmYjc4M2U0NDQxYTNkZTFjZDVhNWI2ODRjOTNmNDMzNDQiLCJpYXQiOjE1NzEyNDQ1OTEsIm5iZiI6MTU3MTI0NDU5MSwiZXhwIjoxNjAyODY2OTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NUaomiHeu9XNGCzUEbVzaTW0ZVuBM2CR5VZ7mawCUDE-TMOQQ1Eo7r6BJYYMqIkORJpdoaTRUaPQEtriQ4fVOWYsORz-XyqMVdSoWJxv3VKCEeWsW1J7TLnM_ZPs_2CrmU8ZZ6CRqLYOCGhxu97Xz_45FpNixUPIn3LRq_1Bboe-7CjJA3DqrTNgI9X8PdgHcWIV8WFtWnHBXAtqLrgtFMAXZTHz-q5qSLnXnUUlY9A4vnO9CaOHT0YKD31bfc7YjFEyaCOJzV9YBPHhooxHWagoW8ZB4BvmbcdSKaDcntqPUCZuJcZsrRAkBVFnBbopZ1JGEzlKgYrM8uPhA78TbX_NviEy7DeycvtR0Ke6dFQZzZZZu-V-DgSraRVlZUmuM5n4NdUErpu9edyJ1iXxo55pwT48AoBZREfQq4L5a_IcNo8OIJcK5PqOu1BLuRIkoNQ5h7ZDfzV3vuXIIztMG51f82b-PmLt10MGHpWKU0FN5LmsCnU5jZZ0RxpGkhrvoLCAzxWt4bzE6AKHEM-pnVmiHgXHdGbEwAFBAhRdMPmZUUjckBbamuVGPGBN9RWqTzuP-dGZ8O--rZ-McveUKN5kVV4ocBr-duSDCcVPSgGx6T00Bv4gxsFAzJzvaAEEWbgTRFRqyLPzL2M2eSXY6HJ_MNk5GyZ-gvKcsRvDq3A",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
-								"key": "XSRF-TOKEN",
+								"key": "Accept",
+								"name": "Content-Type",
 								"type": "text",
-								"value": "eyJpdiI6IkxocmtZV2xBbXBiV1cyWDRkd3BVZHc9PSIsInZhbHVlIjoiM2w3UGFSVFRtbllzRkxBNmhRMTd6TnYrMWMxSXVIOVRWeE02MExEbzRGRVpLZkJNdjBEN2pzTFRNXC9WRXF4bnAiLCJtYWMiOiJiOWVhNzZlOGE4M2NlYzlmZjhkYzM3YmE1NTNhZGY5M2U1NGE1YzEwOTc2MzY1YTA1MGNhMGE5ZjZkMTBmMDdmIn0%3D",
-								"disabled": true
+								"value": "application/json"
 							},
 							{
 								"key": "Content-Type",
-								"name": "Content-Type",
-								"type": "text",
 								"value": "application/json"
 							}
 						],
@@ -746,7 +904,715 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Ciudad",
+			"item": [
+				{
+					"name": "Listar Ciudades",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkYzA0NTcxYWNlYWVlZDIyODg1YjRlNzhhNWVjYjg5NWYxMTc1NzA2MGZiZmNkZmI3ODNlNDQ0MWEzZGUxY2Q1YTViNjg0YzkzZjQzMzQ0In0.eyJhdWQiOiIxIiwianRpIjoiN2RjMDQ1NzFhY2VhZWVkMjI4ODViNGU3OGE1ZWNiODk1ZjExNzU3MDYwZmJmY2RmYjc4M2U0NDQxYTNkZTFjZDVhNWI2ODRjOTNmNDMzNDQiLCJpYXQiOjE1NzEyNDQ1OTEsIm5iZiI6MTU3MTI0NDU5MSwiZXhwIjoxNjAyODY2OTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NUaomiHeu9XNGCzUEbVzaTW0ZVuBM2CR5VZ7mawCUDE-TMOQQ1Eo7r6BJYYMqIkORJpdoaTRUaPQEtriQ4fVOWYsORz-XyqMVdSoWJxv3VKCEeWsW1J7TLnM_ZPs_2CrmU8ZZ6CRqLYOCGhxu97Xz_45FpNixUPIn3LRq_1Bboe-7CjJA3DqrTNgI9X8PdgHcWIV8WFtWnHBXAtqLrgtFMAXZTHz-q5qSLnXnUUlY9A4vnO9CaOHT0YKD31bfc7YjFEyaCOJzV9YBPHhooxHWagoW8ZB4BvmbcdSKaDcntqPUCZuJcZsrRAkBVFnBbopZ1JGEzlKgYrM8uPhA78TbX_NviEy7DeycvtR0Ke6dFQZzZZZu-V-DgSraRVlZUmuM5n4NdUErpu9edyJ1iXxo55pwT48AoBZREfQq4L5a_IcNo8OIJcK5PqOu1BLuRIkoNQ5h7ZDfzV3vuXIIztMG51f82b-PmLt10MGHpWKU0FN5LmsCnU5jZZ0RxpGkhrvoLCAzxWt4bzE6AKHEM-pnVmiHgXHdGbEwAFBAhRdMPmZUUjckBbamuVGPGBN9RWqTzuP-dGZ8O--rZ-McveUKN5kVV4ocBr-duSDCcVPSgGx6T00Bv4gxsFAzJzvaAEEWbgTRFRqyLPzL2M2eSXY6HJ_MNk5GyZ-gvKcsRvDq3A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost/api/ciudad/list",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ciudad",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Ciudad",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkYzA0NTcxYWNlYWVlZDIyODg1YjRlNzhhNWVjYjg5NWYxMTc1NzA2MGZiZmNkZmI3ODNlNDQ0MWEzZGUxY2Q1YTViNjg0YzkzZjQzMzQ0In0.eyJhdWQiOiIxIiwianRpIjoiN2RjMDQ1NzFhY2VhZWVkMjI4ODViNGU3OGE1ZWNiODk1ZjExNzU3MDYwZmJmY2RmYjc4M2U0NDQxYTNkZTFjZDVhNWI2ODRjOTNmNDMzNDQiLCJpYXQiOjE1NzEyNDQ1OTEsIm5iZiI6MTU3MTI0NDU5MSwiZXhwIjoxNjAyODY2OTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NUaomiHeu9XNGCzUEbVzaTW0ZVuBM2CR5VZ7mawCUDE-TMOQQ1Eo7r6BJYYMqIkORJpdoaTRUaPQEtriQ4fVOWYsORz-XyqMVdSoWJxv3VKCEeWsW1J7TLnM_ZPs_2CrmU8ZZ6CRqLYOCGhxu97Xz_45FpNixUPIn3LRq_1Bboe-7CjJA3DqrTNgI9X8PdgHcWIV8WFtWnHBXAtqLrgtFMAXZTHz-q5qSLnXnUUlY9A4vnO9CaOHT0YKD31bfc7YjFEyaCOJzV9YBPHhooxHWagoW8ZB4BvmbcdSKaDcntqPUCZuJcZsrRAkBVFnBbopZ1JGEzlKgYrM8uPhA78TbX_NviEy7DeycvtR0Ke6dFQZzZZZu-V-DgSraRVlZUmuM5n4NdUErpu9edyJ1iXxo55pwT48AoBZREfQq4L5a_IcNo8OIJcK5PqOu1BLuRIkoNQ5h7ZDfzV3vuXIIztMG51f82b-PmLt10MGHpWKU0FN5LmsCnU5jZZ0RxpGkhrvoLCAzxWt4bzE6AKHEM-pnVmiHgXHdGbEwAFBAhRdMPmZUUjckBbamuVGPGBN9RWqTzuP-dGZ8O--rZ-McveUKN5kVV4ocBr-duSDCcVPSgGx6T00Bv4gxsFAzJzvaAEEWbgTRFRqyLPzL2M2eSXY6HJ_MNk5GyZ-gvKcsRvDq3A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id_pais\": 1,\n    \"nombre\": \"Medellín\"\n}"
+						},
+						"url": {
+							"raw": "localhost/api/ciudad/create",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ciudad",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Ciudad",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkYzA0NTcxYWNlYWVlZDIyODg1YjRlNzhhNWVjYjg5NWYxMTc1NzA2MGZiZmNkZmI3ODNlNDQ0MWEzZGUxY2Q1YTViNjg0YzkzZjQzMzQ0In0.eyJhdWQiOiIxIiwianRpIjoiN2RjMDQ1NzFhY2VhZWVkMjI4ODViNGU3OGE1ZWNiODk1ZjExNzU3MDYwZmJmY2RmYjc4M2U0NDQxYTNkZTFjZDVhNWI2ODRjOTNmNDMzNDQiLCJpYXQiOjE1NzEyNDQ1OTEsIm5iZiI6MTU3MTI0NDU5MSwiZXhwIjoxNjAyODY2OTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NUaomiHeu9XNGCzUEbVzaTW0ZVuBM2CR5VZ7mawCUDE-TMOQQ1Eo7r6BJYYMqIkORJpdoaTRUaPQEtriQ4fVOWYsORz-XyqMVdSoWJxv3VKCEeWsW1J7TLnM_ZPs_2CrmU8ZZ6CRqLYOCGhxu97Xz_45FpNixUPIn3LRq_1Bboe-7CjJA3DqrTNgI9X8PdgHcWIV8WFtWnHBXAtqLrgtFMAXZTHz-q5qSLnXnUUlY9A4vnO9CaOHT0YKD31bfc7YjFEyaCOJzV9YBPHhooxHWagoW8ZB4BvmbcdSKaDcntqPUCZuJcZsrRAkBVFnBbopZ1JGEzlKgYrM8uPhA78TbX_NviEy7DeycvtR0Ke6dFQZzZZZu-V-DgSraRVlZUmuM5n4NdUErpu9edyJ1iXxo55pwT48AoBZREfQq4L5a_IcNo8OIJcK5PqOu1BLuRIkoNQ5h7ZDfzV3vuXIIztMG51f82b-PmLt10MGHpWKU0FN5LmsCnU5jZZ0RxpGkhrvoLCAzxWt4bzE6AKHEM-pnVmiHgXHdGbEwAFBAhRdMPmZUUjckBbamuVGPGBN9RWqTzuP-dGZ8O--rZ-McveUKN5kVV4ocBr-duSDCcVPSgGx6T00Bv4gxsFAzJzvaAEEWbgTRFRqyLPzL2M2eSXY6HJ_MNk5GyZ-gvKcsRvDq3A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id_pais\": 1,\n    \"nombre\": \"Medallo\"\n}"
+						},
+						"url": {
+							"raw": "localhost/api/ciudad/7/update",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ciudad",
+								"7",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detalle Ciudad",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkYzA0NTcxYWNlYWVlZDIyODg1YjRlNzhhNWVjYjg5NWYxMTc1NzA2MGZiZmNkZmI3ODNlNDQ0MWEzZGUxY2Q1YTViNjg0YzkzZjQzMzQ0In0.eyJhdWQiOiIxIiwianRpIjoiN2RjMDQ1NzFhY2VhZWVkMjI4ODViNGU3OGE1ZWNiODk1ZjExNzU3MDYwZmJmY2RmYjc4M2U0NDQxYTNkZTFjZDVhNWI2ODRjOTNmNDMzNDQiLCJpYXQiOjE1NzEyNDQ1OTEsIm5iZiI6MTU3MTI0NDU5MSwiZXhwIjoxNjAyODY2OTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NUaomiHeu9XNGCzUEbVzaTW0ZVuBM2CR5VZ7mawCUDE-TMOQQ1Eo7r6BJYYMqIkORJpdoaTRUaPQEtriQ4fVOWYsORz-XyqMVdSoWJxv3VKCEeWsW1J7TLnM_ZPs_2CrmU8ZZ6CRqLYOCGhxu97Xz_45FpNixUPIn3LRq_1Bboe-7CjJA3DqrTNgI9X8PdgHcWIV8WFtWnHBXAtqLrgtFMAXZTHz-q5qSLnXnUUlY9A4vnO9CaOHT0YKD31bfc7YjFEyaCOJzV9YBPHhooxHWagoW8ZB4BvmbcdSKaDcntqPUCZuJcZsrRAkBVFnBbopZ1JGEzlKgYrM8uPhA78TbX_NviEy7DeycvtR0Ke6dFQZzZZZu-V-DgSraRVlZUmuM5n4NdUErpu9edyJ1iXxo55pwT48AoBZREfQq4L5a_IcNo8OIJcK5PqOu1BLuRIkoNQ5h7ZDfzV3vuXIIztMG51f82b-PmLt10MGHpWKU0FN5LmsCnU5jZZ0RxpGkhrvoLCAzxWt4bzE6AKHEM-pnVmiHgXHdGbEwAFBAhRdMPmZUUjckBbamuVGPGBN9RWqTzuP-dGZ8O--rZ-McveUKN5kVV4ocBr-duSDCcVPSgGx6T00Bv4gxsFAzJzvaAEEWbgTRFRqyLPzL2M2eSXY6HJ_MNk5GyZ-gvKcsRvDq3A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost/api/ciudad/7",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ciudad",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Ciudad",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkYzA0NTcxYWNlYWVlZDIyODg1YjRlNzhhNWVjYjg5NWYxMTc1NzA2MGZiZmNkZmI3ODNlNDQ0MWEzZGUxY2Q1YTViNjg0YzkzZjQzMzQ0In0.eyJhdWQiOiIxIiwianRpIjoiN2RjMDQ1NzFhY2VhZWVkMjI4ODViNGU3OGE1ZWNiODk1ZjExNzU3MDYwZmJmY2RmYjc4M2U0NDQxYTNkZTFjZDVhNWI2ODRjOTNmNDMzNDQiLCJpYXQiOjE1NzEyNDQ1OTEsIm5iZiI6MTU3MTI0NDU5MSwiZXhwIjoxNjAyODY2OTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NUaomiHeu9XNGCzUEbVzaTW0ZVuBM2CR5VZ7mawCUDE-TMOQQ1Eo7r6BJYYMqIkORJpdoaTRUaPQEtriQ4fVOWYsORz-XyqMVdSoWJxv3VKCEeWsW1J7TLnM_ZPs_2CrmU8ZZ6CRqLYOCGhxu97Xz_45FpNixUPIn3LRq_1Bboe-7CjJA3DqrTNgI9X8PdgHcWIV8WFtWnHBXAtqLrgtFMAXZTHz-q5qSLnXnUUlY9A4vnO9CaOHT0YKD31bfc7YjFEyaCOJzV9YBPHhooxHWagoW8ZB4BvmbcdSKaDcntqPUCZuJcZsrRAkBVFnBbopZ1JGEzlKgYrM8uPhA78TbX_NviEy7DeycvtR0Ke6dFQZzZZZu-V-DgSraRVlZUmuM5n4NdUErpu9edyJ1iXxo55pwT48AoBZREfQq4L5a_IcNo8OIJcK5PqOu1BLuRIkoNQ5h7ZDfzV3vuXIIztMG51f82b-PmLt10MGHpWKU0FN5LmsCnU5jZZ0RxpGkhrvoLCAzxWt4bzE6AKHEM-pnVmiHgXHdGbEwAFBAhRdMPmZUUjckBbamuVGPGBN9RWqTzuP-dGZ8O--rZ-McveUKN5kVV4ocBr-duSDCcVPSgGx6T00Bv4gxsFAzJzvaAEEWbgTRFRqyLPzL2M2eSXY6HJ_MNk5GyZ-gvKcsRvDq3A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost/api/ciudad/7/delete",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ciudad",
+								"7",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Dependencia",
+			"item": [
+				{
+					"name": "Listar Dependencias",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkYzA0NTcxYWNlYWVlZDIyODg1YjRlNzhhNWVjYjg5NWYxMTc1NzA2MGZiZmNkZmI3ODNlNDQ0MWEzZGUxY2Q1YTViNjg0YzkzZjQzMzQ0In0.eyJhdWQiOiIxIiwianRpIjoiN2RjMDQ1NzFhY2VhZWVkMjI4ODViNGU3OGE1ZWNiODk1ZjExNzU3MDYwZmJmY2RmYjc4M2U0NDQxYTNkZTFjZDVhNWI2ODRjOTNmNDMzNDQiLCJpYXQiOjE1NzEyNDQ1OTEsIm5iZiI6MTU3MTI0NDU5MSwiZXhwIjoxNjAyODY2OTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NUaomiHeu9XNGCzUEbVzaTW0ZVuBM2CR5VZ7mawCUDE-TMOQQ1Eo7r6BJYYMqIkORJpdoaTRUaPQEtriQ4fVOWYsORz-XyqMVdSoWJxv3VKCEeWsW1J7TLnM_ZPs_2CrmU8ZZ6CRqLYOCGhxu97Xz_45FpNixUPIn3LRq_1Bboe-7CjJA3DqrTNgI9X8PdgHcWIV8WFtWnHBXAtqLrgtFMAXZTHz-q5qSLnXnUUlY9A4vnO9CaOHT0YKD31bfc7YjFEyaCOJzV9YBPHhooxHWagoW8ZB4BvmbcdSKaDcntqPUCZuJcZsrRAkBVFnBbopZ1JGEzlKgYrM8uPhA78TbX_NviEy7DeycvtR0Ke6dFQZzZZZu-V-DgSraRVlZUmuM5n4NdUErpu9edyJ1iXxo55pwT48AoBZREfQq4L5a_IcNo8OIJcK5PqOu1BLuRIkoNQ5h7ZDfzV3vuXIIztMG51f82b-PmLt10MGHpWKU0FN5LmsCnU5jZZ0RxpGkhrvoLCAzxWt4bzE6AKHEM-pnVmiHgXHdGbEwAFBAhRdMPmZUUjckBbamuVGPGBN9RWqTzuP-dGZ8O--rZ-McveUKN5kVV4ocBr-duSDCcVPSgGx6T00Bv4gxsFAzJzvaAEEWbgTRFRqyLPzL2M2eSXY6HJ_MNk5GyZ-gvKcsRvDq3A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost/api/dependencia/list",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"dependencia",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Dependencia",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkYzA0NTcxYWNlYWVlZDIyODg1YjRlNzhhNWVjYjg5NWYxMTc1NzA2MGZiZmNkZmI3ODNlNDQ0MWEzZGUxY2Q1YTViNjg0YzkzZjQzMzQ0In0.eyJhdWQiOiIxIiwianRpIjoiN2RjMDQ1NzFhY2VhZWVkMjI4ODViNGU3OGE1ZWNiODk1ZjExNzU3MDYwZmJmY2RmYjc4M2U0NDQxYTNkZTFjZDVhNWI2ODRjOTNmNDMzNDQiLCJpYXQiOjE1NzEyNDQ1OTEsIm5iZiI6MTU3MTI0NDU5MSwiZXhwIjoxNjAyODY2OTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NUaomiHeu9XNGCzUEbVzaTW0ZVuBM2CR5VZ7mawCUDE-TMOQQ1Eo7r6BJYYMqIkORJpdoaTRUaPQEtriQ4fVOWYsORz-XyqMVdSoWJxv3VKCEeWsW1J7TLnM_ZPs_2CrmU8ZZ6CRqLYOCGhxu97Xz_45FpNixUPIn3LRq_1Bboe-7CjJA3DqrTNgI9X8PdgHcWIV8WFtWnHBXAtqLrgtFMAXZTHz-q5qSLnXnUUlY9A4vnO9CaOHT0YKD31bfc7YjFEyaCOJzV9YBPHhooxHWagoW8ZB4BvmbcdSKaDcntqPUCZuJcZsrRAkBVFnBbopZ1JGEzlKgYrM8uPhA78TbX_NviEy7DeycvtR0Ke6dFQZzZZZu-V-DgSraRVlZUmuM5n4NdUErpu9edyJ1iXxo55pwT48AoBZREfQq4L5a_IcNo8OIJcK5PqOu1BLuRIkoNQ5h7ZDfzV3vuXIIztMG51f82b-PmLt10MGHpWKU0FN5LmsCnU5jZZ0RxpGkhrvoLCAzxWt4bzE6AKHEM-pnVmiHgXHdGbEwAFBAhRdMPmZUUjckBbamuVGPGBN9RWqTzuP-dGZ8O--rZ-McveUKN5kVV4ocBr-duSDCcVPSgGx6T00Bv4gxsFAzJzvaAEEWbgTRFRqyLPzL2M2eSXY6HJ_MNk5GyZ-gvKcsRvDq3A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id_alcaldia\": 1,\n    \"nombre\": \"Secretaria 123\"\n}"
+						},
+						"url": {
+							"raw": "localhost/api/dependencia/create",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"dependencia",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Dependencia",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkYzA0NTcxYWNlYWVlZDIyODg1YjRlNzhhNWVjYjg5NWYxMTc1NzA2MGZiZmNkZmI3ODNlNDQ0MWEzZGUxY2Q1YTViNjg0YzkzZjQzMzQ0In0.eyJhdWQiOiIxIiwianRpIjoiN2RjMDQ1NzFhY2VhZWVkMjI4ODViNGU3OGE1ZWNiODk1ZjExNzU3MDYwZmJmY2RmYjc4M2U0NDQxYTNkZTFjZDVhNWI2ODRjOTNmNDMzNDQiLCJpYXQiOjE1NzEyNDQ1OTEsIm5iZiI6MTU3MTI0NDU5MSwiZXhwIjoxNjAyODY2OTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NUaomiHeu9XNGCzUEbVzaTW0ZVuBM2CR5VZ7mawCUDE-TMOQQ1Eo7r6BJYYMqIkORJpdoaTRUaPQEtriQ4fVOWYsORz-XyqMVdSoWJxv3VKCEeWsW1J7TLnM_ZPs_2CrmU8ZZ6CRqLYOCGhxu97Xz_45FpNixUPIn3LRq_1Bboe-7CjJA3DqrTNgI9X8PdgHcWIV8WFtWnHBXAtqLrgtFMAXZTHz-q5qSLnXnUUlY9A4vnO9CaOHT0YKD31bfc7YjFEyaCOJzV9YBPHhooxHWagoW8ZB4BvmbcdSKaDcntqPUCZuJcZsrRAkBVFnBbopZ1JGEzlKgYrM8uPhA78TbX_NviEy7DeycvtR0Ke6dFQZzZZZu-V-DgSraRVlZUmuM5n4NdUErpu9edyJ1iXxo55pwT48AoBZREfQq4L5a_IcNo8OIJcK5PqOu1BLuRIkoNQ5h7ZDfzV3vuXIIztMG51f82b-PmLt10MGHpWKU0FN5LmsCnU5jZZ0RxpGkhrvoLCAzxWt4bzE6AKHEM-pnVmiHgXHdGbEwAFBAhRdMPmZUUjckBbamuVGPGBN9RWqTzuP-dGZ8O--rZ-McveUKN5kVV4ocBr-duSDCcVPSgGx6T00Bv4gxsFAzJzvaAEEWbgTRFRqyLPzL2M2eSXY6HJ_MNk5GyZ-gvKcsRvDq3A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id_alcaldia\": 1,\n    \"nombre\": \"Secretaria\"\n}"
+						},
+						"url": {
+							"raw": "localhost/api/dependencia/10/update",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"dependencia",
+								"10",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detalle Dependencia",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkYzA0NTcxYWNlYWVlZDIyODg1YjRlNzhhNWVjYjg5NWYxMTc1NzA2MGZiZmNkZmI3ODNlNDQ0MWEzZGUxY2Q1YTViNjg0YzkzZjQzMzQ0In0.eyJhdWQiOiIxIiwianRpIjoiN2RjMDQ1NzFhY2VhZWVkMjI4ODViNGU3OGE1ZWNiODk1ZjExNzU3MDYwZmJmY2RmYjc4M2U0NDQxYTNkZTFjZDVhNWI2ODRjOTNmNDMzNDQiLCJpYXQiOjE1NzEyNDQ1OTEsIm5iZiI6MTU3MTI0NDU5MSwiZXhwIjoxNjAyODY2OTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NUaomiHeu9XNGCzUEbVzaTW0ZVuBM2CR5VZ7mawCUDE-TMOQQ1Eo7r6BJYYMqIkORJpdoaTRUaPQEtriQ4fVOWYsORz-XyqMVdSoWJxv3VKCEeWsW1J7TLnM_ZPs_2CrmU8ZZ6CRqLYOCGhxu97Xz_45FpNixUPIn3LRq_1Bboe-7CjJA3DqrTNgI9X8PdgHcWIV8WFtWnHBXAtqLrgtFMAXZTHz-q5qSLnXnUUlY9A4vnO9CaOHT0YKD31bfc7YjFEyaCOJzV9YBPHhooxHWagoW8ZB4BvmbcdSKaDcntqPUCZuJcZsrRAkBVFnBbopZ1JGEzlKgYrM8uPhA78TbX_NviEy7DeycvtR0Ke6dFQZzZZZu-V-DgSraRVlZUmuM5n4NdUErpu9edyJ1iXxo55pwT48AoBZREfQq4L5a_IcNo8OIJcK5PqOu1BLuRIkoNQ5h7ZDfzV3vuXIIztMG51f82b-PmLt10MGHpWKU0FN5LmsCnU5jZZ0RxpGkhrvoLCAzxWt4bzE6AKHEM-pnVmiHgXHdGbEwAFBAhRdMPmZUUjckBbamuVGPGBN9RWqTzuP-dGZ8O--rZ-McveUKN5kVV4ocBr-duSDCcVPSgGx6T00Bv4gxsFAzJzvaAEEWbgTRFRqyLPzL2M2eSXY6HJ_MNk5GyZ-gvKcsRvDq3A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost/api/dependencia/10",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"dependencia",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Dependencia",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkYzA0NTcxYWNlYWVlZDIyODg1YjRlNzhhNWVjYjg5NWYxMTc1NzA2MGZiZmNkZmI3ODNlNDQ0MWEzZGUxY2Q1YTViNjg0YzkzZjQzMzQ0In0.eyJhdWQiOiIxIiwianRpIjoiN2RjMDQ1NzFhY2VhZWVkMjI4ODViNGU3OGE1ZWNiODk1ZjExNzU3MDYwZmJmY2RmYjc4M2U0NDQxYTNkZTFjZDVhNWI2ODRjOTNmNDMzNDQiLCJpYXQiOjE1NzEyNDQ1OTEsIm5iZiI6MTU3MTI0NDU5MSwiZXhwIjoxNjAyODY2OTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NUaomiHeu9XNGCzUEbVzaTW0ZVuBM2CR5VZ7mawCUDE-TMOQQ1Eo7r6BJYYMqIkORJpdoaTRUaPQEtriQ4fVOWYsORz-XyqMVdSoWJxv3VKCEeWsW1J7TLnM_ZPs_2CrmU8ZZ6CRqLYOCGhxu97Xz_45FpNixUPIn3LRq_1Bboe-7CjJA3DqrTNgI9X8PdgHcWIV8WFtWnHBXAtqLrgtFMAXZTHz-q5qSLnXnUUlY9A4vnO9CaOHT0YKD31bfc7YjFEyaCOJzV9YBPHhooxHWagoW8ZB4BvmbcdSKaDcntqPUCZuJcZsrRAkBVFnBbopZ1JGEzlKgYrM8uPhA78TbX_NviEy7DeycvtR0Ke6dFQZzZZZu-V-DgSraRVlZUmuM5n4NdUErpu9edyJ1iXxo55pwT48AoBZREfQq4L5a_IcNo8OIJcK5PqOu1BLuRIkoNQ5h7ZDfzV3vuXIIztMG51f82b-PmLt10MGHpWKU0FN5LmsCnU5jZZ0RxpGkhrvoLCAzxWt4bzE6AKHEM-pnVmiHgXHdGbEwAFBAhRdMPmZUUjckBbamuVGPGBN9RWqTzuP-dGZ8O--rZ-McveUKN5kVV4ocBr-duSDCcVPSgGx6T00Bv4gxsFAzJzvaAEEWbgTRFRqyLPzL2M2eSXY6HJ_MNk5GyZ-gvKcsRvDq3A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost/api/dependencia/10/delete",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"dependencia",
+								"10",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Enfermedad",
+			"item": [
+				{
+					"name": "Listar Enfermedades",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkYzA0NTcxYWNlYWVlZDIyODg1YjRlNzhhNWVjYjg5NWYxMTc1NzA2MGZiZmNkZmI3ODNlNDQ0MWEzZGUxY2Q1YTViNjg0YzkzZjQzMzQ0In0.eyJhdWQiOiIxIiwianRpIjoiN2RjMDQ1NzFhY2VhZWVkMjI4ODViNGU3OGE1ZWNiODk1ZjExNzU3MDYwZmJmY2RmYjc4M2U0NDQxYTNkZTFjZDVhNWI2ODRjOTNmNDMzNDQiLCJpYXQiOjE1NzEyNDQ1OTEsIm5iZiI6MTU3MTI0NDU5MSwiZXhwIjoxNjAyODY2OTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NUaomiHeu9XNGCzUEbVzaTW0ZVuBM2CR5VZ7mawCUDE-TMOQQ1Eo7r6BJYYMqIkORJpdoaTRUaPQEtriQ4fVOWYsORz-XyqMVdSoWJxv3VKCEeWsW1J7TLnM_ZPs_2CrmU8ZZ6CRqLYOCGhxu97Xz_45FpNixUPIn3LRq_1Bboe-7CjJA3DqrTNgI9X8PdgHcWIV8WFtWnHBXAtqLrgtFMAXZTHz-q5qSLnXnUUlY9A4vnO9CaOHT0YKD31bfc7YjFEyaCOJzV9YBPHhooxHWagoW8ZB4BvmbcdSKaDcntqPUCZuJcZsrRAkBVFnBbopZ1JGEzlKgYrM8uPhA78TbX_NviEy7DeycvtR0Ke6dFQZzZZZu-V-DgSraRVlZUmuM5n4NdUErpu9edyJ1iXxo55pwT48AoBZREfQq4L5a_IcNo8OIJcK5PqOu1BLuRIkoNQ5h7ZDfzV3vuXIIztMG51f82b-PmLt10MGHpWKU0FN5LmsCnU5jZZ0RxpGkhrvoLCAzxWt4bzE6AKHEM-pnVmiHgXHdGbEwAFBAhRdMPmZUUjckBbamuVGPGBN9RWqTzuP-dGZ8O--rZ-McveUKN5kVV4ocBr-duSDCcVPSgGx6T00Bv4gxsFAzJzvaAEEWbgTRFRqyLPzL2M2eSXY6HJ_MNk5GyZ-gvKcsRvDq3A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost/api/enfermedad/list",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"enfermedad",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Enfermedad",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkYzA0NTcxYWNlYWVlZDIyODg1YjRlNzhhNWVjYjg5NWYxMTc1NzA2MGZiZmNkZmI3ODNlNDQ0MWEzZGUxY2Q1YTViNjg0YzkzZjQzMzQ0In0.eyJhdWQiOiIxIiwianRpIjoiN2RjMDQ1NzFhY2VhZWVkMjI4ODViNGU3OGE1ZWNiODk1ZjExNzU3MDYwZmJmY2RmYjc4M2U0NDQxYTNkZTFjZDVhNWI2ODRjOTNmNDMzNDQiLCJpYXQiOjE1NzEyNDQ1OTEsIm5iZiI6MTU3MTI0NDU5MSwiZXhwIjoxNjAyODY2OTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NUaomiHeu9XNGCzUEbVzaTW0ZVuBM2CR5VZ7mawCUDE-TMOQQ1Eo7r6BJYYMqIkORJpdoaTRUaPQEtriQ4fVOWYsORz-XyqMVdSoWJxv3VKCEeWsW1J7TLnM_ZPs_2CrmU8ZZ6CRqLYOCGhxu97Xz_45FpNixUPIn3LRq_1Bboe-7CjJA3DqrTNgI9X8PdgHcWIV8WFtWnHBXAtqLrgtFMAXZTHz-q5qSLnXnUUlY9A4vnO9CaOHT0YKD31bfc7YjFEyaCOJzV9YBPHhooxHWagoW8ZB4BvmbcdSKaDcntqPUCZuJcZsrRAkBVFnBbopZ1JGEzlKgYrM8uPhA78TbX_NviEy7DeycvtR0Ke6dFQZzZZZu-V-DgSraRVlZUmuM5n4NdUErpu9edyJ1iXxo55pwT48AoBZREfQq4L5a_IcNo8OIJcK5PqOu1BLuRIkoNQ5h7ZDfzV3vuXIIztMG51f82b-PmLt10MGHpWKU0FN5LmsCnU5jZZ0RxpGkhrvoLCAzxWt4bzE6AKHEM-pnVmiHgXHdGbEwAFBAhRdMPmZUUjckBbamuVGPGBN9RWqTzuP-dGZ8O--rZ-McveUKN5kVV4ocBr-duSDCcVPSgGx6T00Bv4gxsFAzJzvaAEEWbgTRFRqyLPzL2M2eSXY6HJ_MNk5GyZ-gvKcsRvDq3A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nombre\": \"Gonorrea\"\n}"
+						},
+						"url": {
+							"raw": "localhost/api/enfermedad/create",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"enfermedad",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Enfermedad",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkYzA0NTcxYWNlYWVlZDIyODg1YjRlNzhhNWVjYjg5NWYxMTc1NzA2MGZiZmNkZmI3ODNlNDQ0MWEzZGUxY2Q1YTViNjg0YzkzZjQzMzQ0In0.eyJhdWQiOiIxIiwianRpIjoiN2RjMDQ1NzFhY2VhZWVkMjI4ODViNGU3OGE1ZWNiODk1ZjExNzU3MDYwZmJmY2RmYjc4M2U0NDQxYTNkZTFjZDVhNWI2ODRjOTNmNDMzNDQiLCJpYXQiOjE1NzEyNDQ1OTEsIm5iZiI6MTU3MTI0NDU5MSwiZXhwIjoxNjAyODY2OTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NUaomiHeu9XNGCzUEbVzaTW0ZVuBM2CR5VZ7mawCUDE-TMOQQ1Eo7r6BJYYMqIkORJpdoaTRUaPQEtriQ4fVOWYsORz-XyqMVdSoWJxv3VKCEeWsW1J7TLnM_ZPs_2CrmU8ZZ6CRqLYOCGhxu97Xz_45FpNixUPIn3LRq_1Bboe-7CjJA3DqrTNgI9X8PdgHcWIV8WFtWnHBXAtqLrgtFMAXZTHz-q5qSLnXnUUlY9A4vnO9CaOHT0YKD31bfc7YjFEyaCOJzV9YBPHhooxHWagoW8ZB4BvmbcdSKaDcntqPUCZuJcZsrRAkBVFnBbopZ1JGEzlKgYrM8uPhA78TbX_NviEy7DeycvtR0Ke6dFQZzZZZu-V-DgSraRVlZUmuM5n4NdUErpu9edyJ1iXxo55pwT48AoBZREfQq4L5a_IcNo8OIJcK5PqOu1BLuRIkoNQ5h7ZDfzV3vuXIIztMG51f82b-PmLt10MGHpWKU0FN5LmsCnU5jZZ0RxpGkhrvoLCAzxWt4bzE6AKHEM-pnVmiHgXHdGbEwAFBAhRdMPmZUUjckBbamuVGPGBN9RWqTzuP-dGZ8O--rZ-McveUKN5kVV4ocBr-duSDCcVPSgGx6T00Bv4gxsFAzJzvaAEEWbgTRFRqyLPzL2M2eSXY6HJ_MNk5GyZ-gvKcsRvDq3A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nombre\": \"Blenorragia\"\n}"
+						},
+						"url": {
+							"raw": "localhost/api/enfermedad/11/update",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"enfermedad",
+								"11",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detalle Enfermedad",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkYzA0NTcxYWNlYWVlZDIyODg1YjRlNzhhNWVjYjg5NWYxMTc1NzA2MGZiZmNkZmI3ODNlNDQ0MWEzZGUxY2Q1YTViNjg0YzkzZjQzMzQ0In0.eyJhdWQiOiIxIiwianRpIjoiN2RjMDQ1NzFhY2VhZWVkMjI4ODViNGU3OGE1ZWNiODk1ZjExNzU3MDYwZmJmY2RmYjc4M2U0NDQxYTNkZTFjZDVhNWI2ODRjOTNmNDMzNDQiLCJpYXQiOjE1NzEyNDQ1OTEsIm5iZiI6MTU3MTI0NDU5MSwiZXhwIjoxNjAyODY2OTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NUaomiHeu9XNGCzUEbVzaTW0ZVuBM2CR5VZ7mawCUDE-TMOQQ1Eo7r6BJYYMqIkORJpdoaTRUaPQEtriQ4fVOWYsORz-XyqMVdSoWJxv3VKCEeWsW1J7TLnM_ZPs_2CrmU8ZZ6CRqLYOCGhxu97Xz_45FpNixUPIn3LRq_1Bboe-7CjJA3DqrTNgI9X8PdgHcWIV8WFtWnHBXAtqLrgtFMAXZTHz-q5qSLnXnUUlY9A4vnO9CaOHT0YKD31bfc7YjFEyaCOJzV9YBPHhooxHWagoW8ZB4BvmbcdSKaDcntqPUCZuJcZsrRAkBVFnBbopZ1JGEzlKgYrM8uPhA78TbX_NviEy7DeycvtR0Ke6dFQZzZZZu-V-DgSraRVlZUmuM5n4NdUErpu9edyJ1iXxo55pwT48AoBZREfQq4L5a_IcNo8OIJcK5PqOu1BLuRIkoNQ5h7ZDfzV3vuXIIztMG51f82b-PmLt10MGHpWKU0FN5LmsCnU5jZZ0RxpGkhrvoLCAzxWt4bzE6AKHEM-pnVmiHgXHdGbEwAFBAhRdMPmZUUjckBbamuVGPGBN9RWqTzuP-dGZ8O--rZ-McveUKN5kVV4ocBr-duSDCcVPSgGx6T00Bv4gxsFAzJzvaAEEWbgTRFRqyLPzL2M2eSXY6HJ_MNk5GyZ-gvKcsRvDq3A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost/api/enfermedad/11",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"enfermedad",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Enfermedad",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkYzA0NTcxYWNlYWVlZDIyODg1YjRlNzhhNWVjYjg5NWYxMTc1NzA2MGZiZmNkZmI3ODNlNDQ0MWEzZGUxY2Q1YTViNjg0YzkzZjQzMzQ0In0.eyJhdWQiOiIxIiwianRpIjoiN2RjMDQ1NzFhY2VhZWVkMjI4ODViNGU3OGE1ZWNiODk1ZjExNzU3MDYwZmJmY2RmYjc4M2U0NDQxYTNkZTFjZDVhNWI2ODRjOTNmNDMzNDQiLCJpYXQiOjE1NzEyNDQ1OTEsIm5iZiI6MTU3MTI0NDU5MSwiZXhwIjoxNjAyODY2OTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NUaomiHeu9XNGCzUEbVzaTW0ZVuBM2CR5VZ7mawCUDE-TMOQQ1Eo7r6BJYYMqIkORJpdoaTRUaPQEtriQ4fVOWYsORz-XyqMVdSoWJxv3VKCEeWsW1J7TLnM_ZPs_2CrmU8ZZ6CRqLYOCGhxu97Xz_45FpNixUPIn3LRq_1Bboe-7CjJA3DqrTNgI9X8PdgHcWIV8WFtWnHBXAtqLrgtFMAXZTHz-q5qSLnXnUUlY9A4vnO9CaOHT0YKD31bfc7YjFEyaCOJzV9YBPHhooxHWagoW8ZB4BvmbcdSKaDcntqPUCZuJcZsrRAkBVFnBbopZ1JGEzlKgYrM8uPhA78TbX_NviEy7DeycvtR0Ke6dFQZzZZZu-V-DgSraRVlZUmuM5n4NdUErpu9edyJ1iXxo55pwT48AoBZREfQq4L5a_IcNo8OIJcK5PqOu1BLuRIkoNQ5h7ZDfzV3vuXIIztMG51f82b-PmLt10MGHpWKU0FN5LmsCnU5jZZ0RxpGkhrvoLCAzxWt4bzE6AKHEM-pnVmiHgXHdGbEwAFBAhRdMPmZUUjckBbamuVGPGBN9RWqTzuP-dGZ8O--rZ-McveUKN5kVV4ocBr-duSDCcVPSgGx6T00Bv4gxsFAzJzvaAEEWbgTRFRqyLPzL2M2eSXY6HJ_MNk5GyZ-gvKcsRvDq3A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost/api/enfermedad/11/delete",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"enfermedad",
+								"11",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkYzA0NTcxYWNlYWVlZDIyODg1YjRlNzhhNWVjYjg5NWYxMTc1NzA2MGZiZmNkZmI3ODNlNDQ0MWEzZGUxY2Q1YTViNjg0YzkzZjQzMzQ0In0.eyJhdWQiOiIxIiwianRpIjoiN2RjMDQ1NzFhY2VhZWVkMjI4ODViNGU3OGE1ZWNiODk1ZjExNzU3MDYwZmJmY2RmYjc4M2U0NDQxYTNkZTFjZDVhNWI2ODRjOTNmNDMzNDQiLCJpYXQiOjE1NzEyNDQ1OTEsIm5iZiI6MTU3MTI0NDU5MSwiZXhwIjoxNjAyODY2OTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NUaomiHeu9XNGCzUEbVzaTW0ZVuBM2CR5VZ7mawCUDE-TMOQQ1Eo7r6BJYYMqIkORJpdoaTRUaPQEtriQ4fVOWYsORz-XyqMVdSoWJxv3VKCEeWsW1J7TLnM_ZPs_2CrmU8ZZ6CRqLYOCGhxu97Xz_45FpNixUPIn3LRq_1Bboe-7CjJA3DqrTNgI9X8PdgHcWIV8WFtWnHBXAtqLrgtFMAXZTHz-q5qSLnXnUUlY9A4vnO9CaOHT0YKD31bfc7YjFEyaCOJzV9YBPHhooxHWagoW8ZB4BvmbcdSKaDcntqPUCZuJcZsrRAkBVFnBbopZ1JGEzlKgYrM8uPhA78TbX_NviEy7DeycvtR0Ke6dFQZzZZZu-V-DgSraRVlZUmuM5n4NdUErpu9edyJ1iXxo55pwT48AoBZREfQq4L5a_IcNo8OIJcK5PqOu1BLuRIkoNQ5h7ZDfzV3vuXIIztMG51f82b-PmLt10MGHpWKU0FN5LmsCnU5jZZ0RxpGkhrvoLCAzxWt4bzE6AKHEM-pnVmiHgXHdGbEwAFBAhRdMPmZUUjckBbamuVGPGBN9RWqTzuP-dGZ8O--rZ-McveUKN5kVV4ocBr-duSDCcVPSgGx6T00Bv4gxsFAzJzvaAEEWbgTRFRqyLPzL2M2eSXY6HJ_MNk5GyZ-gvKcsRvDq3A",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "55e406de-a5a8-4d08-8ce9-c7f08d132c7b",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "7091819b-2828-44ac-9576-e013c431728e",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "Login",
@@ -778,5 +1644,38 @@
 			},
 			"response": []
 		}
-	]
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkYzA0NTcxYWNlYWVlZDIyODg1YjRlNzhhNWVjYjg5NWYxMTc1NzA2MGZiZmNkZmI3ODNlNDQ0MWEzZGUxY2Q1YTViNjg0YzkzZjQzMzQ0In0.eyJhdWQiOiIxIiwianRpIjoiN2RjMDQ1NzFhY2VhZWVkMjI4ODViNGU3OGE1ZWNiODk1ZjExNzU3MDYwZmJmY2RmYjc4M2U0NDQxYTNkZTFjZDVhNWI2ODRjOTNmNDMzNDQiLCJpYXQiOjE1NzEyNDQ1OTEsIm5iZiI6MTU3MTI0NDU5MSwiZXhwIjoxNjAyODY2OTkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NUaomiHeu9XNGCzUEbVzaTW0ZVuBM2CR5VZ7mawCUDE-TMOQQ1Eo7r6BJYYMqIkORJpdoaTRUaPQEtriQ4fVOWYsORz-XyqMVdSoWJxv3VKCEeWsW1J7TLnM_ZPs_2CrmU8ZZ6CRqLYOCGhxu97Xz_45FpNixUPIn3LRq_1Bboe-7CjJA3DqrTNgI9X8PdgHcWIV8WFtWnHBXAtqLrgtFMAXZTHz-q5qSLnXnUUlY9A4vnO9CaOHT0YKD31bfc7YjFEyaCOJzV9YBPHhooxHWagoW8ZB4BvmbcdSKaDcntqPUCZuJcZsrRAkBVFnBbopZ1JGEzlKgYrM8uPhA78TbX_NviEy7DeycvtR0Ke6dFQZzZZZu-V-DgSraRVlZUmuM5n4NdUErpu9edyJ1iXxo55pwT48AoBZREfQq4L5a_IcNo8OIJcK5PqOu1BLuRIkoNQ5h7ZDfzV3vuXIIztMG51f82b-PmLt10MGHpWKU0FN5LmsCnU5jZZ0RxpGkhrvoLCAzxWt4bzE6AKHEM-pnVmiHgXHdGbEwAFBAhRdMPmZUUjckBbamuVGPGBN9RWqTzuP-dGZ8O--rZ-McveUKN5kVV4ocBr-duSDCcVPSgGx6T00Bv4gxsFAzJzvaAEEWbgTRFRqyLPzL2M2eSXY6HJ_MNk5GyZ-gvKcsRvDq3A",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "b948dc58-43b1-4393-9d5d-8ee175de4313",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "6ba36174-c086-48e5-8470-de7a9c0709b5",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
 }
