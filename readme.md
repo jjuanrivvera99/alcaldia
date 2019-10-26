@@ -15,6 +15,15 @@ En este repositorio se encuentra la base de datos del proyecto formativo con tod
 Para correr este proyecto se necesita tener docker y docker-compose:
 
 ### Configuración General 
+- Detener la ejecución de:
+    - Cualquier instancia de SQL Server
+    - Cualquier servico corriendo en los siguientes puertos
+        - 80
+        - 443
+        - 1433
+        - 27017
+        - 8081
+
 - Ejecutar los siguientes comandos:
     - git clone https://gitlab.com/jjuanrivvera99/alcaldia.git
     - cd alcaldia
