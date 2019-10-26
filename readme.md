@@ -12,7 +12,7 @@ En este repositorio se encuentra la base de datos del proyecto formativo con tod
 
 ## Como correr el proyecto
 
-Para correr este proyecto se necesita tener docker y docker-compose:
+Para correr este proyecto se necesita tener docker y docker-compose instalado:
 
 ### Configuración General 
 - Detener la ejecución de:
