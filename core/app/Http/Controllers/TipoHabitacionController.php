@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use App\TipoHabitacion;
 use Illuminate\Http\Request;
 use App\Http\Requests\TipoHabitacion\CreateFormRequest;
 use App\Http\Requests\TipoHabitacion\UpdateFormRequest;
 
+/**
+ * Class TipoHabitacionController
+ * @package App\Http\Controllers
+ */
 class TipoHabitacionController extends Controller
 {
     /**
@@ -16,7 +21,9 @@ class TipoHabitacionController extends Controller
      */
     public function index()
     {
-        $tipoHabitaciones = TipoHabitacion::all();
+        $user = Auth::user();
+
+        $tipoHabitaciones = TipoHabitacion::on($user->schema)->paginate();
 
         return response()->json($tipoHabitaciones);
     }
@@ -29,9 +36,11 @@ class TipoHabitacionController extends Controller
      */
     public function store(CreateFormRequest $request)
     {
+        $user = Auth::user();
+
         $tipoHabitacion = $request->all();
 
-        $created = TipoHabitacion::create($tipoHabitacion);
+        $created = TipoHabitacion::on($user->schema)->create($tipoHabitacion);
 
         return response()->json($created);
     }
@@ -44,7 +53,9 @@ class TipoHabitacionController extends Controller
      */
     public function show($id)
     {
-        $tipoHabitaciones = TipoHabitacion::findOrFail($id);
+        $user = Auth::user();
+
+        $tipoHabitaciones = TipoHabitacion::on($user->schema)->findOrFail($id);
 
         return response()->json($tipoHabitaciones);
     }
@@ -59,7 +70,9 @@ class TipoHabitacionController extends Controller
      */
     public function update(UpdateFormRequest $request, $id)
     {
-        $tipoHabitacion = TipoHabitacion::findOrFail($id)->update($request->all());
+        $user = Auth::user();
+
+        $tipoHabitacion = TipoHabitacion::on($user->schema)->findOrFail($id)->update($request->all());
 
         return response()->json($tipoHabitacion);
     }
@@ -72,7 +85,9 @@ class TipoHabitacionController extends Controller
      */
     public function destroy($id)
     {
-        $tipoHabitacion = TipoHabitacion::findOrFail($id);
+        $user = Auth::user();
+
+        $tipoHabitacion = TipoHabitacion::on($user->schema)->findOrFail($id);
 
         return response()->json($tipoHabitacion->delete());
     }

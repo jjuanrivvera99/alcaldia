@@ -26,10 +26,14 @@ USE [alcaldia]
 GO
 CREATE DATABASE AUDIT SPECIFICATION [DatabaseAuditSpecification_15-09-2019]
 FOR SERVER AUDIT [AuditoriaAlcaldia]
-ADD (DELETE ON DATABASE::[alcaldia] BY [jefferson]),
-ADD (INSERT ON DATABASE::[alcaldia] BY [jefferson]),
-ADD (SELECT ON DATABASE::[alcaldia] BY [jefferson]),
-ADD (UPDATE ON DATABASE::[alcaldia] BY [jefferson])
+ADD (DELETE ON DATABASE::[alcaldia] BY [usrcore]),
+ADD (INSERT ON DATABASE::[alcaldia] BY [usrcore]),
+ADD (SELECT ON DATABASE::[alcaldia] BY [usrcore]),
+ADD (UPDATE ON DATABASE::[alcaldia] BY [usrcore]),
+ADD (DELETE ON DATABASE::[alcaldia] BY [usrnocore]),
+ADD (INSERT ON DATABASE::[alcaldia] BY [usrnocore]),
+ADD (SELECT ON DATABASE::[alcaldia] BY [usrnocore]),
+ADD (UPDATE ON DATABASE::[alcaldia] BY [usrnocore])
 WITH (STATE = ON)
 GO
 

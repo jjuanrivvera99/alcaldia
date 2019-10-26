@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use App\Dependencia;
 use Illuminate\Http\Request;
 use App\Http\Requests\Dependencia\CreateFormRequest;
 use App\Http\Requests\Dependencia\UpdateFormRequest;
 
+/**
+ * Class DependenciaController
+ * @package App\Http\Controllers
+ */
 class DependenciaController extends Controller
 {
     /**
@@ -16,7 +21,9 @@ class DependenciaController extends Controller
      */
     public function index()
     {
-        $dependencias = Dependencia::all();
+        $user = Auth::user();
+
+        $dependencias = Dependencia::on($user->schema)->paginate();
 
         return response()->json($dependencias);
     }
@@ -29,9 +36,11 @@ class DependenciaController extends Controller
      */
     public function store(CreateFormRequest $request)
     {
+        $user = Auth::user();
+
         $dependencia = $request->all();
 
-        $created = Dependencia::create($dependencia);
+        $created = Dependencia::on($user->schema)->create($dependencia);
 
         return response()->json($created);
     }
@@ -44,7 +53,9 @@ class DependenciaController extends Controller
      */
     public function show($id)
     {
-        $dependencias = Dependencia::findOrFail($id);
+        $user = Auth::user();
+
+        $dependencias = Dependencia::on($user->schema)->findOrFail($id);
 
         return response()->json($dependencias);
     }
@@ -59,7 +70,9 @@ class DependenciaController extends Controller
      */
     public function update(UpdateFormRequest $request, $id)
     {
-        $dependencia = Dependencia::findOrFail($id)->update($request->all());
+        $user = Auth::user();
+
+        $dependencia = Dependencia::on($user->schema)->findOrFail($id)->update($request->all());
 
         return response()->json($dependencia);
     }
@@ -72,7 +85,9 @@ class DependenciaController extends Controller
      */
     public function destroy($id)
     {
-        $dependencia = Dependencia::findOrFail($id);
+        $user = Auth::user();
+
+        $dependencia = Dependencia::on($user->schema)->findOrFail($id);
 
         return response()->json($dependencia->delete());
     }

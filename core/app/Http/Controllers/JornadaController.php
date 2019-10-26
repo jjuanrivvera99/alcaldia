@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use App\Jornada;
 use Illuminate\Http\Request;
 use App\Http\Requests\Jornada\CreateFormRequest;
 use App\Http\Requests\Jornada\UpdateFormRequest;
 
+/**
+ * Class JornadaController
+ * @package App\Http\Controllers
+ */
 class JornadaController extends Controller
 {
     /**
@@ -16,7 +21,9 @@ class JornadaController extends Controller
      */
     public function index()
     {
-        $jornadas = Jornada::all();
+        $user = Auth::user();
+
+        $jornadas = Jornada::on($user->schema)->paginate();
 
         return response()->json($jornadas);
     }
@@ -29,9 +36,11 @@ class JornadaController extends Controller
      */
     public function store(CreateFormRequest $request)
     {
+        $user = Auth::user();
+
         $jornada = $request->all();
 
-        $created = Jornada::create($jornada);
+        $created = Jornada::on($user->schema)->create($jornada);
 
         return response()->json($created);
     }
@@ -44,7 +53,9 @@ class JornadaController extends Controller
      */
     public function show($id)
     {
-        $jornadas = Jornada::findOrFail($id);
+        $user = Auth::user();
+
+        $jornadas = Jornada::on($user->schema)->findOrFail($id);
 
         return response()->json($jornadas);
     }
@@ -59,7 +70,9 @@ class JornadaController extends Controller
      */
     public function update(UpdateFormRequest $request, $id)
     {
-        $jornada = Jornada::findOrFail($id)->update($request->all());
+        $user = Auth::user();
+
+        $jornada = Jornada::on($user->schema)->findOrFail($id)->update($request->all());
 
         return response()->json($jornada);
     }
@@ -72,7 +85,9 @@ class JornadaController extends Controller
      */
     public function destroy($id)
     {
-        $jornada = Jornada::findOrFail($id);
+        $user = Auth::user();
+
+        $jornada = Jornada::on($user->schema)->findOrFail($id);
 
         return response()->json($jornada->delete());
     }

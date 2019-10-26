@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use App\TipoIdentificacion;
 use Illuminate\Http\Request;
 use App\Http\Requests\TipoIdentificacion\CreateFormRequest;
 use App\Http\Requests\TipoIdentificacion\UpdateFormRequest;
 
+/**
+ * Class TipoIdentificacionController
+ * @package App\Http\Controllers
+ */
 class TipoIdentificacionController extends Controller
 {
     /**
@@ -16,7 +21,9 @@ class TipoIdentificacionController extends Controller
      */
     public function index()
     {
-        $tipoIdentificaciones = TipoIdentificacion::all();
+        $user = Auth::user();
+
+        $tipoIdentificaciones = TipoIdentificacion::on($user->schema)->paginate();
 
         return response()->json($tipoIdentificaciones);
     }
@@ -29,9 +36,11 @@ class TipoIdentificacionController extends Controller
      */
     public function store(CreateFormRequest $request)
     {
+        $user = Auth::user();
+
         $tipoIdentificacion = $request->all();
 
-        $created = TipoIdentificacion::create($tipoIdentificacion);
+        $created = TipoIdentificacion::on($user->schema)->create($tipoIdentificacion);
 
         return response()->json($created);
     }
@@ -44,7 +53,9 @@ class TipoIdentificacionController extends Controller
      */
     public function show($id)
     {
-        $tipoIdentificaciones = TipoIdentificacion::findOrFail($id);
+        $user = Auth::user();
+
+        $tipoIdentificaciones = TipoIdentificacion::on($user->schema)->findOrFail($id);
 
         return response()->json($tipoIdentificaciones);
     }
@@ -59,7 +70,9 @@ class TipoIdentificacionController extends Controller
      */
     public function update(UpdateFormRequest $request, $id)
     {
-        $tipoIdentificacion = TipoIdentificacion::findOrFail($id)->update($request->all());
+        $user = Auth::user();
+
+        $tipoIdentificacion = TipoIdentificacion::on($user->schema)->findOrFail($id)->update($request->all());
 
         return response()->json($tipoIdentificacion);
     }
@@ -72,7 +85,9 @@ class TipoIdentificacionController extends Controller
      */
     public function destroy($id)
     {
-        $tipoIdentificacion = TipoIdentificacion::findOrFail($id);
+        $user = Auth::user();
+
+        $tipoIdentificacion = TipoIdentificacion::on($user->schema)->findOrFail($id);
 
         return response()->json($tipoIdentificacion->delete());
     }

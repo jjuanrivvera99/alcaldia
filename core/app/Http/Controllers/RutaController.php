@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use App\Ruta;
 use Illuminate\Http\Request;
 use App\Http\Requests\Ruta\CreateFormRequest;
 use App\Http\Requests\Ruta\UpdateFormRequest;
 
+/**
+ * Class RutaController
+ * @package App\Http\Controllers
+ */
 class RutaController extends Controller
 {
     /**
@@ -16,7 +21,9 @@ class RutaController extends Controller
      */
     public function index()
     {
-        $rutas = Ruta::all();
+        $user = Auth::user();
+
+        $rutas = Ruta::on($user->schema)->paginate();
 
         return response()->json($rutas);
     }
@@ -29,9 +36,11 @@ class RutaController extends Controller
      */
     public function store(CreateFormRequest $request)
     {
+        $user = Auth::user();
+
         $ruta = $request->all();
 
-        $created = Ruta::create($ruta);
+        $created = Ruta::on($user->schema)->create($ruta);
 
         return response()->json($created);
     }
@@ -44,7 +53,9 @@ class RutaController extends Controller
      */
     public function show($id)
     {
-        $rutas = Ruta::findOrFail($id);
+        $user = Auth::user();
+
+        $rutas = Ruta::on($user->schema)->findOrFail($id);
 
         return response()->json($rutas);
     }
@@ -59,7 +70,9 @@ class RutaController extends Controller
      */
     public function update(UpdateFormRequest $request, $id)
     {
-        $ruta = Ruta::findOrFail($id)->update($request->all());
+        $user = Auth::user();
+
+        $ruta = Ruta::on($user->schema)->findOrFail($id)->update($request->all());
 
         return response()->json($ruta);
     }
@@ -72,7 +85,9 @@ class RutaController extends Controller
      */
     public function destroy($id)
     {
-        $ruta = Ruta::findOrFail($id);
+        $user = Auth::user();
+
+        $ruta = Ruta::on($user->schema)->findOrFail($id);
 
         return response()->json($ruta->delete());
     }

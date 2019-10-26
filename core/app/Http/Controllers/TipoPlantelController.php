@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use App\TipoPlantel;
 use Illuminate\Http\Request;
 use App\Http\Requests\TipoPlantel\CreateFormRequest;
 use App\Http\Requests\TipoPlantel\UpdateFormRequest;
 
+/**
+ * Class TipoPlantelController
+ * @package App\Http\Controllers
+ */
 class TipoPlantelController extends Controller
 {
     /**
@@ -16,7 +21,9 @@ class TipoPlantelController extends Controller
      */
     public function index()
     {
-        $tipoPlanteles = TipoPlantel::all();
+        $user = Auth::user();
+
+        $tipoPlanteles = TipoPlantel::on($user->schema)->paginate();
 
         return response()->json($tipoPlanteles);
     }
@@ -29,9 +36,11 @@ class TipoPlantelController extends Controller
      */
     public function store(CreateFormRequest $request)
     {
+        $user = Auth::user();
+
         $tipoPlantel = $request->all();
 
-        $created = TipoPlantel::create($tipoPlantel);
+        $created = TipoPlantel::on($user->schema)->create($tipoPlantel);
 
         return response()->json($created);
     }
@@ -44,7 +53,9 @@ class TipoPlantelController extends Controller
      */
     public function show($id)
     {
-        $tipoPlanteles = TipoPlantel::findOrFail($id);
+        $user = Auth::user();
+
+        $tipoPlanteles = TipoPlantel::on($user->schema)->findOrFail($id);
 
         return response()->json($tipoPlanteles);
     }
@@ -59,7 +70,9 @@ class TipoPlantelController extends Controller
      */
     public function update(UpdateFormRequest $request, $id)
     {
-        $tipoPlantel = TipoPlantel::findOrFail($id)->update($request->all());
+        $user = Auth::user();
+
+        $tipoPlantel = TipoPlantel::on($user->schema)->findOrFail($id)->update($request->all());
 
         return response()->json($tipoPlantel);
     }
@@ -72,7 +85,9 @@ class TipoPlantelController extends Controller
      */
     public function destroy($id)
     {
-        $tipoPlantel = TipoPlantel::findOrFail($id);
+        $user = Auth::user();
+        
+        $tipoPlantel = TipoPlantel::on($user->schema)->findOrFail($id);
 
         return response()->json($tipoPlantel->delete());
     }

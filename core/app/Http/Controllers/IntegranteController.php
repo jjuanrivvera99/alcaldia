@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use App\Integrante;
 use Illuminate\Http\Request;
 use App\Http\Requests\Integrante\CreateFormRequest;
 use App\Http\Requests\Integrante\UpdateFormRequest;
 
+/**
+ * Class IntegranteController
+ * @package App\Http\Controllers
+ */
 class IntegranteController extends Controller
 {
     /**
@@ -16,7 +21,9 @@ class IntegranteController extends Controller
      */
     public function index()
     {
-        $integrantes = Integrante::all();
+        $user = Auth::user();
+
+        $integrantes = Integrante::on($user->schema)->paginate();
 
         return response()->json($integrantes);
     }
@@ -29,9 +36,11 @@ class IntegranteController extends Controller
      */
     public function store(CreateFormRequest $request)
     {
+        $user = Auth::user();
+
         $integrante = $request->all();
 
-        $created = Integrante::create($integrante);
+        $created = Integrante::on($user->schema)->create($integrante);
 
         return response()->json($created);
     }
@@ -44,7 +53,9 @@ class IntegranteController extends Controller
      */
     public function show($id)
     {
-        $integrantes = Integrante::findOrFail($id);
+        $user = Auth::user();
+
+        $integrantes = Integrante::on($user->schema)->findOrFail($id);
 
         return response()->json($integrantes);
     }
@@ -59,7 +70,9 @@ class IntegranteController extends Controller
      */
     public function update(UpdateFormRequest $request, $id)
     {
-        $integrante = Integrante::findOrFail($id)->update($request->all());
+        $user = Auth::user();
+
+        $integrante = Integrante::on($user->schema)->findOrFail($id)->update($request->all());
 
         return response()->json($integrante);
     }
@@ -72,7 +85,9 @@ class IntegranteController extends Controller
      */
     public function destroy($id)
     {
-        $integrante = Integrante::findOrFail($id);
+        $user = Auth::user();
+
+        $integrante = Integrante::on($user->schema)->findOrFail($id);
 
         return response()->json($integrante->delete());
     }

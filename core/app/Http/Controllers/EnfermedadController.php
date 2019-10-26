@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use App\Enfermedad;
 use Illuminate\Http\Request;
 use App\Http\Requests\Enfermedad\CreateFormRequest;
 use App\Http\Requests\Enfermedad\UpdateFormRequest;
 
+/**
+ * Class EnfermedadController
+ * @package App\Http\Controllers
+ */
 class EnfermedadController extends Controller
 {
     /**
@@ -16,7 +21,9 @@ class EnfermedadController extends Controller
      */
     public function index()
     {
-        $enfermedades = Enfermedad::all();
+        $user = Auth::user();
+
+        $enfermedades = Enfermedad::on($user->schema)->paginate();
 
         return response()->json($enfermedades);
     }
@@ -29,9 +36,11 @@ class EnfermedadController extends Controller
      */
     public function store(CreateFormRequest $request)
     {
+        $user = Auth::user();
+
         $enfermedad = $request->all();
 
-        $created = Enfermedad::create($enfermedad);
+        $created = Enfermedad::on($user->schema)->create($enfermedad);
 
         return response()->json($created);
     }
@@ -44,7 +53,9 @@ class EnfermedadController extends Controller
      */
     public function show($id)
     {
-        $enfermedades = Enfermedad::findOrFail($id);
+        $user = Auth::user();
+
+        $enfermedades = Enfermedad::on($user->schema)->findOrFail($id);
 
         return response()->json($enfermedades);
     }
@@ -59,7 +70,9 @@ class EnfermedadController extends Controller
      */
     public function update(UpdateFormRequest $request, $id)
     {
-        $enfermedad = Enfermedad::findOrFail($id)->update($request->all());
+        $user = Auth::user();
+
+        $enfermedad = Enfermedad::on($user->schema)->findOrFail($id)->update($request->all());
 
         return response()->json($enfermedad);
     }
@@ -72,7 +85,9 @@ class EnfermedadController extends Controller
      */
     public function destroy($id)
     {
-        $enfermedad = Enfermedad::findOrFail($id);
+        $user = Auth::user();
+
+        $enfermedad = Enfermedad::on($user->schema)->findOrFail($id);
 
         return response()->json($enfermedad->delete());
     }

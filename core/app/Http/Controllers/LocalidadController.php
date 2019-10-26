@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use App\Localidad;
 use Illuminate\Http\Request;
 use App\Http\Requests\Localidad\CreateFormRequest;
 use App\Http\Requests\Localidad\UpdateFormRequest;
 
+/**
+ * Class LocalidadController
+ * @package App\Http\Controllers
+ */
 class LocalidadController extends Controller
 {
     /**
@@ -16,7 +21,9 @@ class LocalidadController extends Controller
      */
     public function index()
     {
-        $localidades = Localidad::all();
+        $user = Auth::user();
+
+        $localidades = Localidad::on($user->schema)->paginate();
 
         return response()->json($localidades);
     }
@@ -29,9 +36,11 @@ class LocalidadController extends Controller
      */
     public function store(CreateFormRequest $request)
     {
+        $user = Auth::user();
+
         $localidad = $request->all();
 
-        $created = Localidad::create($localidad);
+        $created = Localidad::on($user->schema)->create($localidad);
 
         return response()->json($created);
     }
@@ -44,7 +53,9 @@ class LocalidadController extends Controller
      */
     public function show($id)
     {
-        $localidades = Localidad::findOrFail($id);
+        $user = Auth::user();
+
+        $localidades = Localidad::on($user->schema)->findOrFail($id);
 
         return response()->json($localidades);
     }
@@ -59,7 +70,9 @@ class LocalidadController extends Controller
      */
     public function update(UpdateFormRequest $request, $id)
     {
-        $localidad = Localidad::findOrFail($id)->update($request->all());
+        $user = Auth::user();
+
+        $localidad = Localidad::on($user->schema)->findOrFail($id)->update($request->all());
 
         return response()->json($localidad);
     }
@@ -72,7 +85,9 @@ class LocalidadController extends Controller
      */
     public function destroy($id)
     {
-        $localidad = Localidad::findOrFail($id);
+        $user = Auth::user();
+
+        $localidad = Localidad::on($user->schema)->findOrFail($id);
 
         return response()->json($localidad->delete());
     }

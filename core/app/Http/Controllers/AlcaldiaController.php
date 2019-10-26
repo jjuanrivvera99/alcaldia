@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use App\Alcaldia;
 use Illuminate\Http\Request;
 use App\Http\Requests\Alcaldia\CreateFormRequest;
 use App\Http\Requests\Alcaldia\UpdateFormRequest;
 
+/**
+ * Class AlcaldiaController
+ * @package App\Http\Controllers
+ */
 class AlcaldiaController extends Controller
 {
     /**
@@ -16,7 +21,9 @@ class AlcaldiaController extends Controller
      */
     public function index()
     {
-        $alcaldias = Alcaldia::all();
+        $user = Auth::user();
+
+        $alcaldias = Alcaldia::on($user->schema)->paginate();
 
         return response()->json($alcaldias);
     }
@@ -29,9 +36,11 @@ class AlcaldiaController extends Controller
      */
     public function store(CreateFormRequest $request)
     {
+        $user = Auth::user();
+
         $alcaldia = $request->all();
 
-        $created = Alcaldia::create($alcaldia);
+        $created = Alcaldia::on($user->schema)->create($alcaldia);
 
         return response()->json($created);
     }
@@ -44,7 +53,9 @@ class AlcaldiaController extends Controller
      */
     public function show($id)
     {
-        $alcaldias = Alcaldia::findOrFail($id);
+        $user = Auth::user();
+
+        $alcaldias = Alcaldia::on($user->schema)->findOrFail($id);
 
         return response()->json($alcaldias);
     }
@@ -59,7 +70,9 @@ class AlcaldiaController extends Controller
      */
     public function update(UpdateFormRequest $request, $id)
     {
-        $alcaldia = Alcaldia::findOrFail($id)->update($request->all());
+        $user = Auth::user();
+
+        $alcaldia = Alcaldia::on($user->schema)->findOrFail($id)->update($request->all());
 
         return response()->json($alcaldia);
     }
@@ -72,7 +85,9 @@ class AlcaldiaController extends Controller
      */
     public function destroy($id)
     {
-        $alcaldia = Alcaldia::findOrFail($id);
+        $user = Auth::user();
+
+        $alcaldia = Alcaldia::on($user->schema)->findOrFail($id);
 
         return response()->json($alcaldia->delete());
     }

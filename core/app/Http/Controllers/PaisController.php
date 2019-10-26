@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use App\Pais;
 use Illuminate\Http\Request;
 use App\Http\Requests\Pais\CreateFormRequest;
 use App\Http\Requests\Pais\UpdateFormRequest;
 
+/**
+ * Class PaisController
+ * @package App\Http\Controllers
+ */
 class PaisController extends Controller
 {
     /**
@@ -16,7 +21,9 @@ class PaisController extends Controller
      */
     public function index()
     {
-        $paises = Pais::all();
+        $user = Auth::user();
+
+        $paises = Pais::on($user->schema)->paginate();
 
         return response()->json($paises);
     }
@@ -29,9 +36,11 @@ class PaisController extends Controller
      */
     public function store(CreateFormRequest $request)
     {
+        $user = Auth::user();
+
         $pais = $request->all();
 
-        $created = Pais::create($pais);
+        $created = Pais::on($user->schema)->create($pais);
 
         return response()->json($created);
     }
@@ -44,7 +53,9 @@ class PaisController extends Controller
      */
     public function show($id)
     {
-        $paises = Pais::findOrFail($id);
+        $user = Auth::user();
+
+        $paises = Pais::on($user->schema)->findOrFail($id);
 
         return response()->json($paises);
     }
@@ -59,7 +70,9 @@ class PaisController extends Controller
      */
     public function update(UpdateFormRequest $request, $id)
     {
-        $pais = Pais::findOrFail($id)->update($request->all());
+        $user = Auth::user();
+
+        $pais = Pais::on($user->schema)->findOrFail($id)->update($request->all());
 
         return response()->json($pais);
     }
@@ -72,7 +85,9 @@ class PaisController extends Controller
      */
     public function destroy($id)
     {
-        $pais = Pais::findOrFail($id);
+        $user = Auth::user();
+
+        $pais = Pais::on($user->schema)->findOrFail($id);
 
         return response()->json($pais->delete());
     }

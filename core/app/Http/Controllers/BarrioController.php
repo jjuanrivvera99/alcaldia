@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use App\Barrio;
 use Illuminate\Http\Request;
 use App\Http\Requests\Barrio\CreateFormRequest;
 use App\Http\Requests\Barrio\UpdateFormRequest;
 
+/**
+ * Class BarrioController
+ * @package App\Http\Controllers
+ */
 class BarrioController extends Controller
 {
     /**
@@ -16,7 +21,9 @@ class BarrioController extends Controller
      */
     public function index()
     {
-        $barrios = Barrio::all();
+        $user = Auth::user();
+
+        $barrios = Barrio::on($user->schema)->paginate();
 
         return response()->json($barrios);
     }
@@ -29,9 +36,11 @@ class BarrioController extends Controller
      */
     public function store(CreateFormRequest $request)
     {
+        $user = Auth::user();
+
         $barrio = $request->all();
 
-        $created = Barrio::create($barrio);
+        $created = Barrio::on($user->schema)->reate($barrio);
 
         return response()->json($created);
     }
@@ -44,7 +53,9 @@ class BarrioController extends Controller
      */
     public function show($id)
     {
-        $barrios = Barrio::findOrFail($id);
+        $user = Auth::user();
+
+        $barrios = Barrio::on($user->schema)->indOrFail($id);
 
         return response()->json($barrios);
     }
@@ -59,7 +70,9 @@ class BarrioController extends Controller
      */
     public function update(UpdateFormRequest $request, $id)
     {
-        $barrio = Barrio::findOrFail($id)->update($request->all());
+        $user = Auth::user();
+
+        $barrio = Barrio::on($user->schema)->indOrFail($id)->update($request->all());
 
         return response()->json($barrio);
     }
@@ -72,7 +85,9 @@ class BarrioController extends Controller
      */
     public function destroy($id)
     {
-        $barrio = Barrio::findOrFail($id);
+        $user = Auth::user();
+
+        $barrio = Barrio::on($user->schema)->indOrFail($id);
 
         return response()->json($barrio->delete());
     }

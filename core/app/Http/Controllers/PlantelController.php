@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use App\Plantel;
 use Illuminate\Http\Request;
 use App\Http\Requests\Plantel\CreateFormRequest;
 use App\Http\Requests\Plantel\UpdateFormRequest;
 
+/**
+ * Class PlantelController
+ * @package App\Http\Controllers
+ */
 class PlantelController extends Controller
 {
     /**
@@ -16,7 +21,9 @@ class PlantelController extends Controller
      */
     public function index()
     {
-        $planteles = Plantel::all();
+        $user = Auth::user();
+
+        $planteles = Plantel::on($user->schema)->paginate();
 
         return response()->json($planteles);
     }
@@ -29,9 +36,11 @@ class PlantelController extends Controller
      */
     public function store(CreateFormRequest $request)
     {
+        $user = Auth::user();
+
         $plantel = $request->all();
 
-        $created = Plantel::create($plantel);
+        $created = Plantel::on($user->schema)->create($plantel);
 
         return response()->json($created);
     }
@@ -44,7 +53,9 @@ class PlantelController extends Controller
      */
     public function show($id)
     {
-        $planteles = Plantel::findOrFail($id);
+        $user = Auth::user();
+
+        $planteles = Plantel::on($user->schema)->findOrFail($id);
 
         return response()->json($planteles);
     }
@@ -59,7 +70,9 @@ class PlantelController extends Controller
      */
     public function update(UpdateFormRequest $request, $id)
     {
-        $plantel = Plantel::findOrFail($id)->update($request->all());
+        $user = Auth::user();
+
+        $plantel = Plantel::on($user->schema)->findOrFail($id)->update($request->all());
 
         return response()->json($plantel);
     }
@@ -72,7 +85,9 @@ class PlantelController extends Controller
      */
     public function destroy($id)
     {
-        $plantel = Plantel::findOrFail($id);
+        $user = Auth::user();
+
+        $plantel = Plantel::on($user->schema)->findOrFail($id);
 
         return response()->json($plantel->delete());
     }

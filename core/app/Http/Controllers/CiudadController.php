@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use App\Ciudad;
 use Illuminate\Http\Request;
 use App\Http\Requests\Ciudad\CreateFormRequest;
 use App\Http\Requests\Ciudad\UpdateFormRequest;
 
+/**
+ * Class CiudadController
+ * @package App\Http\Controllers
+ */
 class CiudadController extends Controller
 {
     /**
@@ -16,7 +21,9 @@ class CiudadController extends Controller
      */
     public function index()
     {
-        $ciudades = Ciudad::all();
+        $user = Auth::user();
+
+        $ciudades = Ciudad::on($user->schema)->paginate();
 
         return response()->json($ciudades);
     }
@@ -29,9 +36,11 @@ class CiudadController extends Controller
      */
     public function store(CreateFormRequest $request)
     {
+        $user = Auth::user();
+
         $ciudad = $request->all();
 
-        $created = Ciudad::create($ciudad);
+        $created = Ciudad::on($user->schema)->create($ciudad);
 
         return response()->json($created);
     }
@@ -44,7 +53,9 @@ class CiudadController extends Controller
      */
     public function show($id)
     {
-        $ciudades = Ciudad::findOrFail($id);
+        $user = Auth::user();
+
+        $ciudades = Ciudad::on($user->schema)->findOrFail($id);
 
         return response()->json($ciudades);
     }
@@ -59,7 +70,9 @@ class CiudadController extends Controller
      */
     public function update(UpdateFormRequest $request, $id)
     {
-        $ciudad = Ciudad::findOrFail($id)->update($request->all());
+        $user = Auth::user();
+
+        $ciudad = Ciudad::on($user->schema)->findOrFail($id)->update($request->all());
 
         return response()->json($ciudad);
     }
@@ -72,7 +85,9 @@ class CiudadController extends Controller
      */
     public function destroy($id)
     {
-        $ciudad = Ciudad::findOrFail($id);
+        $user = Auth::user();
+
+        $ciudad = Ciudad::on($user->schema)->findOrFail($id);
 
         return response()->json($ciudad->delete());
     }

@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use App\Alcalde;
 use Illuminate\Http\Request;
 use App\Http\Requests\Alcalde\CreateFormRequest;
 use App\Http\Requests\Alcalde\UpdateFormRequest;
 
+/**
+ * Class AlcaldeController
+ * @package App\Http\Controllers
+ */
 class AlcaldeController extends Controller
 {
     /**
@@ -16,7 +21,9 @@ class AlcaldeController extends Controller
      */
     public function index()
     {
-        $alcaldes = Alcalde::all();
+        $user = Auth::user();
+        
+        $alcaldes = Alcalde::on($user->schema)->paginate();
 
         return response()->json($alcaldes);
     }
@@ -29,9 +36,11 @@ class AlcaldeController extends Controller
      */
     public function store(CreateFormRequest $request)
     {
+        $user = Auth::user();
+
         $alcalde = $request->all();
 
-        $created = Alcalde::create($alcalde);
+        $created = Alcalde::on($user->schema)->create($alcalde);
 
         return response()->json($created);
     }
@@ -44,7 +53,9 @@ class AlcaldeController extends Controller
      */
     public function show($id)
     {
-        $alcaldes = Alcalde::findOrFail($id);
+        $user = Auth::user();
+
+        $alcaldes = Alcalde::on($user->schema)->findOrFail($id);
 
         return response()->json($alcaldes);
     }
@@ -59,7 +70,9 @@ class AlcaldeController extends Controller
      */
     public function update(UpdateFormRequest $request, $id)
     {
-        $alcalde = Alcalde::findOrFail($id)->update($request->all());
+        $user = Auth::user();
+
+        $alcalde = Alcalde::on($user->schema)->findOrFail($id)->update($request->all());
 
         return response()->json($alcalde);
     }
@@ -72,7 +85,9 @@ class AlcaldeController extends Controller
      */
     public function destroy($id)
     {
-        $alcalde = Alcalde::findOrFail($id);
+        $user = Auth::user();
+
+        $alcalde = Alcalde::on($user->schema)->findOrFail($id);
 
         return response()->json($alcalde->delete());
     }

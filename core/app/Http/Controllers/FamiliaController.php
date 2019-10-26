@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use App\Familia;
 use Illuminate\Http\Request;
 use App\Http\Requests\Familia\CreateFormRequest;
 use App\Http\Requests\Familia\UpdateFormRequest;
 
+/**
+ * Class FamiliaController
+ * @package App\Http\Controllers
+ */
 class FamiliaController extends Controller
 {
     /**
@@ -16,7 +21,9 @@ class FamiliaController extends Controller
      */
     public function index()
     {
-        $familias = Familia::all();
+        $user = Auth::user();
+
+        $familias = Familia::on($user->schema)->paginate();
 
         return response()->json($familias);
     }
@@ -29,9 +36,11 @@ class FamiliaController extends Controller
      */
     public function store(CreateFormRequest $request)
     {
+        $user = Auth::user();
+
         $familia = $request->all();
 
-        $created = Familia::create($familia);
+        $created = Familia::on($user->schema)->create($familia);
 
         return response()->json($created);
     }
@@ -44,7 +53,9 @@ class FamiliaController extends Controller
      */
     public function show($id)
     {
-        $familias = Familia::findOrFail($id);
+        $user = Auth::user();
+
+        $familias = Familia::on($user->schema)->findOrFail($id);
 
         return response()->json($familias);
     }
@@ -59,7 +70,9 @@ class FamiliaController extends Controller
      */
     public function update(UpdateFormRequest $request, $id)
     {
-        $familia = Familia::findOrFail($id)->update($request->all());
+        $user = Auth::user();
+
+        $familia = Familia::on($user->schema)->findOrFail($id)->update($request->all());
 
         return response()->json($familia);
     }
@@ -72,7 +85,9 @@ class FamiliaController extends Controller
      */
     public function destroy($id)
     {
-        $familia = Familia::findOrFail($id);
+        $user = Auth::user();
+
+        $familia = Familia::on($user->schema)->findOrFail($id);
 
         return response()->json($familia->delete());
     }
