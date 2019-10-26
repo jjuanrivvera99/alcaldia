@@ -4,6 +4,13 @@ namespace App\Http\Requests\Familia;
 
 use App\Http\Requests\ApiFormRequest;
 
+/**
+ * Class CreateFormRequest
+ * @package App\Http\Requests\Familia
+ * @license GPL
+ * @license http://opensource.org/licenses/gpl-license.php GNU Public License
+ * @author Juan Felipe Rivera González <jjuanrivvera@gmail.com>
+ */
 class CreateFormRequest extends ApiFormRequest
 {
 
@@ -24,6 +31,9 @@ class CreateFormRequest extends ApiFormRequest
         ];
     }
 
+    /**
+     * @return array
+     */
     public function messages(){
         return [
             'id_barrio.required' => 'El id del barrio es obligatorio',

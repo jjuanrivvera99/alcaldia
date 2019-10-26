@@ -1,4 +1,9 @@
 <?php
+/**
+ * @license GPL
+ * @license http://opensource.org/licenses/gpl-license.php GNU Public License
+ * @author Juan Felipe Rivera González <jjuanrivvera@gmail.com>
+ */
 
 use Illuminate\Http\Request;
 

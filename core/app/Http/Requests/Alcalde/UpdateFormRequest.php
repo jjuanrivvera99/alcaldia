@@ -4,6 +4,13 @@ namespace App\Http\Requests\Alcalde;
 
 use App\Http\Requests\ApiFormRequest;
 
+/**
+ * Class UpdateFormRequest
+ * @package App\Http\Requests\Alcalde
+ * @license GPL
+ * @license http://opensource.org/licenses/gpl-license.php GNU Public License
+ * @author Juan Felipe Rivera González <jjuanrivvera@gmail.com>
+ */
 class UpdateFormRequest extends ApiFormRequest
 {
 
@@ -22,6 +29,11 @@ class UpdateFormRequest extends ApiFormRequest
         ];
     }
 
+    /**
+     * Get custom messages for validator errors.
+     *
+     * @return array
+     */
     public function messages(){
         return [
             'primer_nombre.required' => "El primer nombre es obligatorio",

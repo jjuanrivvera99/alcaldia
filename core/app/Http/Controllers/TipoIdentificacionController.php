@@ -11,6 +11,9 @@ use App\Http\Requests\TipoIdentificacion\UpdateFormRequest;
 /**
  * Class TipoIdentificacionController
  * @package App\Http\Controllers
+ * @license GPL
+ * @license http://opensource.org/licenses/gpl-license.php GNU Public License
+ * @author Juan Felipe Rivera González <jjuanrivvera@gmail.com>
  */
 class TipoIdentificacionController extends Controller
 {

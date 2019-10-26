@@ -8,16 +8,20 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 
+/**
+ * Class AuthController
+ * @package App\Http\Controllers\Api
+ * @license GPL
+ * @license http://opensource.org/licenses/gpl-license.php GNU Public License
+ * @author Juan Felipe Rivera González <jjuanrivvera@gmail.com>
+ */
 class AuthController extends Controller
 {
     /**
      * Create user
      *
-     * @param  [string] name
-     * @param  [string] email
-     * @param  [string] password
-     * @param  [string] password_confirmation
-     * @return [string] message
+     * @param  Request $request
+     * @return \Illuminate\Http\Response
      */
     public function signup(Request $request)
     {
@@ -43,12 +47,8 @@ class AuthController extends Controller
     /**
      * Login user and create token
      *
-     * @param  [string] email
-     * @param  [string] password
-     * @param  [boolean] remember_me
-     * @return [string] access_token
-     * @return [string] token_type
-     * @return [string] expires_at
+     * @param  Request $request
+     * @return \Illuminate\Http\Response
      */
     public function login(Request $request)
     {
@@ -88,7 +88,8 @@ class AuthController extends Controller
     /**
      * Logout user (Revoke the token)
      *
-     * @return [string] message
+     * @param  Request $request
+     * @return \Illuminate\Http\Response
      */
     public function logout(Request $request)
     {
@@ -102,7 +103,8 @@ class AuthController extends Controller
     /**
      * Get the authenticated User
      *
-     * @return [json] user object
+     * @param  Request $request
+     * @return \Illuminate\Http\Response
      */
     public function user(Request $request)
     {

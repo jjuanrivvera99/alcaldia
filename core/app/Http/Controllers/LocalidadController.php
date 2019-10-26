@@ -11,6 +11,9 @@ use App\Http\Requests\Localidad\UpdateFormRequest;
 /**
  * Class LocalidadController
  * @package App\Http\Controllers
+ * @license GPL
+ * @license http://opensource.org/licenses/gpl-license.php GNU Public License
+ * @author Juan Felipe Rivera González <jjuanrivvera@gmail.com>
  */
 class LocalidadController extends Controller
 {

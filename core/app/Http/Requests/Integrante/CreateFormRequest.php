@@ -4,6 +4,13 @@ namespace App\Http\Requests\Integrante;
 
 use App\Http\Requests\ApiFormRequest;
 
+/**
+ * Class CreateFormRequest
+ * @package App\Http\Requests\Integrante
+ * @license GPL
+ * @license http://opensource.org/licenses/gpl-license.php GNU Public License
+ * @author Juan Felipe Rivera González <jjuanrivvera@gmail.com>
+ */
 class CreateFormRequest extends ApiFormRequest
 {
 
@@ -27,6 +34,9 @@ class CreateFormRequest extends ApiFormRequest
         ];
     }
 
+    /**
+     * @return array
+     */
     public function messages(){
         return [
             'id_tipo_identificacion.required' => 'El tipo de identificación es obligatoria',

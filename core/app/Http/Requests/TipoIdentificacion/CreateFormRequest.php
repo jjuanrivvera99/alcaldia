@@ -4,6 +4,13 @@ namespace App\Http\Requests\TipoIdentificacion;
 
 use App\Http\Requests\ApiFormRequest;
 
+/**
+ * Class CreateFormRequest
+ * @package App\Http\Requests\TipoIdentificacion
+ * @license GPL
+ * @license http://opensource.org/licenses/gpl-license.php GNU Public License
+ * @author Juan Felipe Rivera González <jjuanrivvera@gmail.com>
+ */
 class CreateFormRequest extends ApiFormRequest
 {
 
@@ -19,6 +26,9 @@ class CreateFormRequest extends ApiFormRequest
         ];
     }
 
+    /**
+     * @return array
+     */
     public function messages(){
         return [
             'nombre.required' => 'El nombre es obligatorio',

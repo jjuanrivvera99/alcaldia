@@ -11,6 +11,9 @@ use App\Http\Requests\Enfermedad\UpdateFormRequest;
 /**
  * Class EnfermedadController
  * @package App\Http\Controllers
+ * @license GPL
+ * @license http://opensource.org/licenses/gpl-license.php GNU Public License
+ * @author Juan Felipe Rivera González <jjuanrivvera@gmail.com>
  */
 class EnfermedadController extends Controller
 {

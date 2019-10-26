@@ -4,6 +4,13 @@ namespace App\Http\Requests\Ruta;
 
 use App\Http\Requests\ApiFormRequest;
 
+/**
+ * Class CreateFormRequest
+ * @package App\Http\Requests\Ruta
+ * @license GPL
+ * @license http://opensource.org/licenses/gpl-license.php GNU Public License
+ * @author Juan Felipe Rivera González <jjuanrivvera@gmail.com>
+ */
 class CreateFormRequest extends ApiFormRequest
 {
 
@@ -19,6 +26,9 @@ class CreateFormRequest extends ApiFormRequest
         ];
     }
 
+    /**
+     * @return array
+     */
     public function messages(){
         return [
             'descripcion.required' => 'La descripcion es obligatorio',
