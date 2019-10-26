@@ -1,0 +1,26 @@
+USE master;
+GO
+
+DROP DATABASE IF EXISTS alcaldia;
+GO
+
+CREATE DATABASE alcaldia;
+GO
+
+USE alcaldia;
+GO
+
+DROP SCHEMA IF EXISTS [core] 
+GO
+
+DROP SCHEMA IF EXISTS [nocore]
+GO
+
+CREATE SCHEMA [core]
+GO
+
+CREATE SCHEMA [nocore]
+GO
+
+USE alcaldia;
+GO
