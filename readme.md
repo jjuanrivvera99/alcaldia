@@ -17,7 +17,7 @@ Para correr este proyecto se necesita tener docker y docker-compose instalado:
 ### Configuración General 
 - Detener la ejecución de:
     - Cualquier instancia de SQL Server
-    - Cualquier servico corriendo en los siguientes puertos
+    - Cualquier servicio corriendo en los siguientes puertos
         - 80
         - 443
         - 1433
