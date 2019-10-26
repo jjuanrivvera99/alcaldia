@@ -5,7 +5,7 @@ En este repositorio se encuentra la base de datos del proyecto formativo con tod
 ## Estructura del proyecto
 
 - mssql: archivos de SQL Server (queries, certificados, backups, auditorias, etc)
-- core: [API con laravel 5.8]("https://web.postman.co/collections/6736340-cc6df75b-9200-4562-8be7-1431d520e40e?version=latest&workspace=df61dc68-b666-40b3-82c7-64fee04162c3)
+- core: [API con laravel 5.8](https://web.postman.co/collections/6736340-cc6df75b-9200-4562-8be7-1431d520e40e?version=latest&workspace=df61dc68-b666-40b3-82c7-64fee04162c3)
 - build: archivos necesarios para la construcción de la imagen de docker
 - mongo: archivos de mongo.
 - docker-compose.yml: Especificación de los servicios de docker
