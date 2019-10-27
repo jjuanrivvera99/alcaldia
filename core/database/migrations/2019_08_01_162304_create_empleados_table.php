@@ -26,12 +26,12 @@ class CreateEmpleadosTable extends Migration
             $table->timestamps();
 
             $table->foreign('id_area_dependencia')->references('id_area_dependencia')->on('nocore.area_dependencia');
-
-            DB::statement("ALTER TABLE core.empleado ALTER COLUMN primer_nombre ADD MASKED WITH (FUNCTION = 'partial(2,\"XXXXXXX\",0)')");
-            DB::statement("ALTER TABLE core.empleado ALTER COLUMN primer_apellido ADD MASKED WITH (FUNCTION = 'partial(2,\"XXXXXXX\",0)')");
-            DB::statement("ALTER TABLE core.empleado ALTER COLUMN direccion ADD MASKED WITH (FUNCTION = 'partial(2,\"XXXXXXX\",0)')");
-            DB::statement("ALTER TABLE core.empleado ALTER COLUMN email ADD MASKED WITH (FUNCTION = 'email()')");
         });
+
+        DB::statement("ALTER TABLE nocore.empleado ALTER COLUMN primer_nombre ADD MASKED WITH (FUNCTION = 'partial(2,\"XXXXXXX\",0)')");
+        DB::statement("ALTER TABLE nocore.empleado ALTER COLUMN primer_apellido ADD MASKED WITH (FUNCTION = 'partial(2,\"XXXXXXX\",0)')");
+        DB::statement("ALTER TABLE nocore.empleado ALTER COLUMN direccion ADD MASKED WITH (FUNCTION = 'partial(2,\"XXXXXXX\",0)')");
+        DB::statement("ALTER TABLE nocore.empleado ALTER COLUMN email ADD MASKED WITH (FUNCTION = 'email()')");
     }
 
     /**
