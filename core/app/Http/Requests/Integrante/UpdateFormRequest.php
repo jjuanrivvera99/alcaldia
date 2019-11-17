@@ -27,9 +27,9 @@ class UpdateFormRequest extends ApiFormRequest
             'id_ciudad' => 'required',
             'id_familia' => 'required',
             'primer_nombre' => 'required',
-            'segundo_nombre' => 'required',
+            // 'segundo_nombre' => 'required',
             'primer_apellido' => 'required',
-            'segundo_apellido' => 'required',
+            // 'segundo_apellido' => 'required',
             'fecha_nacimiento' => 'required',
         ];
     }
@@ -44,9 +44,9 @@ class UpdateFormRequest extends ApiFormRequest
             'id_ciudad.required' => 'La ciudad es obligatoria',
             'id_familia.required' => 'La familia es obligatoria',
             'primer_nombre.required' => 'El primer nombre es obligatorio',
-            'segundo_nombre.required' => 'El segundo nombre es obligatorio',
+            // 'segundo_nombre.required' => 'El segundo nombre es obligatorio',
             'primer_apellido.required' => 'El primer apellido es obligatorio',
-            'segundo_apellido.required' => 'El segundo apellido es obligatorio',
+            // 'segundo_apellido.required' => 'El segundo apellido es obligatorio',
             'fecha_nacimiento.required' => 'La fecha de nacimiento es obligatoria',
         ];
     }
